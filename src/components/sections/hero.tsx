@@ -58,6 +58,7 @@ export default function HeroSection() {
                 width={60}
                 height={28}
                 alt="LOGO ICCN"
+                style={{ width: "auto", height: "auto" }}
               />
 
               {/* MCF hex icon */}
@@ -66,6 +67,7 @@ export default function HeroSection() {
                 width={40}
                 height={32}
                 alt="LOGO MCF"
+                style={{ width: "auto", height: "auto" }}
               />
 
               {/* Malang Kota Kreatif */}
@@ -74,6 +76,7 @@ export default function HeroSection() {
                 width={60}
                 height={28}
                 alt="LOGO MALANG ARTS"
+                style={{ width: "auto", height: "auto" }}
               />
 
               {/* UNESCO */}
@@ -82,6 +85,7 @@ export default function HeroSection() {
                 width={45}
                 height={20}
                 alt="ICCN"
+                style={{ width: "auto", height: "auto" }}
               />
             </div>
 
