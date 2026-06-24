@@ -1,5 +1,6 @@
 "use client";
 
+import { Plus } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -48,15 +49,15 @@ export default function PartnersSection() {
       <div className="max-w-8xl relative z-10 mx-auto w-full px-6 lg:px-[72px]">
         {/* Header */}
         <div className="mx-auto flex max-w-[800px] flex-col items-center text-center">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-widest text-[#F2F2F2] capitalize md:text-sm">
-            <span>+</span>
+          <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-widest capitalize">
+            <Plus className="size-4" />
             <span>Sponsors & Partners</span>
           </div>
-          <h2 className="mt-6 text-3xl font-medium tracking-tight text-[#F2F2F2] md:text-5xl lg:text-6xl lg:leading-[1.1]">
+          <h2 className="text-neutral-off-white mt-6 text-3xl font-medium tracking-tight md:text-5xl lg:text-[64px] lg:leading-snug">
             Aliansi Strategis Penggerak <br className="hidden sm:block" />{" "}
             Ekosistem
           </h2>
-          <p className="mt-6 max-w-[650px] text-sm leading-relaxed text-[#F2F2F2]/70 lg:text-base">
+          <p className="text-neutral-off-white mt-6 w-full max-w-[850px] text-sm leading-relaxed lg:text-2xl">
             Sinergi kolaboratif multi-stakeholder antara jajaran kementerian,
             pemerintah daerah, Badan Usaha Milik Negara (BUMN), dan sektor
             swasta dalam mengawal peta jalan ekonomi kreatif Indonesia.
@@ -68,7 +69,7 @@ export default function PartnersSection() {
           {/* Separator Title */}
           <div className="flex items-center justify-center gap-4">
             <div className="hidden h-px w-full max-w-[150px] bg-linear-to-r from-transparent to-white/20 md:block md:max-w-[300px]"></div>
-            <h3 className="text-base font-semibold tracking-wider whitespace-nowrap text-[#F2F2F2] md:text-sm md:text-white/60">
+            <h3 className="text-neutral-off-white text-base font-semibold tracking-wider whitespace-nowrap md:text-sm md:text-white/60">
               Instansi Pemerintah & Kementerian
             </h3>
             <div className="hidden h-px w-full bg-linear-to-l from-transparent to-white/20 md:block md:max-w-[300px]"></div>
@@ -179,7 +180,7 @@ export default function PartnersSection() {
           {/* Separator Title */}
           <div className="flex items-center justify-center gap-4">
             <div className="hidden h-px w-full max-w-[150px] bg-linear-to-r from-transparent to-white/20 md:block md:max-w-[300px]"></div>
-            <h3 className="text-base font-semibold tracking-wider whitespace-nowrap text-[#F2F2F2] md:text-sm md:text-white/60">
+            <h3 className="text-neutral-off-white text-base font-semibold tracking-wider whitespace-nowrap md:text-sm md:text-white/60">
               Sektor Swasta & Mitra Bisnis
             </h3>
             <div className="hidden h-px w-full max-w-[150px] bg-linear-to-l from-transparent to-white/20 md:block md:max-w-[300px]"></div>

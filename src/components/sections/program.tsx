@@ -1,3 +1,4 @@
+import { Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,7 +44,7 @@ export default function ProgramSection() {
   return (
     <section
       id="program"
-      className="relative w-full bg-[#111B26] py-24 md:py-32 lg:py-[356px]"
+      className="bg-brand-navy relative w-full py-24 md:py-32 lg:py-[356px]"
     >
       {/* Background Glow (Connecting from Festival Video Section) */}
       <div className="pointer-events-none absolute top-40 right-0 z-0 h-[300px] w-[300px] translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.3)_0%,rgba(227,136,204,0.5)_15%,rgba(227,136,204,0.2)_40%,transparent_70%)] blur-[50px] md:h-[1000px] md:w-[1000px] md:blur-[120px]" />
@@ -55,16 +56,16 @@ export default function ProgramSection() {
         {/* Header */}
         <div className="mb-16 flex flex-col gap-12 md:flex-row md:items-center md:justify-between lg:mb-24 lg:items-end">
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#F2F2F2] capitalize md:text-sm">
-              <span>+</span>
+            <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-wider capitalize">
+              <Plus className="size-4" />
               <span>Program</span>
             </div>
-            <h2 className="max-w-[800px] text-2xl font-medium tracking-tight text-[#F2F2F2] md:text-5xl lg:text-7xl lg:leading-snug">
+            <h2 className="text-neutral-off-white max-w-[800px] text-2xl font-medium tracking-tight md:text-5xl lg:text-[64px] lg:leading-snug">
               Mengakselerasi Potensi Ekonomi Kreatif dan Infrastruktur Digital
               Nasional.
             </h2>
           </div>
-          <p className="max-w-[450px] pt-5 text-sm leading-relaxed font-normal text-[#F2F2F2]/80 md:pt-10 md:text-left md:text-base lg:text-2xl">
+          <p className="text-neutral-off-white/80 max-w-[450px] pt-5 text-sm leading-relaxed font-normal md:pt-10 md:text-left md:text-base lg:text-2xl">
             Sebuah ajakan kolaborasi eksklusif bagi Mitra Korporasi untuk
             terhubung, berinteraksi, dan mengamankan posisi merek di hadapan
             lebih dari 10.000 inovator startup, pelaku industri kreatif, dan
@@ -92,13 +93,13 @@ export default function ProgramSection() {
 
               {/* Text Container */}
               <div className="flex w-full flex-col md:w-[55%] md:pt-0 lg:w-[50%]">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 font-medium text-[#f2f2f2]">
+                <div className="text-neutral-off-white flex h-8 w-8 items-center justify-center rounded-full border border-white/20 font-medium">
                   {program.id}
                 </div>
-                <h3 className="mt-5 text-2xl font-medium tracking-tight text-[#F2F2F2] md:text-3xl lg:text-[40px]">
+                <h3 className="text-neutral-off-white mt-5 text-2xl font-medium tracking-tight md:text-3xl lg:text-[40px]">
                   {program.title}
                 </h3>
-                <p className="mt-4 max-w-[560px] text-xs leading-relaxed font-light text-[#F2F2F2] md:text-sm lg:text-xl lg:leading-8">
+                <p className="text-neutral-off-white mt-4 max-w-[560px] text-xs leading-relaxed font-light md:text-sm lg:text-xl lg:leading-8">
                   {program.description}
                 </p>
               </div>

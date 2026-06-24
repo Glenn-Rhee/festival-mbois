@@ -22,13 +22,13 @@ export function AccordionItem({
         className="flex w-full cursor-pointer items-center justify-between p-6 text-left focus:outline-none md:p-8"
         onClick={onClick}
       >
-        <h3 className="text-xl font-medium tracking-wide text-[#f2f2f2] md:text-2xl">
+        <h3 className="text-xl font-medium tracking-wide text-neutral-off-white md:text-2xl">
           {title}
         </h3>
         {isOpen ? (
-          <Minus className="ml-4 h-8 w-8 shrink-0 stroke-1 text-[#f2f2f2]" />
+          <Minus className="ml-4 h-8 w-8 shrink-0 stroke-1 text-neutral-off-white" />
         ) : (
-          <Plus className="ml-4 h-8 w-8 shrink-0 stroke-1 text-[#f2f2f2]" />
+          <Plus className="ml-4 h-8 w-8 shrink-0 stroke-1 text-neutral-off-white" />
         )}
       </button>
       <div
@@ -36,7 +36,7 @@ export function AccordionItem({
           isOpen ? "max-h-96 pb-6 opacity-100 md:pb-8" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="pr-8 text-sm leading-relaxed font-light text-[#f2f2f2]/80 md:text-base">
+        <div className="pr-8 text-sm leading-relaxed font-light text-neutral-off-white/80 md:text-base">
           {content}
         </div>
       </div>

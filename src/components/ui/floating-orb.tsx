@@ -11,14 +11,14 @@ export function FloatingOrb() {
             src="/hero_glowing_orb.png"
             alt="Glowing Energy Orb"
             fill
-            sizes="(max-width: 1024px) 250px, (max-width: 1024px) 350px, (max-width: 1024px) 400px, 400px"
+            sizes="(max-width: 640px) 280px, (max-width: 768px) 350px, (max-width: 1024px) 400px, 460px"
             className="object-contain drop-shadow-[0_0_80px_rgba(209,85,128,0.6)]"
             priority
           />
 
           {/* Extra Center Glow to make the middle much brighter */}
           <div className="absolute top-1/2 left-1/2 z-20 h-[15%] w-[15%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white opacity-90 blur-md" />
-          <div className="absolute top-1/2 left-1/2 z-20 h-[25%] w-[25%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFB6E8] opacity-70 blur-xl" />
+          <div className="absolute top-1/2 left-1/2 z-20 h-[25%] w-[25%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-pink-glow opacity-70 blur-xl" />
 
           {/* Centered Union Star (Top/Main) */}
           <div className="absolute top-1/2 left-1/2 z-10 h-1/4 w-1/4 -translate-x-1/2 translate-y-[-95%]">

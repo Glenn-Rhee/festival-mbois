@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { StarParticles } from "../ui/star-particles";
+import { Plus } from "lucide-react";
 
 const agendaData = [
   {
@@ -122,7 +123,7 @@ export default function AgendaSection() {
   };
 
   return (
-    <section id="agenda" className="relative w-full bg-[#111B26]">
+    <section id="agenda" className="bg-brand-navy relative w-full">
       <StarParticles top={2} left={12} size="medium" glow={true} />
       <StarParticles top={5} right={10} size="large" glow={true} />
       <StarParticles top={8} left={5} size="small" />
@@ -166,14 +167,14 @@ export default function AgendaSection() {
       <div className="max-w-8xl relative z-10 mx-auto w-full px-6 lg:px-[72px]">
         {/* Header */}
         <div className="mx-auto flex max-w-[800px] flex-col items-center text-center">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-widest text-[#F2F2F2] capitalize md:text-base">
-            <span>+</span>
+          <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-widest capitalize">
+            <Plus className="size-4" />
             <span>Agenda</span>
           </div>
-          <h2 className="mt-6 text-3xl font-medium tracking-tight text-[#F2F2F2] md:text-5xl lg:text-6xl lg:leading-snug">
+          <h2 className="text-neutral-off-white mt-6 text-3xl font-medium tracking-tight md:text-5xl lg:text-[64px] lg:leading-snug">
             Saat Kultur Bertemu Teknologi Terdepan.
           </h2>
-          <p className="mt-6 max-w-[870px] text-sm leading-relaxed text-[#F2F2F2] lg:text-2xl">
+          <p className="text-neutral-off-white mt-6 max-w-[870px] text-sm leading-relaxed lg:text-2xl">
             Satu stadion, ribu ide, juta karya, satu gerakan. Simak ringkasan
             agenda kolaborasi, eksibisi bisnis, hingga panggung sportainment
             spektakuler Festival Mbois 11.
@@ -195,20 +196,17 @@ export default function AgendaSection() {
               >
                 {/* Left Column (Date & Summary) */}
                 <div className="flex flex-col items-start border-b border-white/10 p-8 md:border-r md:border-b-0 lg:p-12">
-                  <h3 className="text-2xl font-semibold text-[#f2f2f2]">
+                  <h3 className="text-neutral-off-white text-2xl font-semibold">
                     {agenda.title}
                   </h3>
-                  <p className="my-1.5 font-semibold text-[#f2f2f2]">
+                  <p className="text-neutral-off-white my-1.5 font-semibold">
                     {agenda.date}
                   </p>
-                  <p className="max-w-[200px] text-sm leading-relaxed text-[#f2f2f2]">
+                  <p className="text-neutral-off-white max-w-[200px] text-sm leading-relaxed">
                     {agenda.subtitle}
                   </p>
 
-                  <Button
-                    variant={"outline"}
-                    className="mt-4 w-full rounded-xl"
-                  >
+                  <Button variant={"outline"} className="mt-4 w-full">
                     Get a Ticket
                   </Button>
                 </div>
@@ -219,7 +217,7 @@ export default function AgendaSection() {
                     className="flex cursor-pointer items-center justify-between"
                     onClick={() => toggleDay(agenda.day)}
                   >
-                    <h4 className="text-lg font-medium text-[#f2f2f2] lg:text-2xl">
+                    <h4 className="text-neutral-off-white text-lg font-medium lg:text-2xl">
                       {agenda.eventTitle}
                     </h4>
                   </div>
@@ -233,10 +231,10 @@ export default function AgendaSection() {
                   </div>
 
                   <div className="mt-8">
-                    <p className="text-[10px] font-medium text-[#f2f2f2] capitalize lg:text-xl">
+                    <p className="text-neutral-off-white text-[10px] font-medium capitalize lg:text-xl">
                       Headline Artist
                     </p>
-                    <h3 className="mt-2 text-3xl font-medium text-[#f2f2f2] lg:text-5xl">
+                    <h3 className="text-neutral-off-white mt-2 text-3xl font-medium lg:text-5xl">
                       {agenda.headlineArtist}
                     </h3>
                   </div>
@@ -252,13 +250,13 @@ export default function AgendaSection() {
                         <div className="mt-8 mb-4 flex flex-col gap-10">
                           {agenda.schedules.map((schedule, i) => (
                             <div key={i}>
-                              <h5 className="text-sm font-semibold text-[#f2f2f2] lg:text-xl">
+                              <h5 className="text-neutral-off-white text-sm font-semibold lg:text-xl">
                                 {schedule.time}
                               </h5>
-                              <p className="my-4 text-sm font-semibold text-[#f2f2f2] lg:text-xl">
+                              <p className="text-neutral-off-white my-4 text-sm font-semibold lg:text-xl">
                                 {schedule.category}
                               </p>
-                              <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed font-light text-[#f2f2f2] marker:text-[#f2f2f2] lg:text-base">
+                              <ul className="text-neutral-off-white marker:text-neutral-off-white list-disc space-y-2 pl-5 text-sm leading-relaxed font-light lg:text-base">
                                 {schedule.items.map((item, j) => (
                                   <li key={j}>{item}</li>
                                 ))}
@@ -270,12 +268,13 @@ export default function AgendaSection() {
                     </div>
                   </div>
 
-                  <button
+                  <Button
+                    variant={"outline"}
+                    className="mt-6 w-full"
                     onClick={() => toggleDay(agenda.day)}
-                    className="mt-8 w-full rounded-lg border border-white/20 bg-transparent py-3.5 text-xs font-semibold text-white transition-colors hover:bg-white/10"
                   >
                     {isExpanded ? "Less Detail -" : "See Detail +"}
-                  </button>
+                  </Button>
                 </div>
               </div>
             );

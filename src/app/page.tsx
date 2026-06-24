@@ -11,7 +11,7 @@ import FaqSection from "@/components/sections/faq";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col overflow-x-hidden bg-[#111B26]">
+    <main className="flex min-h-screen flex-col overflow-x-hidden bg-brand-navy">
       <div className="relative w-full overflow-hidden isolate">
         {/* ── Background ── */}
         <div

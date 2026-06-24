@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#322130]">
+    <footer className="bg-brand-aubergine relative w-full overflow-hidden">
       {/* Background Grid & Ornaments */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem]" />
@@ -32,10 +32,10 @@ export default function Footer() {
           <h2 className="mx-auto max-w-4xl text-2xl leading-tight font-medium tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
             Saatnya Bikin Malang Menyala Bareng Karya Terbaikmu!
           </h2>
-          <Button variant={"primary-gradient"} className="mt-6 rounded-lg sm:rounded-xl px-5 py-3 text-xs sm:text-sm sm:px-7 sm:py-4 h-11 sm:h-12" asChild>
+          <Button variant={"primary-gradient"} className="mt-12" asChild>
             <Link href="#kemitraan" className="flex items-center gap-2.5">
               Kolaborasi Kemitraan
-              <div className="flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-white text-[#c94fa2] shrink-0">
+              <div className="text-brand-magenta-dark flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white sm:h-5 sm:w-5">
                 <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               </div>
             </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="border-t border-white/20">
           <div className="flex flex-col md:flex-row">
             {/* Logo & Name */}
-            <div className="flex flex-1 flex-col md:flex-row items-center gap-4 px-6 py-12 md:gap-8 md:px-16 lg:gap-8 lg:pl-24 text-center md:text-left justify-center md:justify-start">
+            <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-12 text-center md:flex-row md:justify-start md:gap-8 md:px-16 md:text-left lg:gap-8 lg:pl-24">
               <Image
                 src={"/logo_festival_mbois.svg"}
                 alt="Logo"
@@ -61,7 +61,7 @@ export default function Footer() {
 
             {/* Tagline */}
             <div className="flex items-center justify-center border-t border-white/20 px-6 py-8 md:border-t-0 md:border-l md:px-16 lg:px-24">
-              <span className="text-xl leading-tight font-medium text-white md:text-3xl lg:text-[40px] text-center md:text-left">
+              <span className="text-center text-xl leading-tight font-medium text-white md:text-left md:text-3xl lg:text-[40px]">
                 Malang <br className="hidden md:inline" /> Menyala
               </span>
             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
         <div className="border-t border-white/20">
           <div className="flex flex-col md:flex-row">
             {/* Social Icons */}
-            <div className="flex items-center justify-center gap-6 px-6 py-8 md:px-16 lg:px-24 w-full md:w-auto">
+            <div className="flex w-full items-center justify-center gap-6 px-6 py-8 md:w-auto md:px-16 lg:px-24">
               <a
                 href="https://instagram.com/festivalmbois"
                 target="_blank"
@@ -121,7 +121,7 @@ export default function Footer() {
             </div>
 
             {/* Links & Copyright */}
-            <div className="flex flex-1 flex-col items-center text-center justify-center gap-4 border-t border-white/20 px-6 py-8 sm:flex-row sm:items-center md:justify-end md:text-left md:border-t-0 md:border-l md:px-16">
+            <div className="flex flex-1 flex-col items-center justify-center gap-4 border-t border-white/20 px-6 py-8 text-center sm:flex-row sm:items-center md:justify-end md:border-t-0 md:border-l md:px-16 md:text-left">
               <Link
                 href="#privacy"
                 className="text-sm font-medium text-white transition-colors hover:text-white/80"

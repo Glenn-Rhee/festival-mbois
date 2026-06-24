@@ -1,4 +1,5 @@
 import { Accordion } from "@/components/ui/accordion";
+import { Plus } from "lucide-react";
 
 const faqItems = [
   {
@@ -24,14 +25,14 @@ export default function FaqSection() {
       <div className="relative z-10 container mx-auto max-w-4xl px-4">
         {/* Header */}
         <div className="mx-auto mb-32 flex max-w-[890px] flex-col items-center text-center">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-widest text-[#F2F2F2] capitalize md:text-base">
-            <span>+</span>
+          <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-widest capitalize">
+            <Plus className="size-4" />
             <span>FAQs</span>
           </div>
-          <h2 className="mt-6 text-3xl font-medium tracking-tight text-[#F2F2F2] md:text-5xl lg:text-6xl lg:leading-snug">
+          <h2 className="text-neutral-off-white mt-6 text-3xl font-medium tracking-tight md:text-5xl lg:text-6xl lg:leading-snug">
             Ada Pertanyaan?
           </h2>
-          <p className="mt-6 max-w-[890px] text-sm leading-relaxed text-[#F2F2F2] lg:text-2xl">
+          <p className="text-neutral-off-white mt-6 max-w-[890px] text-sm leading-relaxed lg:text-2xl">
             Temukan jawaban cepat seputar pelaksanaan, akses tiket, dan
             keterlibatan ekosistem di Festival Mbois 11.
           </p>

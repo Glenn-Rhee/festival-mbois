@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FloatingOrb } from "../ui/floating-orb";
 import { Button } from "../ui/button";
-import { CircleArrowRight } from "lucide-react";
+import { ArrowRight, CircleArrowRight } from "lucide-react";
 import { StarParticles } from "../ui/star-particles";
 
 export default function HeroSection() {
@@ -55,8 +55,8 @@ export default function HeroSection() {
               {/* ICCN */}
               <Image
                 src={"/logo_iccn.webp"}
-                width={60}
-                height={28}
+                width={70}
+                height={60}
                 alt="LOGO ICCN"
                 style={{ width: "auto", height: "auto" }}
               />
@@ -64,8 +64,8 @@ export default function HeroSection() {
               {/* MCF hex icon */}
               <Image
                 src={"/logo_mcf.webp"}
-                width={40}
-                height={32}
+                width={70}
+                height={64}
                 alt="LOGO MCF"
                 style={{ width: "auto", height: "auto" }}
               />
@@ -73,8 +73,8 @@ export default function HeroSection() {
               {/* Malang Kota Kreatif */}
               <Image
                 src={"/logo_malang_arts.webp"}
-                width={60}
-                height={28}
+                width={80}
+                height={60}
                 alt="LOGO MALANG ARTS"
                 style={{ width: "auto", height: "auto" }}
               />
@@ -82,7 +82,7 @@ export default function HeroSection() {
               {/* UNESCO */}
               <Image
                 src={"/logo_unesco.webp"}
-                width={45}
+                width={70}
                 height={20}
                 alt="ICCN"
                 style={{ width: "auto", height: "auto" }}
@@ -95,7 +95,7 @@ export default function HeroSection() {
                 className="mb-2 text-xl font-semibold tracking-normal whitespace-nowrap uppercase md:text-[48px]"
                 style={{
                   backgroundImage:
-                    "linear-gradient(to right, #FFFFFF, #946889)",
+                    "linear-gradient(to right, #FFFFFF, var(--brand-purple-muted))",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -106,7 +106,7 @@ export default function HeroSection() {
               </p>
 
               {/* Main heading */}
-              <h1 className="mb-6 -ml-1 bg-linear-to-r from-white via-[#f3c8e7] to-[#FFB6E8] bg-clip-text text-3xl leading-[0.95] font-semibold tracking-normal text-transparent md:text-[clamp(4rem,10vw,8.5rem)] lg:mb-12 lg:-ml-2 lg:text-[118px]">
+              <h1 className="via-brand-pink-baby to-brand-pink-glow mb-6 -ml-1 bg-linear-to-r from-white bg-clip-text text-3xl leading-[0.95] font-semibold tracking-normal text-transparent md:text-[clamp(4rem,10vw,8.5rem)] lg:mb-12 lg:-ml-2 lg:text-[118px]">
                 MALANG MENYALA
               </h1>
             </div>
@@ -120,34 +120,25 @@ export default function HeroSection() {
         <div className="relative right-0 bottom-0 left-0 z-10 mt-4 flex w-full flex-col-reverse items-center justify-between gap-6 px-6 pb-12 md:flex-row lg:absolute lg:right-[72px] lg:bottom-6 lg:left-[72px] lg:w-auto lg:px-0 lg:pb-0">
           {/* CTA buttons */}
           <div
-            className="animate-fade-up flex w-full flex-row items-center justify-center gap-3 px-2 md:justify-start"
+            className="animate-fade-up grid w-full grid-cols-1 items-center justify-center gap-3 px-2 sm:grid-cols-2 md:flex md:flex-row md:justify-start"
             style={{ animationDelay: "200ms" }}
           >
-            <Button
-              variant={"outline"}
-              className="h-11 flex-1 rounded-lg px-3 text-xs whitespace-nowrap sm:h-12 sm:flex-initial sm:px-7 sm:text-sm lg:rounded-xl"
-              asChild
-            >
-              <Link href="#registration">Get a Ticket</Link>
-            </Button>
+            <Link href="#registration" className="flex-1 sm:flex-initial">
+              <Button variant={"outline"}>Get a Ticket</Button>
+            </Link>
 
-            <Button
-              variant={"primary-gradient"}
-              className="h-11 flex-1 rounded-lg px-3 text-xs whitespace-nowrap sm:h-12 sm:flex-initial sm:px-7 sm:text-sm lg:rounded-xl"
-              asChild
-            >
-              <Link
-                href="#registration"
-                className="flex items-center justify-center gap-1.5 sm:gap-3"
-              >
+            <Link href="#registration" className="flex-1 sm:flex-initial">
+              <Button variant={"primary-gradient"}>
                 Business Matching
-                <CircleArrowRight className="h-4 w-4 shrink-0 fill-white text-[#EA5EA7] sm:h-5 sm:w-5" />
-              </Link>
-            </Button>
+                <div className="text-brand-magenta-dark ml-2 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white sm:h-5 sm:w-5">
+                  <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                </div>
+              </Button>
+            </Link>
           </div>
 
           {/* Tagline */}
-          <div className="text-center md:text-right">
+          <div className="text-center md:w-full md:text-right">
             <p className="text-[15px] tracking-normal text-white uppercase lg:text-2xl">
               FROM EVENT TO SYSTEM
             </p>

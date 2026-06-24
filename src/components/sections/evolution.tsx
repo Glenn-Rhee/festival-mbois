@@ -34,7 +34,7 @@ export default function EvolutionSection() {
   return (
     <section
       id="evolution"
-      className="relative w-full overflow-hidden bg-[#322130] py-14 md:py-[72px]"
+      className="relative w-full overflow-hidden bg-brand-aubergine py-14 md:py-[72px]"
     >
       {/* Background Grid & Ornaments */}
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -59,10 +59,10 @@ export default function EvolutionSection() {
       <div className="max-w-8xl relative z-10 mx-auto w-full px-6 lg:px-[72px]">
         {/* Header */}
         <div className="mb-10 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
-          <h2 className="text-4xl font-medium tracking-tight text-[#F2F2F2] md:text-6xl lg:text-8xl">
+          <h2 className="text-4xl font-medium tracking-tight text-neutral-off-white md:text-6xl lg:text-8xl">
             Evolusi 11 Tahun
           </h2>
-          <p className="max-w-96 text-lg leading-snug font-semibold text-[#F2F2F2] md:text-right md:text-xl lg:text-[32px]">
+          <p className="max-w-96 text-lg leading-snug font-semibold text-neutral-off-white md:text-right md:text-xl lg:text-[32px]">
             Dari Ruang Ekspresi Menjadi Hub Ekosistem
           </p>
         </div>
@@ -72,12 +72,12 @@ export default function EvolutionSection() {
           {evolutionData.map((item, index) => (
             <div
               key={item.id}
-              className="relative h-[300px] border-l border-[#bdbdbd] pt-2 pr-4 pl-6 md:h-[350px] lg:h-[400px]"
+              className="relative h-[300px] border-l border-neutral-gray pt-2 pr-4 pl-6 md:h-[350px] lg:h-[400px]"
             >
-              <h3 className="mb-4 text-xl font-medium text-[#F2F2F2] lg:text-2xl">
+              <h3 className="mb-4 text-xl font-medium text-neutral-off-white lg:text-2xl">
                 {item.title}
               </h3>
-              <p className="text-sm leading-relaxed text-[#F2F2F2] lg:text-lg">
+              <p className="text-sm leading-relaxed text-neutral-off-white lg:text-lg">
                 {item.description}
               </p>
 
@@ -101,11 +101,11 @@ export default function EvolutionSection() {
           {evolutionData.map((item, index) => (
             <div
               key={item.id}
-              className="flex flex-col border-t border-[#ffffff1f] py-6"
+              className="flex flex-col border-t border-white/10 py-6"
             >
               {/* Year */}
               <span
-                className={`tracking-normal text-[#F2F2F2] ${
+                className={`tracking-normal text-neutral-off-white ${
                   index === evolutionData.length - 1
                     ? "text-[28px] font-bold"
                     : "text-[22px] font-semibold"
@@ -115,18 +115,18 @@ export default function EvolutionSection() {
               </span>
 
               {/* Title */}
-              <h3 className="mt-4 text-[18px] font-medium tracking-wide text-[#f2f2f2]">
+              <h3 className="mt-4 text-[18px] font-medium tracking-wide text-neutral-off-white">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-2 text-sm leading-relaxed font-light text-[#F2F2F2]">
+              <p className="mt-2 text-sm leading-relaxed font-light text-neutral-off-white">
                 {item.description}
               </p>
             </div>
           ))}
           {/* Bottom border line */}
-          <div className="border-t border-[#ffffff1f]" />
+          <div className="border-t border-white/10" />
         </div>
       </div>
     </section>

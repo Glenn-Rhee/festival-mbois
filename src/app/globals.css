@@ -1,8 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #111B26;
+  --background: #111b26;
   --foreground: #ffffff;
+
+  /* Brand Palette Variables */
+  --brand-navy: #111b26;
+  --brand-rose: #d0547f;
+  --brand-rose-hover: #b04068;
+  --brand-pink: #ea5ea7;
+  --brand-pink-glow: #ffb6e8;
+  --brand-pink-baby: #f3c8e7;
+  --brand-pink-pastel: #ffbbec;
+  --brand-purple-orchid: #e388cc;
+  --brand-purple-medium: #aa55a8;
+  --brand-purple-deep: #6428b4;
+  --brand-purple-light: #be50ff;
+  --brand-purple-muted: #946889;
+  --brand-magenta-dark: #c94fa2;
+  --brand-aubergine: #322130;
+  --brand-plum: #1a1126;
+  --brand-violet: #120d22;
+  --brand-blue-baby: #7baefa;
+  --brand-blue-dark: #161821;
+  --neutral-off-white: #f2f2f2;
+  --neutral-gray: #bdbdbd;
+  --neutral-charcoal: #1e1e1e;
 }
 
 @theme inline {
@@ -10,22 +33,63 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-plus-jakarta-sans), sans-serif;
   --font-onest: var(--font-onest), sans-serif;
-  
+
+  /* Tailwind CSS Utility Mapping */
+  --color-brand-navy: #111b26;
+  --color-brand-rose: #d0547f;
+  --color-brand-rose-hover: #b04068;
+  --color-brand-pink: #ea5ea7;
+  --color-brand-pink-glow: #ffb6e8;
+  --color-brand-pink-baby: #f3c8e7;
+  --color-brand-pink-pastel: #ffbbec;
+  --color-brand-purple-orchid: #e388cc;
+  --color-brand-purple-medium: #aa55a8;
+  --color-brand-purple-deep: #6428b4;
+  --color-brand-purple-light: #be50ff;
+  --color-brand-purple-muted: #946889;
+  --color-brand-magenta-dark: #c94fa2;
+  --color-brand-aubergine: #322130;
+  --color-brand-plum: #1a1126;
+  --color-brand-violet: #120d22;
+  --color-brand-blue-baby: #7baefa;
+  --color-brand-blue-dark: #161821;
+  --color-neutral-off-white: #f2f2f2;
+  --color-neutral-gray: #bdbdbd;
+  --color-neutral-charcoal: #1e1e1e;
+
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
   --animate-fade-up: fade-up 1s ease-out forwards;
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
   @keyframes pulse-glow {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.05); }
+    0%,
+    100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
   }
   @keyframes fade-up {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -35,6 +99,6 @@ html {
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--neutral-off-white);
   font-family: var(--font-plus-jakarta-sans), Arial, Helvetica, sans-serif;
 }

@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import { StarParticles } from "../ui/star-particles";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Plus } from "lucide-react";
 
 export default function AboutSection() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <>
-      <section id="about" className="relative w-full py-16 lg:py-[356px]">
+      <section id="about" className="relative w-full py-16 lg:py-80">
         <StarParticles top={0} right={5} size="small" />
         <StarParticles top={5} right={15} size="medium" />
         <StarParticles top={10} right={30} size="medium" glow={true} />
@@ -22,17 +22,17 @@ export default function AboutSection() {
         <div className="max-w-8xl mx-auto w-full flex-col px-6 lg:flex-row lg:px-28">
           {/* Left Content - Title */}
           <div className="mb-6 flex items-center gap-2">
-            <span className="text-sm text-white">+</span>
-            <span className="text-xs md:text-sm font-medium text-white">Tentang Kami</span>
+            <Plus className="size-4" />
+            <span className="font-medium text-white">Tentang Kami</span>
           </div>
 
           <div className="flex flex-col items-start justify-between lg:flex-row">
-            <h2 className="max-w-[560px] text-2xl leading-normal font-semibold tracking-normal text-wrap text-white md:text-5xl lg:text-[64px]">
+            <h2 className="w-full max-w-[560px] text-[32px] leading-normal font-semibold tracking-normal text-wrap text-white md:text-5xl lg:text-[64px]">
               Lebih dari Sekadar Hub, Ini Perjalanan Menembus Batas.
             </h2>
 
             {/* Right Content - Description */}
-            <div className="flex w-full max-w-[460px] flex-col justify-center pt-12 text-sm leading-normal text-[#F2F2F2] md:text-base lg:pt-0 lg:text-lg">
+            <div className="text-neutral-off-white flex w-full max-w-[460px] flex-col justify-center pt-12 text-sm leading-normal md:text-base lg:pt-0 lg:text-lg">
               <div>
                 <p>
                   Festival Mbois adalah perayaan tahunan ekosistem kreatif Kota
@@ -62,7 +62,7 @@ export default function AboutSection() {
 
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="mt-6 flex w-max cursor-pointer items-center gap-1.5 text-xs font-semibold tracking-wider text-[#FFBAEB] transition-colors hover:text-white focus:outline-none lg:hidden"
+                className="text-brand-pink-pastel mt-6 flex w-max cursor-pointer items-center gap-1.5 text-xs font-semibold tracking-wider transition-colors hover:text-white focus:outline-none lg:hidden"
               >
                 {isExpanded ? "Sembunyikan" : "Selengkapnya..."}
               </button>
