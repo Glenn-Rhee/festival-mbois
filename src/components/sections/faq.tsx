@@ -3,19 +3,24 @@ import { Plus } from "lucide-react";
 
 const faqItems = [
   {
-    title: "Acara ini buat siapa aja sih?",
+    title: "Apa itu Festival Mbois 11: Malang Menyala?",
     content:
-      "Selama kamu punya ketertarikan di dunia startup, seni visual, teknologi digital, craft, atau pengen cari jaringan baru di industri kreatif—kamu wajib dateng!",
+      "Festival Mbois 11 adalah acara perayaan industri kreatif tahunan di Malang. Mengusung tema Malang Menyala, festival ini menjadi wadah bertemunya para kreator, seniman, pelaku UMKM, dan masyarakat luas melalui berbagai rangkaian acara kreatif.",
   },
   {
-    title: "Tiketnya bisa di-refund kalau tiba-tiba ada jadwal mendadak?",
+    title: "Kapan dan di mana Festival Mbois 11 diselenggarakan?",
     content:
-      "Tiket yang sudah dibeli tidak dapat dikembalikan (non-refundable) kecuali jika acara dibatalkan oleh pihak penyelenggara.",
+      "Acara akan diselenggarakan pada tanggal 21 - 23 Agustus 2026 di Stadion Gajayana Malang.",
   },
   {
-    title: "Bagaimana cara mendaftar untuk sesi B2B Pitching atau Tenant UMKM?",
+    title: "Siapa saja yang bisa hadir di acara ini?",
     content:
-      "Pendaftaran dapat dilakukan melalui link khusus yang akan kami sediakan di Instagram resmi Festival Mbois 11 atau bisa langsung menghubungi panitia melalui kontak yang tertera.",
+      "Festival ini terbuka untuk umum! Mulai dari penikmat seni, penggemar musik, penggiat industri kreatif, hingga keluarga yang ingin menikmati akhir pekan di pasar kreatif.",
+  },
+  {
+    title: "Bagaimana cara menghubungi pihak penyelenggara untuk pertanyaan lebih lanjut atau kerja sama?",
+    content:
+      "Anda bisa menghubungi kami dengan mengirimkan pesan langsung (DM) melalui Instagram resmi kami di @festivalmbois.",
   },
 ];
 

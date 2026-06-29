@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Beranda", href: "#home" },
   { label: "Tentang Kami", href: "#about" },
   { label: "Program", href: "#program" },
-  { label: "Registrasi", href: "#registration" },
+  { label: "Pendaftaran", href: "#registration" },
 ];
 
 export default function Navbar() {
@@ -32,6 +32,18 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   const handleNavClick = () => setIsMobileMenuOpen(false);
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    // Update URL hash without triggering default jump
+    window.history.pushState(null, "", href);
+  };
 
   return (
     <>
@@ -55,13 +67,13 @@ export default function Navbar() {
           <Link
             href="#home"
             className="flex items-center gap-3"
-            onClick={handleNavClick}
+            onClick={(e) => scrollToSection(e, "#home")}
           >
             <Image
-              src={"/logo_festival_mbois_yellow.svg"}
+              src={"/logo_festival_mbois.png"}
               alt="logo"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               className="h-auto w-auto"
             />
             <div className="flex flex-col">
@@ -80,6 +92,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
                   className="text-lg font-medium text-white/85 transition-colors hover:text-white"
                 >
                   {link.label}
@@ -88,7 +101,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Desktop CTA & Language */}
+          {/* Desktop Language Switcher */}
           <div className="hidden cursor-pointer items-center gap-8 lg:flex">
             <button
               type="button"
@@ -97,16 +110,8 @@ export default function Navbar() {
             >
               <Globe className="h-5 w-5" />
               <span className="text-lg font-medium">{language}</span>
+              <ChevronDown className="h-4 w-4" />
             </button>
-
-            <Link
-              href="#login"
-              className={cn(
-                "border-brand-pink-pastel text-brand-pink-pastel rounded-xl border px-6 py-4 text-lg font-medium transition-all hover:bg-white/10",
-              )}
-            >
-              Masuk
-            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -158,7 +163,7 @@ export default function Navbar() {
           {/* Brand (Logo + Text) */}
           <div className="flex items-center gap-3">
             <Image
-              src="/logo_festival_mbois_yellow.svg"
+              src={"/logo_festival_mbois.png"}
               alt="Logo"
               width={40}
               height={40}
@@ -192,7 +197,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={handleNavClick}
+                onClick={(e) => scrollToSection(e, link.href)}
                 className={cn(
                   "text-lg font-medium text-white/80 transition-all duration-300 hover:text-white",
                   isMobileMenuOpen
@@ -255,8 +260,8 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="#login"
-              onClick={handleNavClick}
+              href="#registration"
+              onClick={(e) => scrollToSection(e, "#registration")}
               className={cn(
                 "border-brand-pink-pastel text-brand-pink-pastel flex w-full items-center justify-center rounded-2xl border bg-transparent py-4 text-sm font-semibold transition-all hover:bg-white/10",
                 isMobileMenuOpen
@@ -269,7 +274,7 @@ export default function Navbar() {
                   : "0ms",
               }}
             >
-              Masuk
+              Daftar
             </Link>
           </div>
         </div>

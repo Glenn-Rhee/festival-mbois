@@ -44,7 +44,7 @@ export default function FestivalVideoSection() {
                     {/* Left Side text */}
                     <div className="xs:gap-2 flex items-center gap-1.5 md:gap-4 lg:gap-5">
                       <img
-                        src="/logo_festival_mbois.svg"
+                        src="/logo_festival_mbois.png"
                         alt="Logo Festival Mbois"
                         className="xs:w-6 h-auto w-5 md:w-16 lg:w-[75px]"
                       />

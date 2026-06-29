@@ -1,42 +1,41 @@
 import { Plus } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 const programs = [
   {
     id: 1,
-    title: "Creative Brand Market",
+    title: "Malang Sportainment",
     description:
-      "Eksibisi komersial yang mengurasi merek lokal progresif dari subsektor mode, kriya, kuliner, dan gaya hidup. Program ini dirancang dengan pendekatan manajemen trafik modern guna memaksimalkan interaksi langsung antara produk konsumen dengan ribuan pengunjung harian dari demografi usia produktif.",
-    image: "/creative_brand_market.webp",
+      "Perayaan energi kreatif terbesar yang secara spektakuler menyatukan dunia olahraga, kompetisi esports, dan aksi seni urban dalam satu panggung. Acara ini dirancang sebagai wadah interaksi lintas komunitas yang memadukan keseruan laga kompetitif dengan hiburan modern seperti live music, drone show, hingga festival kuliner.",
+    image: "/program_sportainment.webp",
   },
   {
     id: 2,
-    title: "Creative IP Market",
+    title: "Sound of Malang Menyala",
     description:
-      "Forum bisnis khusus yang memfasilitasi negosiasi strategis dan monetisasi Kekayaan Intelektual (Intellectual Property). Menghubungkan secara langsung para kreator konten, ilustrator, dan pengembang aset digital lokal dengan jajaran investor korporasi serta pemangku kepentingan industri skala nasional.",
-    image: "/creative_ip_market.webp",
+      "Perayaan energi baru Kota Malang di mana musik, budaya, kreativitas, dan teknologi bertemu dalam satu kesatuan. Pengunjung akan disuguhkan pengalaman multisensori, mulai dari panggung musik dan seni media interaktif, hingga pertunjukan budaya dan pasar ekonomi kreatif yang semarak, semuanya dirancang untuk menyatukan ribuan orang dalam satu gerakan kreatif yang menginspirasi.",
+    image: "/program_sound_of_malang_menyala.webp",
   },
   {
     id: 3,
-    title: "Media Art Exhibition",
+    title: "Malang City Connect",
     description:
-      "Eksibisi seni digital imersif yang mengintegrasikan teknologi kecerdasan buatan (Artificial Intelligence) dengan seni rupa kontemporer. Menyajikan pengalaman visual futuristik berteknologi tinggi, memberikan ruang bagi mitra sponsor untuk mengasosiasikan merek mereka dengan konsep inovasi dan teknologi terdepan.",
-    image: "/media_exhibition.webp",
+      "Konferensi dan forum bisnis strategis yang menjadi titik temu bagi para pemimpin kota, pelaku industri, investor, akademisi, dan komunitas kreatif untuk mendorong ekosistem inklusif dan berkelanjutan. Acara ini mengintegrasikan berbagai program utama seperti Creative City Summit, Business Matching, hingga MBOIS AI & Creative Pitch guna mengubah ide inovatif menjadi investasi dan dampak nyata bagi masa depan industri kreatif Indonesia.",
+    image: "/program_malang_city_connect.webp",
   },
   {
     id: 4,
-    title: "City Activation",
+    title: "Made by Arema Market ",
     description:
-      "Aktivasi ruang publik berskala masif dengan mengintegrasikan elemen arsitektur warisan budaya (heritage) menggunakan teknologi projection mapping, pencahayaan teatrikal, dan instalasi interaktif. Program ini menjamin jangkauan publikasi yang luas serta dokumentasi media yang bernilai tinggi bagi visibilitas sponsor.",
-    image: "/city_activation.webp",
+      "Etalase kreatif yang mempertemukan brand lokal, kreator, dan startup teknologi guna merayakan inovasi masa depan yang berakar kuat pada identitas lokal Malang melalui zona fesyen, kriya, kuliner, hingga creative hub. Dirancang sebagai panggung kolaborasi tanpa batas untuk mendukung karya terbaik Arek Malang agar siap bersinar dan berdampak di kancah yang lebih luas.",
+    image: "/program_made_by_arema_market.webp",
   },
   {
     id: 5,
-    title: "National Summit",
+    title: "Malang Mediart Experience",
     description:
-      "Konferensi tingkat tinggi ekonomi kreatif yang mempertemukan jajaran regulator pemerintahan, direksi BUMN, dan pemimpin industri digital. Forum ini fokus pada perumusan kebijakan strategis dan pemetaan tren industri, memposisikan entitas sponsor di barisan terdepan penggerak ekonomi nasional.",
-    image: "/nasional_summit.webp",
+      "Menghadirkan masa depan kreativitas melalui perpaduan spektakuler antara seni, teknologi, dan inovasi. Pengunjung akan disuguhkan pengalaman imersif yang memukau, mulai dari projection mapping dan instalasi interaktif hingga eksplorasi seni berbasis AI dan robotika. Acara ini merupakan wadah kolaborasi visioner yang dirancang untuk menyalakan energi kreatif baru dan membawa ekosistem digital Malang ke level global.",
+    image: "/program_malang_mediart_experience.webp",
   },
 ];
 
@@ -44,14 +43,8 @@ export default function ProgramSection() {
   return (
     <section
       id="program"
-      className="bg-brand-navy relative w-full py-24 md:py-32 lg:py-[356px]"
+      className="relative w-full py-24 md:py-32 lg:py-[356px]"
     >
-      {/* Background Glow (Connecting from Festival Video Section) */}
-      <div className="pointer-events-none absolute top-40 right-0 z-0 h-[300px] w-[300px] translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.3)_0%,rgba(227,136,204,0.5)_15%,rgba(227,136,204,0.2)_40%,transparent_70%)] blur-[50px] md:h-[1000px] md:w-[1000px] md:blur-[120px]" />
-
-      {/* Original Background glow */}
-      <div className="pointer-events-none absolute top-1/3 left-0 h-[250px] w-[250px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(100,40,180,0.10)_0%,transparent_65%)] blur-2xl md:h-[800px] md:w-[800px] md:blur-[100px]" />
-
       <div className="max-w-8xl relative z-10 mx-auto w-full px-6 lg:px-[72px]">
         {/* Header */}
         <div className="mb-16 flex flex-col gap-12 md:flex-row md:items-center md:justify-between lg:mb-24 lg:items-end">
@@ -81,12 +74,12 @@ export default function ProgramSection() {
               className="group flex flex-col items-center gap-10 md:flex-row md:gap-16 lg:gap-24"
             >
               {/* Image Container */}
-              <div className="relative aspect-16/10 w-full overflow-hidden rounded-[16px] md:aspect-4/3 md:w-[45%] md:rounded-[24px] lg:aspect-16/11 lg:w-[45%]">
+              <div className="relative aspect-16/10 w-full overflow-hidden rounded-[16px] bg-brand-navy md:aspect-4/3 md:w-[45%] md:rounded-[24px] lg:aspect-16/11 lg:w-[45%]">
                 <Image
                   src={program.image}
                   alt={program.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="scale-[1.02] object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

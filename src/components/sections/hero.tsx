@@ -1,11 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FloatingOrb } from "../ui/floating-orb";
 import { Button } from "../ui/button";
-import { ArrowRight, CircleArrowRight } from "lucide-react";
+import { CircleArrowRight } from "lucide-react";
 import { StarParticles } from "../ui/star-particles";
 
 export default function HeroSection() {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    window.history.pushState(null, "", href);
+  };
+
   return (
     <>
       <section
@@ -55,28 +67,28 @@ export default function HeroSection() {
               {/* ICCN */}
               <Image
                 src={"/logo_iccn.webp"}
-                width={70}
-                height={60}
+                width={56}
+                height={48}
                 alt="LOGO ICCN"
-                style={{ width: "auto", height: "auto" }}
+                style={{ width: "auto", height: "40px" }}
               />
 
               {/* MCF hex icon */}
               <Image
                 src={"/logo_mcf.webp"}
-                width={70}
-                height={64}
+                width={56}
+                height={48}
                 alt="LOGO MCF"
-                style={{ width: "auto", height: "auto" }}
+                style={{ width: "auto", height: "40px" }}
               />
 
               {/* Malang Kota Kreatif */}
               <Image
                 src={"/logo_malang_arts.webp"}
-                width={80}
-                height={60}
+                width={56}
+                height={48}
                 alt="LOGO MALANG ARTS"
-                style={{ width: "auto", height: "auto" }}
+                style={{ width: "auto", height: "40px" }}
               />
 
               {/* UNESCO */}
@@ -84,8 +96,8 @@ export default function HeroSection() {
                 src={"/logo_unesco.webp"}
                 width={70}
                 height={20}
-                alt="ICCN"
-                style={{ width: "auto", height: "auto" }}
+                alt="UNESCO"
+                style={{ width: "auto", height: "40px" }}
               />
             </div>
 
@@ -118,21 +130,15 @@ export default function HeroSection() {
 
         {/* ── Bottom Bar: CTA Buttons & Tagline ── */}
         <div className="relative right-0 bottom-0 left-0 z-10 mt-4 flex w-full flex-col-reverse items-center justify-between gap-6 px-6 pb-12 md:flex-row lg:absolute lg:right-[72px] lg:bottom-6 lg:left-[72px] lg:w-auto lg:px-0 lg:pb-0">
-          {/* CTA buttons */}
+          {/* CTA button */}
           <div
-            className="animate-fade-up grid w-full grid-cols-1 items-center justify-center gap-3 px-2 sm:grid-cols-2 md:flex md:flex-row md:justify-start"
+            className="animate-fade-up flex w-full items-center justify-center md:justify-start"
             style={{ animationDelay: "200ms" }}
           >
-            <Link href="#registration" className="flex-1 sm:flex-initial">
-              <Button variant={"outline"}>Get a Ticket</Button>
-            </Link>
-
-            <Link href="#registration" className="flex-1 sm:flex-initial">
+            <Link href="#registration" onClick={(e) => scrollToSection(e, "#registration")}>
               <Button variant={"primary-gradient"}>
-                Business Matching
-                <div className="text-brand-magenta-dark ml-2 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white sm:h-5 sm:w-5">
-                  <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
-                </div>
+                Pendaftaran Dibuka
+                <CircleArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>

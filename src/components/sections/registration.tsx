@@ -8,46 +8,28 @@ import { Plus } from "lucide-react";
 
 const registrationRoles = [
   {
-    id: "publik",
-    title: "Publik",
+    id: "volunteer",
+    title: "Volunteer",
     description:
-      "Akses penuh menuju area stadion untuk menikmati seluruh rangkaian eksibisi seni imersif, creative brand market, instalasi teknologi interaktif, hingga panggung konser musik utama.",
+      "Kesempatan menjadi volunteer telah tiba. Daftarkan dirimu sekarang dan ambil peran aktif dalam mewujudkan pengalaman tak terlupakan bagi ribuan pengunjung.",
     buttons: [
       {
-        label: "Regular Pass",
+        label: "Daftar",
         variant: "outline",
-        href: "#",
-      },
-      {
-        label: "3 Days Pass",
-        variant: "gradient",
-        href: "#",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSdMTq4E3p2Rx9HDGKoOzNVoOPOLJOlAkYIyMVtRDAmqlxGcLg/viewform?usp=send_form",
       },
     ],
   },
   {
-    id: "b2b",
-    title: "B2B",
+    id: "kolaborator",
+    title: "Kolaborator",
     description:
-      "Gerbang eksklusif untuk mendaftarkan startup Anda di Pitching Stage, memesan slot di Investor Meeting Room, serta mengakses sesi diskusi strategis bersama para pemimpin industri digital.",
+      "Kami mengundang para kreator, komunitas, praktisi visual, talenta lokal, hingga inovator teknologi untuk bergabung dan mengambil peran sebagai kolaborator resmi.",
     buttons: [
       {
-        label: "Get Space",
+        label: "Daftar",
         variant: "outline",
-        href: "#",
-      },
-    ],
-  },
-  {
-    id: "umkm",
-    title: "Brand & UMKM",
-    description:
-      "Formulir resmi pendaftaran kurasi tenant kreatif khusus subsektor Fashion, Kriya, dan Kuliner. Tempatkan produk terbaik Anda di hadapan puluhan ribu pengunjung aktif harian.",
-    buttons: [
-      {
-        label: "Get Space",
-        variant: "outline",
-        href: "#",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSf0vD7vxkJ6mTx23C6Ic81ekpyfituSA-pMx90iRVK_UOl88g/viewform",
       },
     ],
   },
@@ -57,11 +39,8 @@ export default function RegistrationSection() {
   return (
     <section
       id="registration"
-      className="bg-brand-navy relative w-full overflow-hidden py-24 md:py-32 lg:py-[256px]"
+      className="relative w-full py-24 md:py-32 lg:py-[256px]"
     >
-      {/* Background glow */}
-      <div className="pointer-events-none absolute top-1/2 right-0 z-0 h-[250px] w-[250px] translate-x-1/3 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(233,93,181,0.15)_0%,transparent_65%)] blur-2xl md:h-[800px] md:w-[800px] md:blur-[120px]" />
-
       {/* star ornaments */}
       <StarParticles top={2} left={12} size="medium" glow={true} />
       <StarParticles top={5} right={10} size="large" glow={true} />
@@ -70,9 +49,6 @@ export default function RegistrationSection() {
       <StarParticles top={15} right={25} size="medium" />
       <StarParticles top={18} left={15} size="large" glow={true} />
       <StarParticles top={22} right={5} size="small" glow={true} />
-
-      {/* glow ornaments */}
-      <div className="absolute top-0 right-1/4 h-[300px] w-[300px] translate-x-1/2 translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.3)_0%,rgba(227,136,204,0.5)_15%,rgba(227,136,204,0.2)_35%,transparent_60%)] blur-[50px] md:h-[800px] md:w-[800px] md:blur-[120px]" />
 
       <div className="max-w-8xl relative z-10 mx-auto w-full px-6 lg:px-[72px]">
         {/* Header */}
@@ -121,18 +97,16 @@ export default function RegistrationSection() {
                 }`}
               >
                 {role.buttons.map((btn, idx) => (
-                  <Link href={btn.href} key={idx} className="w-full">
+                  <Link
+                    href={btn.href}
+                    key={idx}
+                    className="w-full"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button
-                      variant={
-                        btn.variant === "gradient"
-                          ? "primary-gradient"
-                          : undefined
-                      }
-                      className={`w-full ${
-                        btn.variant === "gradient"
-                          ? ""
-                          : "border-brand-pink-pastel text-brand-pink-pastel border bg-transparent hover:bg-white/10"
-                      }`}
+                      variant="primary-gradient"
+                      className="w-full"
                     >
                       {btn.label}
                     </Button>

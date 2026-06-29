@@ -1,9 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 export default function Footer() {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    window.history.pushState(null, "", href);
+  };
+
   return (
     <footer className="bg-brand-aubergine relative w-full overflow-hidden">
       {/* Background Grid & Ornaments */}
@@ -33,7 +45,11 @@ export default function Footer() {
             Saatnya Bikin Malang Menyala Bareng Karya Terbaikmu!
           </h2>
           <Button variant={"primary-gradient"} className="mt-12" asChild>
-            <Link href="#kemitraan" className="flex items-center gap-2.5">
+            <Link
+              href="#registration"
+              onClick={(e) => scrollToSection(e, "#registration")}
+              className="flex items-center gap-2.5"
+            >
               Kolaborasi Kemitraan
               <div className="text-brand-magenta-dark flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white sm:h-5 sm:w-5">
                 <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
@@ -48,11 +64,11 @@ export default function Footer() {
             {/* Logo & Name */}
             <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-12 text-center md:flex-row md:justify-start md:gap-8 md:px-16 md:text-left lg:gap-8 lg:pl-24">
               <Image
-                src={"/logo_festival_mbois.svg"}
+                src={"/logo_festival_mbois.png"}
                 alt="Logo"
                 width={80}
                 height={80}
-                className="h-20 w-20 md:h-16 md:w-16 lg:h-[80px] lg:w-[80px]"
+                className="h-20 w-20 md:h-16 md:w-16 lg:h-[90px] lg:w-[90px]"
               />
               <span className="text-3xl leading-none font-semibold tracking-tight text-white md:text-6xl lg:text-8xl">
                 Festival Mbois 11
@@ -104,15 +120,15 @@ export default function Footer() {
                 />
               </a>
               <a
-                href="https://tiktok.com/@festivalmbois"
+                href="https://www.threads.com/@festivalmbois"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-opacity hover:opacity-80"
-                aria-label="TikTok"
+                aria-label="Threads"
               >
                 <Image
-                  src="/tiktok.svg"
-                  alt="TikTok"
+                  src="/threads.svg"
+                  alt="Threads"
                   width={24}
                   height={24}
                   className="h-6 w-6"
@@ -135,7 +151,7 @@ export default function Footer() {
                 Contact Us
               </Link>
               <p className="text-sm font-medium text-white">
-                © 2026 Festival Mbois Malang
+                © 2026 Malang Creative Fusion
               </p>
             </div>
           </div>
