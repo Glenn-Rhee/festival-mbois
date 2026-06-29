@@ -1,7 +1,12 @@
+"use client";
+
 import { Plus } from "lucide-react";
 import { StarParticles } from "../ui/star-particles";
+import { useLanguage } from "@/i18n/context";
 
 export default function AgendaSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="agenda" className="relative w-full">
       <StarParticles top={2} left={12} size="medium" glow={true} />
@@ -45,25 +50,23 @@ export default function AgendaSection() {
         <div className="mx-auto flex max-w-[800px] flex-col items-center text-center">
           <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-widest capitalize">
             <Plus className="size-4" />
-            <span>Agenda</span>
+            <span>{t.agenda.label}</span>
           </div>
           <h2 className="text-neutral-off-white mt-6 text-3xl font-medium tracking-tight md:text-5xl lg:text-[64px] lg:leading-snug">
-            Saat Kultur Bertemu Teknologi Terdepan.
+            {t.agenda.title}
           </h2>
           <p className="text-neutral-off-white mt-6 max-w-[870px] text-sm leading-relaxed lg:text-2xl">
-            Satu stadion, ribu ide, juta karya, satu gerakan. Simak ringkasan
-            agenda kolaborasi, eksibisi bisnis, hingga panggung sportainment
-            spektakuler Festival Mbois 11.
+            {t.agenda.description}
           </p>
         </div>
 
         {/* Coming Soon Box */}
         <div className="mx-auto mt-20 flex max-w-[700px] flex-col items-center justify-center rounded-xl border border-white/20 px-8 py-16 text-center md:mt-28 md:py-20">
           <h3 className="text-neutral-off-white text-2xl font-semibold tracking-tight md:text-3xl lg:text-[40px]">
-            Sesuatu yang Besar Sedang Disiapkan!
+            {t.agenda.comingSoonTitle}
           </h3>
           <p className="text-neutral-off-white/80 mt-4 text-sm md:text-base lg:text-lg">
-            Nantikan kejutan besar sedang disiapkan.
+            {t.agenda.comingSoonSubtitle}
           </p>
         </div>
       </div>

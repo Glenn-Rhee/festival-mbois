@@ -5,18 +5,19 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 import Image from "next/image";
 import { X, Globe, ChevronDown } from "lucide-react";
-
-const navLinks = [
-  { label: "Beranda", href: "#home" },
-  { label: "Tentang Kami", href: "#about" },
-  { label: "Program", href: "#program" },
-  { label: "Pendaftaran", href: "#registration" },
-];
+import { useLanguage } from "@/i18n/context";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState("ID");
+  const { language, setLanguage, t } = useLanguage();
+
+  const navLinks = [
+    { label: t.nav.home, href: "#home" },
+    { label: t.nav.about, href: "#about" },
+    { label: t.nav.program, href: "#program" },
+    { label: t.nav.registration, href: "#registration" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 60);
@@ -274,7 +275,7 @@ export default function Navbar() {
                   : "0ms",
               }}
             >
-              Daftar
+              {t.nav.register}
             </Link>
           </div>
         </div>

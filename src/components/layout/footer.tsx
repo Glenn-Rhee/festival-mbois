@@ -4,8 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
+import { useLanguage } from "@/i18n/context";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
@@ -42,7 +45,7 @@ export default function Footer() {
         {/* --- CTA SECTION --- */}
         <div className="flex flex-col items-center justify-center px-6 py-16 text-center md:py-32 lg:px-8">
           <h2 className="mx-auto max-w-4xl text-2xl leading-tight font-medium tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-            Saatnya Bikin Malang Menyala Bareng Karya Terbaikmu!
+            {t.footer.cta}
           </h2>
           <Button variant={"primary-gradient"} className="mt-12" asChild>
             <Link
@@ -50,7 +53,7 @@ export default function Footer() {
               onClick={(e) => scrollToSection(e, "#registration")}
               className="flex items-center gap-2.5"
             >
-              Kolaborasi Kemitraan
+              {t.footer.ctaButton}
               <div className="text-brand-magenta-dark flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white sm:h-5 sm:w-5">
                 <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               </div>
@@ -71,14 +74,14 @@ export default function Footer() {
                 className="h-20 w-20 md:h-16 md:w-16 lg:h-[90px] lg:w-[90px]"
               />
               <span className="text-3xl leading-none font-semibold tracking-tight text-white md:text-6xl lg:text-8xl">
-                Festival Mbois 11
+                {t.footer.brandName}
               </span>
             </div>
 
             {/* Tagline */}
             <div className="flex items-center justify-center border-t border-white/20 px-6 py-8 md:border-t-0 md:border-l md:px-16 lg:px-24">
               <span className="text-center text-xl leading-tight font-medium text-white md:text-left md:text-3xl lg:text-[40px]">
-                Malang <br className="hidden md:inline" /> Menyala
+                {t.footer.tagline}
               </span>
             </div>
           </div>
@@ -142,16 +145,16 @@ export default function Footer() {
                 href="#privacy"
                 className="text-sm font-medium text-white transition-colors hover:text-white/80"
               >
-                Privacy Policy
+                {t.footer.privacy}
               </Link>
               <Link
                 href="#contact"
                 className="text-sm font-medium text-white transition-colors hover:text-white/80"
               >
-                Contact Us
+                {t.footer.contact}
               </Link>
               <p className="text-sm font-medium text-white">
-                © 2026 Malang Creative Fusion
+                {t.footer.copyright}
               </p>
             </div>
           </div>

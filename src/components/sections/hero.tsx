@@ -6,8 +6,11 @@ import { FloatingOrb } from "../ui/floating-orb";
 import { Button } from "../ui/button";
 import { CircleArrowRight } from "lucide-react";
 import { StarParticles } from "../ui/star-particles";
+import { useLanguage } from "@/i18n/context";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
@@ -64,6 +67,15 @@ export default function HeroSection() {
           <div className="mt-10 flex w-full flex-col items-center text-center md:mt-0 lg:w-auto lg:items-start lg:text-left">
             {/* Partner logos row */}
             <div className="mb-8 flex flex-wrap items-center justify-center gap-5 opacity-95 lg:justify-start">
+              {/* MCF hex icon */}
+              <Image
+                src={"/logo_mcf.webp"}
+                width={56}
+                height={48}
+                alt="LOGO MCF"
+                style={{ width: "auto", height: "40px" }}
+              />
+              
               {/* ICCN */}
               <Image
                 src={"/logo_iccn.webp"}
@@ -73,9 +85,18 @@ export default function HeroSection() {
                 style={{ width: "auto", height: "40px" }}
               />
 
-              {/* MCF hex icon */}
+              {/* Kota Malang */}
               <Image
-                src={"/logo_mcf.webp"}
+                src={"/logo_kota_malang.webp"}
+                width={56}
+                height={48}
+                alt="LOGO MCF"
+                style={{ width: "auto", height: "40px" }}
+              />
+
+              {/* Dekopinda Kota Malang */}
+              <Image
+                src={"/logo_dekopinda.webp"}
                 width={56}
                 height={48}
                 alt="LOGO MCF"
@@ -114,12 +135,12 @@ export default function HeroSection() {
                   color: "transparent",
                 }}
               >
-                FESTIVAL MBOIS 11
+                {t.hero.subtitle}
               </p>
 
               {/* Main heading */}
               <h1 className="via-brand-pink-baby to-brand-pink-glow mb-6 -ml-1 bg-linear-to-r from-white bg-clip-text text-3xl leading-[0.95] font-semibold tracking-normal text-transparent md:text-[clamp(4rem,10vw,8.5rem)] lg:mb-12 lg:-ml-2 lg:text-[118px]">
-                MALANG MENYALA
+                {t.hero.title}
               </h1>
             </div>
           </div>
@@ -137,7 +158,7 @@ export default function HeroSection() {
           >
             <Link href="#registration" onClick={(e) => scrollToSection(e, "#registration")}>
               <Button variant={"primary-gradient"}>
-                Pendaftaran Dibuka
+                {t.hero.cta}
                 <CircleArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -146,10 +167,10 @@ export default function HeroSection() {
           {/* Tagline */}
           <div className="text-center md:w-full md:text-right">
             <p className="text-[15px] tracking-normal text-white uppercase lg:text-2xl">
-              FROM EVENT TO SYSTEM
+              {t.hero.tagline}
             </p>
             <p className="mt-1 text-[12px] font-light text-white lg:text-base">
-              21–23 Agustus 2026 &nbsp;|&nbsp; Stadion Gajayana, Malang
+              {t.hero.dateLocation}
             </p>
           </div>
         </div>

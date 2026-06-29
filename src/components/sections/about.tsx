@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { StarParticles } from "../ui/star-particles";
 import { Plus } from "lucide-react";
+import { useLanguage } from "@/i18n/context";
 
 export default function AboutSection() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <>
@@ -23,24 +25,19 @@ export default function AboutSection() {
           {/* Left Content - Title */}
           <div className="mb-6 flex items-center gap-2">
             <Plus className="size-4" />
-            <span className="font-medium text-white">Tentang Kami</span>
+            <span className="font-medium text-white">{t.about.label}</span>
           </div>
 
           <div className="flex flex-col items-start justify-between lg:flex-row">
             <h2 className="w-full max-w-[560px] text-[32px] leading-normal font-semibold tracking-normal text-wrap text-white md:text-5xl lg:text-[64px]">
-              Lebih dari Sekadar Hub, Ini Perjalanan Menembus Batas.
+              {t.about.title}
             </h2>
 
             {/* Right Content - Description */}
             <div className="text-neutral-off-white flex w-full max-w-[460px] flex-col justify-center pt-12 text-sm leading-normal md:text-base lg:pt-0 lg:text-lg">
               <div>
                 <p>
-                  Festival Mbois adalah perayaan tahunan ekosistem kreatif Kota
-                  Malang yang menyatukan kolaborasi hexahelix yaitu komunitas,
-                  industri, akademisi, pemerintah, media, dan agregator.
-                  Bergerak dengan semangat &quot;Dari komunitas untuk
-                  kota,&quot; festival ini menghubungkan ide, budaya, dan
-                  teknologi menjadi dampak nyata.
+                  {t.about.description1}
                 </p>
 
                 <div
@@ -51,11 +48,7 @@ export default function AboutSection() {
                   }`}
                 >
                   <p>
-                    Memasuki edisi ke-11, Festival Mbois bertransformasi menjadi
-                    Creative Impact Platform skala nasional. Merayakan status
-                    Malang sebagai bagian dari UNESCO Creative Cities Network
-                    untuk Media Arts, kami menyulap 100 tahun sejarah Stadion
-                    Gajayana menjadi ruang agregasi inovasi masa depan.
+                    {t.about.description2}
                   </p>
                 </div>
               </div>
@@ -64,7 +57,7 @@ export default function AboutSection() {
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="text-brand-pink-pastel mt-6 flex w-max cursor-pointer items-center gap-1.5 text-xs font-semibold tracking-wider transition-colors hover:text-white focus:outline-none lg:hidden"
               >
-                {isExpanded ? "Sembunyikan" : "Selengkapnya..."}
+                {isExpanded ? t.about.showLess : t.about.showMore}
               </button>
             </div>
           </div>

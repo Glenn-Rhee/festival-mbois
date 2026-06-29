@@ -1,36 +1,10 @@
 "use client";
 
-const evolutionData = [
-  {
-    id: 1,
-    title: "Panggung Komunitas",
-    description:
-      "Ruang ekspresi pelaku kreatif, pertemuan komunitas, showcase karya",
-    year: "2016 – 2019",
-  },
-  {
-    id: 2,
-    title: "Digital & Adaptasi",
-    description:
-      "Virtual exhibition, webinar interaktif, live streaming inovatif",
-    year: "2020 – 2021",
-  },
-  {
-    id: 3,
-    title: "Ekosistem & Kolaborasi",
-    description:
-      "Hub lintas sektor, aktivasi 17 subsektor, integrasi ICCN & MCC",
-    year: "2022 – 2025",
-  },
-  {
-    id: 4,
-    title: "Creative Impact Platform",
-    description: "Festival mbois tidak lagi event. Ia adalah sistem",
-    year: "2026",
-  },
-];
+import { useLanguage } from "@/i18n/context";
 
 export default function EvolutionSection() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="evolution"
@@ -60,18 +34,18 @@ export default function EvolutionSection() {
         {/* Header */}
         <div className="mb-10 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
           <h2 className="text-4xl font-medium tracking-tight text-neutral-off-white md:text-6xl lg:text-8xl">
-            Evolusi 11 Tahun
+            {t.evolution.label}
           </h2>
           <p className="max-w-96 text-lg leading-snug font-semibold text-neutral-off-white md:text-right md:text-xl lg:text-[32px]">
-            Dari Ruang Ekspresi Menjadi Hub Ekosistem
+            {t.evolution.title}
           </p>
         </div>
 
         {/* Timeline (Desktop/Tablet) */}
         <div className="hidden grid-cols-2 gap-8 md:grid lg:grid-cols-4 lg:gap-0">
-          {evolutionData.map((item, index) => (
+          {t.evolution.items.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className="relative h-[300px] border-l border-neutral-gray pt-2 pr-4 pl-6 md:h-[350px] lg:h-[400px]"
             >
               <h3 className="mb-4 text-xl font-medium text-neutral-off-white lg:text-2xl">
@@ -84,7 +58,7 @@ export default function EvolutionSection() {
               <div className="absolute bottom-0 left-5 flex h-8 w-8 items-end justify-center">
                 <div
                   className={`absolute bottom-0 origin-bottom-left -rotate-90 tracking-widest whitespace-nowrap text-white ${
-                    index === evolutionData.length - 1
+                    index === t.evolution.items.length - 1
                       ? "left-10 text-3xl font-bold lg:text-[36px]"
                       : "left-8 text-2xl font-semibold lg:text-[24px]"
                   }`}
@@ -98,15 +72,15 @@ export default function EvolutionSection() {
 
         {/* Timeline (Mobile - Stacks vertically with horizontal separators) */}
         <div className="flex flex-col md:hidden">
-          {evolutionData.map((item, index) => (
+          {t.evolution.items.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className="flex flex-col border-t border-white/10 py-6"
             >
               {/* Year */}
               <span
                 className={`tracking-normal text-neutral-off-white ${
-                  index === evolutionData.length - 1
+                  index === t.evolution.items.length - 1
                     ? "text-[28px] font-bold"
                     : "text-[22px] font-semibold"
                 }`}

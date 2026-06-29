@@ -1,31 +1,11 @@
 "use client";
 
 import { Plus } from "lucide-react";
-
-const statisticsData = [
-  {
-    id: 1,
-    label: "Pengunjung",
-    value: "20.000+",
-  },
-  {
-    id: 2,
-    label: "Pelaku Kreatif",
-    value: "500+",
-  },
-  {
-    id: 3,
-    label: "Business Matching",
-    value: "300+",
-  },
-  {
-    id: 4,
-    label: "Potensi Transaksi",
-    value: "50 - 150 M",
-  },
-];
+import { useLanguage } from "@/i18n/context";
 
 export default function StatistikSection() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="statistik"
@@ -39,23 +19,22 @@ export default function StatistikSection() {
           <div className="flex flex-col gap-6">
             <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-wider capitalize">
               <Plus className="size-4" />
-              <span>Statistik</span>
+              <span>{t.statistic.label}</span>
             </div>
             <h2 className="text-neutral-off-white text-2xl font-medium tracking-tight md:text-5xl lg:text-8xl lg:leading-snug">
-              Festival Mbois Dalam Angka
+              {t.statistic.title}
             </h2>
           </div>
           <p className="text-neutral-off-white max-w-[500px] text-sm leading-relaxed font-normal md:text-right md:text-base lg:text-2xl">
-            Mengukur dampak nyata, memetakan pertumbuhan, dan membuka ruang
-            integrasi terbesar bagi masa depan ekonomi kreatif.
+            {t.statistic.description}
           </p>
         </div>
 
         {/* Statistics List */}
         <div className="flex flex-col">
-          {statisticsData.map((item, index) => (
+          {t.statistic.items.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className={`flex flex-col items-start justify-between border-white/10 py-8 md:flex-row lg:py-10 ${
                 index === 0 ? "border-y" : "border-b"
               }`}

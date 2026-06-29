@@ -1,41 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
 import { StarParticles } from "../ui/star-particles";
 import { Button } from "../ui/button";
 import { Plus } from "lucide-react";
+import { useLanguage } from "@/i18n/context";
 
-const registrationRoles = [
-  {
-    id: "volunteer",
-    title: "Volunteer",
-    description:
-      "Kesempatan menjadi volunteer telah tiba. Daftarkan dirimu sekarang dan ambil peran aktif dalam mewujudkan pengalaman tak terlupakan bagi ribuan pengunjung.",
-    buttons: [
-      {
-        label: "Daftar",
-        variant: "outline",
-        href: "https://docs.google.com/forms/d/e/1FAIpQLSdMTq4E3p2Rx9HDGKoOzNVoOPOLJOlAkYIyMVtRDAmqlxGcLg/viewform?usp=send_form",
-      },
-    ],
-  },
-  {
-    id: "kolaborator",
-    title: "Kolaborator",
-    description:
-      "Kami mengundang para kreator, komunitas, praktisi visual, talenta lokal, hingga inovator teknologi untuk bergabung dan mengambil peran sebagai kolaborator resmi.",
-    buttons: [
-      {
-        label: "Daftar",
-        variant: "outline",
-        href: "https://docs.google.com/forms/d/e/1FAIpQLSf0vD7vxkJ6mTx23C6Ic81ekpyfituSA-pMx90iRVK_UOl88g/viewform",
-      },
-    ],
-  },
+const registrationLinks = [
+  "https://docs.google.com/forms/d/e/1FAIpQLSdMTq4E3p2Rx9HDGKoOzNVoOPOLJOlAkYIyMVtRDAmqlxGcLg/viewform?usp=send_form",
+  "https://docs.google.com/forms/d/e/1FAIpQLSf0vD7vxkJ6mTx23C6Ic81ekpyfituSA-pMx90iRVK_UOl88g/viewform",
 ];
 
 export default function RegistrationSection() {
+  const { t } = useLanguage();
   return (
     <section
       id="registration"
@@ -55,23 +32,21 @@ export default function RegistrationSection() {
         <div className="mx-auto flex max-w-[800px] flex-col items-center text-center">
           <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-widest capitalize">
             <Plus className="size-4" />
-            <span>Gerbang Ekosistem</span>
+            <span>{t.registration.label}</span>
           </div>
           <h2 className="text-neutral-off-white mt-6 text-4xl font-medium tracking-tight md:text-5xl lg:text-[64px] lg:leading-snug">
-            Pilih Peranmu Sekarang
+            {t.registration.title}
           </h2>
           <p className="text-neutral-off-white mt-6 max-w-[870px] text-sm leading-relaxed lg:text-2xl">
-            Amankan tiket festival, daftarkan startup-mu ke sesi pitching, atau
-            ajukan kurasi brand lokalmu untuk ikut menggerakkan ekosistem
-            kreatif tahun ini.
+            {t.registration.description}
           </p>
         </div>
 
         {/* Roles Table */}
         <div className="mx-auto mt-20 flex flex-col border-t border-white/10">
-          {registrationRoles.map((role) => (
+          {t.registration.roles.map((role, index) => (
             <div
-              key={role.id}
+              key={index}
               className="flex flex-col gap-6 border-b border-white/10 pt-6 pb-16 md:flex-row md:items-start md:justify-between"
             >
               {/* Title */}
@@ -88,30 +63,21 @@ export default function RegistrationSection() {
                 </p>
               </div>
 
-              {/* Buttons */}
-              <div
-                className={`w-full gap-3 md:w-[25%] ${
-                  role.buttons.length === 2
-                    ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2"
-                    : "flex flex-col"
-                }`}
-              >
-                {role.buttons.map((btn, idx) => (
-                  <Link
-                    href={btn.href}
-                    key={idx}
+              {/* Button */}
+              <div className="flex w-full flex-col gap-3 md:w-[25%]">
+                <Link
+                  href={registrationLinks[index]}
+                  className="w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="primary-gradient"
                     className="w-full"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
-                    <Button
-                      variant="primary-gradient"
-                      className="w-full"
-                    >
-                      {btn.label}
-                    </Button>
-                  </Link>
-                ))}
+                    {role.buttonLabel}
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}
