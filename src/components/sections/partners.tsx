@@ -20,6 +20,9 @@ const governmentLogos = [
 
 const privateLogos = [
   { name: "BRI", src: "/logo_partner_9.svg", srcWhite: "/logo_partner_9_white.svg" },
+  { name: "Amazing", src: "/logo_partner_15.svg", srcWhite: "/logo_partner_15_white.svg" },
+  { name: "Malang Apparel", src: "/logo_partner_16.svg", srcWhite: "/logo_partner_16_white.svg" },
+  { name: "Sejuta Kopi", src: "/logo_partner_17.svg", srcWhite: "/logo_partner_17_white.svg" },
   { name: "IndiHome", src: "/logo_partner_10.svg", srcWhite: "/logo_partner_10_white.svg" },
   { name: "Xpora", src: "/logo_partner_11.svg", srcWhite: "/logo_partner_11_white.svg" },
   { name: "PLN", src: "/logo_partner_12.svg", srcWhite: "/logo_partner_12_white.svg" },

@@ -103,6 +103,15 @@ export default function HeroSection() {
                 style={{ width: "auto", height: "40px" }}
               />
 
+                {/* Amazing Malang */}
+              <Image
+                src={"/logo_amazing_mlg.webp"}
+                width={56}
+                height={48}
+                alt="LOGO MCF"
+                style={{ width: "auto", height: "40px" }}
+              />
+
               {/* Malang Kota Kreatif */}
               <Image
                 src={"/logo_malang_arts.webp"}
