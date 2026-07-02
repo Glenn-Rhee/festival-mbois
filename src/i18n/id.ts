@@ -118,9 +118,33 @@ const id = {
         buttonLabel: "Daftar",
       },
       {
-        title: "Kolaborator",
+        title: "Sound of Malang Menyala Competition",
         description:
-          "Kami mengundang para kreator, komunitas, praktisi visual, talenta lokal, hingga inovator teknologi untuk bergabung dan mengambil peran sebagai kolaborator resmi.",
+          "Festival Band Pelajar merupakan ajang kompetisi musik yang diselenggarakan untuk memberikan ruang bagi para musisi muda atau pelajar dalam menampilkan kreativitas, musikalitas, serta karya terbaik di panggung  Festival Mbois 11 – Malang Menyala Temukan Suaramu, Nyalakan Panggungmu.",
+        buttonLabel: "Daftar",
+      },
+      {
+        title: "Sound of Malang Menyala Concert",
+        description:
+          "Festival Mbois 11 – Malang Menyala membuka kesempatan bagi band-band terbaik untuk tampil sebagai Opening Act Main Stage bersama deretan penampil utama dalam festival kreatif terbesar di Kota Malang.",
+        buttonLabel: "Daftar",
+      },
+      {
+        title: "Media Partner",
+        description:
+          "Festival Mbois 11 membuka kesempatan bagi media cetak, online, televisi, radio, komunitas media, media kampus, hingga content creator untuk menjadi bagian dari gerakan ini sebagai Official Media Partner.",
+        buttonLabel: "Daftar",
+      },
+      {
+        title: "Booth & Tenant",
+        description:
+          "Festival Mbois 11 – Malang Menyala membuka kesempatan bagi UMKM, pelaku ekonomi kreatif, startup, komunitas, institusi, dan brand untuk berpartisipasi sebagai tenant dalam rangkaian Creative Market & Exhibition.",
+        buttonLabel: "Daftar",
+      },
+      {
+        title: "Talent Made By Arema Market",
+        description:
+          "Festival Mbois 11 – Malang Menyala membuka kesempatan bagi talenta kreatif dari Malang Raya untuk berkolaborasi dan tampil pada Panggung Made By Arema Creative Market yang berada di area luar Stadion Gajayana.",
         buttonLabel: "Daftar",
       },
     ],

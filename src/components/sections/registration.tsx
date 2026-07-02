@@ -7,8 +7,12 @@ import { Plus } from "lucide-react";
 import { useLanguage } from "@/i18n/context";
 
 const registrationLinks = [
-  "https://docs.google.com/forms/d/e/1FAIpQLSdMTq4E3p2Rx9HDGKoOzNVoOPOLJOlAkYIyMVtRDAmqlxGcLg/viewform?usp=send_form",
-  "https://docs.google.com/forms/d/e/1FAIpQLSf0vD7vxkJ6mTx23C6Ic81ekpyfituSA-pMx90iRVK_UOl88g/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLSdMTq4E3p2Rx9HDGKoOzNVoOPOLJOlAkYIyMVtRDAmqlxGcLg/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLScGQo_WjpqcMAwCCfJosTALobAF17A8ha_v0Exyk3tdPrxaKQ/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLSckY5cMQJMtS61_-8zSTBCcEqyJhxLjMG5vpK-QzgL041keGQ/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLSdLQb6mdhpTYtv1Wq4Zo5qoSLNLSHI-8XWqW4rguC4GMSHcrA/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLScYCeAlneNXezIHXrSGJbrIAFNzqKS33F7rB881IiYBthlGOA/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLSf0vD7vxkJ6mTx23C6Ic81ekpyfituSA-pMx90iRVK_UOl88g/viewform"
 ];
 
 export default function RegistrationSection() {

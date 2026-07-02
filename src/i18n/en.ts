@@ -120,9 +120,33 @@ const en: Translations = {
         buttonLabel: "Register",
       },
       {
-        title: "Collaborator",
+        title: "Sound of Malang Menyala Competition",
         description:
-          "We invite creators, communities, visual practitioners, local talents, and technology innovators to join and take a role as official collaborators.",
+          "The Student Band Festival is a music competition held to provide a space for young musicians and students to showcase their creativity, musicality, and best works on the Festival Mbois 11 – Malang Menyala stage. Find Your Voice, Light Up Your Stage.",
+        buttonLabel: "Register",
+      },
+      {
+        title: "Sound of Malang Menyala Concert",
+        description:
+          "Festival Mbois 11 – Malang Menyala opens the opportunity for the best bands to perform as the Main Stage Opening Act alongside the lineup of headliners at the biggest creative festival in Malang.",
+        buttonLabel: "Register",
+      },
+      {
+        title: "Media Partner",
+        description:
+          "Festival Mbois 11 opens opportunities for print, online, television, radio media, media communities, campus media, and content creators to be part of this movement as an Official Media Partner.",
+        buttonLabel: "Register",
+      },
+      {
+        title: "Booth & Tenant",
+        description:
+          "Festival Mbois 11 – Malang Menyala opens opportunities for MSMEs, creative economy players, startups, communities, institutions, and brands to participate as tenants in the Creative Market & Exhibition series.",
+        buttonLabel: "Register",
+      },
+      {
+        title: "Talent Made By Arema Market",
+        description:
+          "Festival Mbois 11 – Malang Menyala opens opportunities for creative talents from Greater Malang to collaborate and perform on the Made By Arema Creative Market Stage located in the outer area of Stadion Gajayana.",
         buttonLabel: "Register",
       },
     ],
