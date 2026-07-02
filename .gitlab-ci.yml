@@ -1,0 +1,24 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  tags:
+    - node-ls-runner
+  only:
+    - development
+  script:
+    - echo "$PIS_LS_KEY" > id_rsa
+    - chmod 600 id_rsa
+    - ssh -o StrictHostKeyChecking=no -i id_rsa ubuntu@47.131.113.111 "
+        cd /var/www/html/festival-mbois-11 &&
+        git pull origin development &&
+        if git diff HEAD@{1} HEAD --name-only | grep -q 'package.json'; then
+          echo 'Package.json berubah, menjalankan npm install...' &&
+          npm i;
+        else
+          echo 'Tidak ada perubahan di package.json';
+        fi &&
+        npm run build &&
+        pm2 reload ecosystem.config.cjs --env production
+      "
