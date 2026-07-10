@@ -46,7 +46,7 @@ export default function TicketSection() {
           rel="noopener noreferrer"
           className="mt-8"
         >
-          <Button variant={"primary-gradient"}>
+          <Button className="text-lg shadow-[0px_0px_13.9px_0px_#F12B8E]" variant={"primary-gradient"}>
             {t.ticket.cta}
             <CircleArrowRight className="ml-2 h-4 w-4" />
           </Button>
