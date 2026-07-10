@@ -120,7 +120,7 @@ export default function HeroSection() {
 
       {/* ── Supported By Section ── */}
       <section className="relative z-10 w-full px-6 pb-16 lg:px-[72px]">
-        <p className="py-6 text-center text-2xl font-semibold tracking-widest text-white/70 uppercase">
+        <p className="py-6 text-center text-2xl font-semibold tracking-widest text-[#F2F2F2] uppercase">
           {t.hero.supportedBy}
         </p>
         <div className="rounded-2xl bg-white px-8 py-8 lg:px-12 lg:py-8">
