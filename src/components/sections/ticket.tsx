@@ -18,18 +18,18 @@ export default function TicketSection() {
       <div className="absolute inset-0 bg-[#251524] opacity-[0.92]" />
 
       {/* Grid pattern (same as evolution section) */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem]" />
+      <div className="pointer-events-none absolute inset-0 bg-[#0B1030] bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem]" />
 
       {/* Glow - right side (purple) */}
       <div
-        className="absolute top-[108px] left-[55%] h-[644px] w-[1153px] opacity-[0.77]"
-        style={{ background: "#944A8D", filter: "blur(74px)" }}
+        className="absolute top-[250px] left-[55%] h-[644px] w-[1153px]"
+        style={{ background: "#23367A", filter: "blur(147.5px)" }}
       />
 
       {/* Glow - left side (pink) */}
       <div
-        className="absolute -top-[19px] -left-[59px] h-[607px] w-[459px] opacity-[0.71]"
-        style={{ background: "#E45EA5", filter: "blur(171px)" }}
+        className="absolute top-[120px] -left-[59px] w-[459.02px] h-151.75"
+        style={{ background: "#68114A", filter: "blur(171px)" }}
       />
 
       {/* Content */}
