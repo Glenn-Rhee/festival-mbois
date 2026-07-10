@@ -8,6 +8,7 @@ import UserIcon from "../icon/UserIcon";
 import Idea from "../icon/Idea";
 import Creative from "../icon/Creative";
 import User from "../icon/User";
+import { StarParticles } from "../ui/star-particles";
 
 const pillarIcons = [LinkIcon, UserIcon, Idea, Creative];
 
@@ -16,7 +17,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="relative w-full py-16 lg:py-32">
-      <div className="max-w-8xl mx-auto w-full px-6 lg:px-18">
+      <div className="max-w-8xl relative z-20 mx-auto w-full px-6 lg:px-18">
         {/* Main Card */}
         <div className="rounded-2xl border border-white bg-[#EEEEEE14] p-6 backdrop-blur-xl md:p-10 lg:p-14">
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-14">
@@ -72,7 +73,7 @@ export default function AboutSection() {
                   sizes="(max-width: 768px) 100vw, 45vw"
                 />
                 {/* Play button overlay */}
-                <div className="bg-brand-blue-dark/60 absolute inset-0 flex items-center justify-center">
+                <div className="bg-brand-blue-dark/80 absolute inset-0 flex items-center justify-center">
                   <div className="flex size-25 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
                     <PlayIcon className="size-8" fill="white" />
                   </div>
@@ -112,15 +113,29 @@ export default function AboutSection() {
                   <span className="text-xl font-semibold tracking-tight text-[#FDFDFD] md:text-2xl lg:text-4xl">
                     {stat.value}
                   </span>
-                  <span className="text[#FDFDFD] md:text-sm">
-                    {stat.label}
-                  </span>
+                  <span className="text[#FDFDFD] md:text-sm">{stat.label}</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+      <div className="absolute bottom-13 -left-20 size-100 rounded-full bg-[#2ec4f298] blur-[200px]" />
+      {/* Kiri */}
+      <StarParticles bottom={10} left={20} glow size="large" />
+      <StarParticles bottom={20} left={2} glow size="medium" />
+      <StarParticles bottom={5} left={8} size="small" />
+      <StarParticles bottom={15} left={35} size="small" />
+      <StarParticles bottom={25} left={45} glow size="medium" />
+      {/* Tengah */}
+      <StarParticles bottom={8} left={55} size="small" />
+      <StarParticles bottom={18} left={62} glow size="large" />
+      <StarParticles bottom={3} left={70} size="small" />
+      <StarParticles bottom={22} left={78} size="medium" />
+      {/* Kanan */}
+      <StarParticles bottom={12} left={85} glow size="medium" />
+      <StarParticles bottom={6} left={92} size="small" />
+      <StarParticles bottom={28} left={95} glow size="large" />{" "}
     </section>
   );
 }
