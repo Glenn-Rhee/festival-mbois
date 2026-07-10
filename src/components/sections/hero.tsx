@@ -11,7 +11,10 @@ import { useLanguage } from "@/i18n/context";
 export default function HeroSection() {
   const { t } = useLanguage();
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
@@ -64,25 +67,15 @@ export default function HeroSection() {
         {/* ── Content grid ── */}
         <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between px-6 pt-32 pb-4 lg:flex-row lg:items-center lg:px-[72px] lg:pt-40 lg:pb-16">
           {/* Left — text content */}
-          <div className="mt-10 flex w-full flex-col items-center text-center md:mt-0 lg:w-auto lg:items-start lg:text-left">
+          <div className="mt-10 flex w-full flex-col items-center text-center md:mt-0 lg:w-auto lg:max-w-xl lg:items-start lg:text-left">
             <div className="lg:flex lg:flex-col lg:items-start">
               {/* Sub-heading */}
-              <p
-                className="mb-2 text-xl font-semibold tracking-normal whitespace-nowrap uppercase md:text-[48px]"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(to right, #FFFFFF, var(--brand-purple-muted))",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  color: "transparent",
-                }}
-              >
+              <p className="mb-2 text-xl font-semibold tracking-normal whitespace-nowrap uppercase md:text-[48px]">
                 {t.hero.subtitle}
               </p>
 
               {/* Main heading */}
-              <h1 className="via-brand-pink-baby to-brand-pink-glow mb-6 -ml-1 bg-linear-to-r from-white bg-clip-text text-3xl leading-[0.95] font-semibold tracking-normal text-transparent md:text-[clamp(4rem,10vw,8.5rem)] lg:mb-12 lg:-ml-2 lg:text-[118px]">
+              <h1 className="mb-6 -ml-1 text-3xl leading-[0.95] font-semibold tracking-normal text-white md:text-[clamp(4rem,10vw,8.5rem)] lg:mb-12 lg:-ml-2 lg:text-[118px]">
                 {t.hero.title}
               </h1>
             </div>
@@ -100,11 +93,12 @@ export default function HeroSection() {
             style={{ animationDelay: "200ms" }}
           >
             <Link href="#ticket" onClick={(e) => scrollToSection(e, "#ticket")}>
-              <Button variant={"outline"}>
-                {t.hero.ctaTicket}
-              </Button>
+              <Button variant={"outline"}>{t.hero.ctaTicket}</Button>
             </Link>
-            <Link href="#registration" onClick={(e) => scrollToSection(e, "#registration")}>
+            <Link
+              href="#registration"
+              onClick={(e) => scrollToSection(e, "#registration")}
+            >
               <Button variant={"primary-gradient"}>
                 {t.hero.cta}
                 <CircleArrowRight className="ml-2 h-4 w-4" />
