@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/hero";
+import TicketSection from "@/components/sections/ticket";
 import AboutSection from "@/components/sections/about";
 import EvolutionSection from "@/components/sections/evolution";
 import StatistikSection from "@/components/sections/statistic";
@@ -26,6 +27,7 @@ export default function Home() {
         />
 
         <HeroSection />
+        <TicketSection />
         <AboutSection />
       </div>
       <EvolutionSection />

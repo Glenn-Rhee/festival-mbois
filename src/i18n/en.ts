@@ -6,6 +6,7 @@ const en: Translations = {
     about: "About Us",
     program: "Program",
     registration: "Registration",
+    ticket: "Ticket",
     register: "Register",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -15,16 +16,34 @@ const en: Translations = {
     subtitle: "FESTIVAL MBOIS 11",
     title: "MALANG MENYALA",
     cta: "Registration Open",
+    ctaTicket: "Presale Ticket",
     tagline: "FROM EVENT TO SYSTEM",
     dateLocation: "21–23 August 2026 \u00A0|\u00A0 Stadion Gajayana, Malang",
+    supportedBy: "SUPPORTED BY",
+  },
+  ticket: {
+    title: "Buy Your Presale Ticket Now!",
+    description: "Secure your ticket now to celebrate creativity and innovation at Stadion Gajayana during Festival MBOIS 11!",
+    cta: "Buy Presale Ticket",
   },
   about: {
     label: "About Us",
-    title: "More Than a Hub, This Is a Journey Beyond Boundaries.",
-    description1:
-      "Festival Mbois is an annual celebration of Malang's creative ecosystem that unites hexahelix collaboration—communities, industries, academics, government, media, and aggregators. Driven by the spirit of \"From community for the city,\" this festival connects ideas, culture, and technology into real impact.",
-    description2:
-      "Entering its 11th edition, Festival Mbois transforms into a national-scale Creative Impact Platform. Celebrating Malang's status as part of the UNESCO Creative Cities Network for Media Arts, we turn 100 years of Stadion Gajayana's history into a space for future innovation aggregation.",
+    title: "More Than Just a Festival",
+    description:
+      "Festival Mbois is an annual celebration of Malang's creative ecosystem that unites hexahelix collaboration—communities, industries, academics, government, media, and aggregators to drive real impact for the city.",
+    pillars: [
+      "Boundless Collaboration",
+      "Sustainable Innovation",
+      "Real Impact for the City",
+      "Space for Inspiration & Creation",
+    ],
+    stats: [
+      { value: "20,000+", label: "Visitors" },
+      { value: "500+", label: "Creative Workers" },
+      { value: "300+", label: "Business Matching" },
+      { value: "50-150M", label: "Transaction Potential" },
+      { value: "500", label: "Media Exposure" },
+    ],
     showMore: "Read more...",
     showLess: "Show less",
   },

@@ -17,6 +17,7 @@ export default function Navbar() {
     { label: t.nav.about, href: "#about" },
     { label: t.nav.program, href: "#program" },
     { label: t.nav.registration, href: "#registration" },
+    { label: t.nav.ticket, href: "#ticket" },
   ];
 
   useEffect(() => {

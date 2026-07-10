@@ -4,6 +4,7 @@ const id = {
     about: "Tentang Kami",
     program: "Program",
     registration: "Pendaftaran",
+    ticket: "Tiket",
     register: "Daftar",
     openMenu: "Buka menu",
     closeMenu: "Tutup menu",
@@ -13,16 +14,34 @@ const id = {
     subtitle: "FESTIVAL MBOIS 11",
     title: "MALANG MENYALA",
     cta: "Pendaftaran Dibuka",
+    ctaTicket: "Tiket Presale",
     tagline: "FROM EVENT TO SYSTEM",
     dateLocation: "21–23 Agustus 2026 \u00A0|\u00A0 Stadion Gajayana, Malang",
+    supportedBy: "DI DUKUNG OLEH",
+  },
+  ticket: {
+    title: "Beli Tiket Presale Sekarang!",
+    description: "Amankan tiketmu sekarang untuk merayakan kreativitas dan inovasi di Stadion Gajayana di Festival MBOIS 11 nanti !",
+    cta: "Beli Tiket Presale",
   },
   about: {
     label: "Tentang Kami",
-    title: "Lebih dari Sekadar Hub, Ini Perjalanan Menembus Batas.",
-    description1:
-      "Festival Mbois adalah perayaan tahunan ekosistem kreatif Kota Malang yang menyatukan kolaborasi hexahelix yaitu komunitas, industri, akademisi, pemerintah, media, dan agregator. Bergerak dengan semangat \"Dari komunitas untuk kota,\" festival ini menghubungkan ide, budaya, dan teknologi menjadi dampak nyata.",
-    description2:
-      "Memasuki edisi ke-11, Festival Mbois bertransformasi menjadi Creative Impact Platform skala nasional. Merayakan status Malang sebagai bagian dari UNESCO Creative Cities Network untuk Media Arts, kami menyulap 100 tahun sejarah Stadion Gajayana menjadi ruang agregasi inovasi masa depan.",
+    title: "Lebih dari Sekedar Festival",
+    description:
+      "Festival Mbois adalah perayaan tahunan ekosistem kreatif Kota Malang yang menyatukan kolaborasi hexahelix yaitu komunitas, industri, akademisi, pemerintah, media, dan agregator untuk mendorong dampak nyata bagi kota.",
+    pillars: [
+      "Kolaborasi Tanpa Batas",
+      "Inovasi Berkelanjutan",
+      "Dampak nyata bagi kota",
+      "Ruang Inspirasi dan Kreasi",
+    ],
+    stats: [
+      { value: "20.000+", label: "Pengunjung" },
+      { value: "500+", label: "Pelaku Kreatif" },
+      { value: "300+", label: "Business Matching" },
+      { value: "50-150M", label: "Potensi Transaksi" },
+      { value: "500", label: "Media Exposure" },
+    ],
     showMore: "Selengkapnya...",
     showLess: "Sembunyikan",
   },
