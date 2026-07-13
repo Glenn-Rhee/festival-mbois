@@ -598,12 +598,12 @@ const id = {
       "Temukan jawaban cepat seputar pelaksanaan, akses tiket, dan keterlibatan ekosistem di Festival Mbois 11.",
     items: [
       {
-        title: "Apa itu Festival Mbois 11: Malang Menyala?",
+        title: "Acara ini buat siapa aja sih?",
         content:
-          "Festival Mbois 11 adalah acara perayaan industri kreatif tahunan di Malang. Mengusung tema Malang Menyala, festival ini menjadi wadah bertemunya para kreator, seniman, pelaku UMKM, dan masyarakat luas melalui berbagai rangkaian acara kreatif.",
+          "Selama kamu punya ketertarikan di dunia startup, seni visual, teknologi digital, craft, atau pengen cari jaringan baru di industri kreatif—kamu wajib dateng!",
       },
       {
-        title: "Kapan dan di mana Festival Mbois 11 diselenggarakan?",
+        title: "Tiketnya bisa di-refund kalau tiba-tiba ada jadwal mendadak?",
         content:
           "Acara akan diselenggarakan pada tanggal 21 - 23 Agustus 2026 di Stadion Gajayana Malang.",
       },

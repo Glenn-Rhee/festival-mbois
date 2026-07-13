@@ -8,10 +8,10 @@ export default function FaqSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative flex w-full flex-col items-center bg-transparent py-24 md:py-32 lg:py-64">
-      <div className="relative z-10 container mx-auto max-w-4xl px-4">
+    <section className="relative flex w-full flex-col items-center bg-transparent px-8 py-14 md:px-16 md:py-18">
+      <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
-        <div className="mx-auto mb-32 flex max-w-[890px] flex-col items-center text-center">
+        <div className="mx-auto mb-32 flex w-full flex-col items-center text-center">
           <div className="text-neutral-off-white flex items-center gap-2 font-semibold tracking-widest capitalize">
             <Plus className="size-4" />
             <span>{t.faq.label}</span>
