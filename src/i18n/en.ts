@@ -622,6 +622,35 @@ const en: Translations = {
       },
     ],
   },
+  sponsors: {
+    label: "+ Sponsors & Partners",
+    title: "Strategic Alliance Driving the Ecosystem",
+    description:
+      "A multi-stakeholder collaborative synergy among ministries, local governments, State-Owned Enterprises (SOEs), and the private sector in guiding Indonesia's creative economy roadmap.",
+    item: {
+      govermentsUrl: [
+        "/logo_partner_1.svg",
+        "/logo_partner_2.svg",
+        "/logo_partner_3.svg",
+        "/logo_partner_4.svg",
+        "/logo_partner_5.svg",
+        "/logo_partner_6.svg",
+        "/logo_partner_7.svg",
+        "/logo_partner_8.svg",
+      ],
+      privateSectorsUrl: [
+        "/logo_partner_9.svg",
+        "/logo_partner_10.svg",
+        "/logo_partner_11.svg",
+        "/logo_partner_12.svg",
+        "/logo_partner_13.svg",
+        "/logo_partner_14.svg",
+        "/logo_partner_15.svg",
+        "/logo_partner_16.svg",
+        "/logo_partner_17.svg",
+      ],
+    },
+  },
   footer: {
     cta: "It's Time to Light Up Malang with Your Best Work!",
     ctaButton: "Partnership Collaboration",

@@ -19,7 +19,7 @@ export default function FaqSection() {
           <h2 className="text-neutral-off-white mt-6 text-3xl font-medium tracking-tight md:text-5xl lg:text-6xl lg:leading-snug">
             {t.faq.title}
           </h2>
-          <p className="text-neutral-off-white mt-6 max-w-[890px] text-sm leading-relaxed lg:text-2xl">
+          <p className="text-neutral-off-white mt-6 max-w-222.5 text-sm leading-relaxed lg:text-2xl">
             {t.faq.description}
           </p>
         </div>

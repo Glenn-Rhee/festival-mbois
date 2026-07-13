@@ -8,6 +8,7 @@ import LineUpArtist from "@/components/sections/line-up-artist";
 import KeySpeaker from "@/components/sections/key-speaker";
 import YourRoleSection from "@/components/sections/your-role-section";
 import RundownSection from "@/components/sections/rundown-section";
+import SponsorsSection from "@/components/sections/sponsors-section";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
       <YourRoleSection />
       <RundownSection />
       <FaqSection />
+      <SponsorsSection />
     </main>
   );
 }

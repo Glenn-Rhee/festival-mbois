@@ -620,6 +620,35 @@ const id = {
       },
     ],
   },
+  sponsors: {
+    label: "+ Sponsors & Partners",
+    title: "Aliansi Strategis Penggerak Ekosistem",
+    description:
+      "Sinergi kolaboratif multi-stakeholder antara jajaran kementerian, pemerintah daerah, Badan Usaha Milik Negara (BUMN), dan sektor swasta dalam mengawal peta jalan ekonomi kreatif Indonesia.",
+    item: {
+      govermentsUrl: [
+        "/logo_partner_1.svg",
+        "/logo_partner_2.svg",
+        "/logo_partner_3.svg",
+        "/logo_partner_4.svg",
+        "/logo_partner_5.svg",
+        "/logo_partner_6.svg",
+        "/logo_partner_7.svg",
+        "/logo_partner_8.svg",
+      ],
+      privateSectorsUrl: [
+        "/logo_partner_9.svg",
+        "/logo_partner_10.svg",
+        "/logo_partner_11.svg",
+        "/logo_partner_12.svg",
+        "/logo_partner_13.svg",
+        "/logo_partner_14.svg",
+        "/logo_partner_15.svg",
+        "/logo_partner_16.svg",
+        "/logo_partner_17.svg",
+      ],
+    },
+  },
   footer: {
     cta: "Saatnya Bikin Malang Menyala Bareng Karya Terbaikmu!",
     ctaButton: "Kolaborasi Kemitraan",
