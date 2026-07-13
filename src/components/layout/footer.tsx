@@ -9,7 +9,10 @@ import { useLanguage } from "@/i18n/context";
 export default function Footer() {
   const { t } = useLanguage();
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
@@ -20,34 +23,27 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-brand-aubergine relative w-full overflow-hidden">
+    <footer className="relative w-full overflow-hidden">
       {/* Background Grid & Ornaments */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem]" />
-
-        {/* Ornaments */}
-        <img
-          src="/vector4.webp"
-          alt="Ornament Left"
-          className="absolute top-0 left-0 w-[300px] object-contain opacity-80 mix-blend-screen md:w-[500px] lg:w-[700px]"
-        />
-        <img
-          src="/vector3.webp"
-          alt="Ornament Right"
-          className="absolute top-[20%] right-0 w-[300px] object-contain opacity-80 mix-blend-screen md:w-[500px] lg:w-[700px]"
-        />
-
+        <div className="absolute top-5 -left-5 size-80 rounded-full bg-[#68114A] blur-[90px]" />
+        <div className="absolute -right-5 bottom-5 size-80 rounded-full bg-[#23367A] blur-[90px]" />
         {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 h-[600px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(190,80,255,0.3)_0%,rgba(208,84,127,0.2)_40%,transparent_70%)] blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 h-150 w-200 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(190,80,255,0.3)_0%,rgba(208,84,127,0.2)_40%,transparent_70%)] blur-[80px]" />
       </div>
 
       <div className="relative z-10 mx-auto w-full">
         {/* --- CTA SECTION --- */}
         <div className="flex flex-col items-center justify-center px-6 py-16 text-center md:py-32 lg:px-8">
-          <h2 className="mx-auto max-w-4xl text-2xl leading-tight font-medium tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-2xl leading-tight font-semibold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-5xl">
             {t.footer.cta}
           </h2>
-          <Button variant={"primary-gradient"} className="mt-12" asChild>
+          <Button
+            variant={"primary-gradient"}
+            className="mt-12 shadow-[0px_0px_17px_0px_#F61D89E5]"
+            asChild
+          >
             <Link
               href="#registration"
               onClick={(e) => scrollToSection(e, "#registration")}
@@ -66,13 +62,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row">
             {/* Logo & Name */}
             <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-12 text-center md:flex-row md:justify-start md:gap-8 md:px-16 md:text-left lg:gap-8 lg:pl-24">
-              <Image
-                src={"/logo_festival_mbois.png"}
-                alt="Logo"
-                width={80}
-                height={80}
-                className="h-20 w-20 md:h-16 md:w-16 lg:h-[90px] lg:w-[90px]"
-              />
               <span className="text-3xl leading-none font-semibold tracking-tight text-white md:text-6xl lg:text-8xl">
                 {t.footer.brandName}
               </span>
