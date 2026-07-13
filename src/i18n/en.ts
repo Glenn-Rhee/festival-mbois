@@ -23,7 +23,8 @@ const en: Translations = {
   },
   ticket: {
     title: "Buy Your Presale Ticket Now!",
-    description: "Secure your ticket now to celebrate creativity and innovation at Stadion Gajayana during Festival MBOIS 11!",
+    description:
+      "Secure your ticket now to celebrate creativity and innovation at Stadion Gajayana during Festival MBOIS 11!",
     cta: "Buy Presale Ticket",
   },
   about: {
@@ -53,17 +54,20 @@ const en: Translations = {
     items: [
       {
         title: "Community Stage",
-        description: "Creative expression space, community gatherings, work showcases",
+        description:
+          "Creative expression space, community gatherings, work showcases",
         year: "2016 – 2019",
       },
       {
         title: "Digital & Adaptation",
-        description: "Virtual exhibitions, interactive webinars, innovative live streaming",
+        description:
+          "Virtual exhibitions, interactive webinars, innovative live streaming",
         year: "2020 – 2021",
       },
       {
         title: "Ecosystem & Collaboration",
-        description: "Cross-sector hub, 17 subsector activation, ICCN & MCC integration",
+        description:
+          "Cross-sector hub, 17 subsector activation, ICCN & MCC integration",
         year: "2022 – 2025",
       },
       {
@@ -72,6 +76,45 @@ const en: Translations = {
         year: "2026",
       },
     ],
+  },
+  pillar: {
+    label: "+ Program",
+    title: "The 5 Pillars of MBOIS Festival 11",
+    description:
+      "An exclusive invitation for Corporate Partners to connect, engage, and secure brand positioning in front of over 10,000 startup innovators, creative industry players, and an integrated digital ecosystem.",
+    items: [
+      {
+        title: "Malang Sportainment",
+        description:
+          "The largest celebration of creative energy that spectacularly unites the worlds of sports, esports competitions, and urban art onto a single stage. This event is designed as a hub for cross-community interaction, blending the excitement of competitive matches with modern entertainment such as live music, drone shows, and culinary festivals.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Sound of Malang Menyala",
+        description:
+          "A celebration of Malang City's new energy where music, culture, creativity, and technology converge into one. Visitors will be treated to a multisensory experience, ranging from music stages and interactive media art to cultural performances and a vibrant creative economy market, all designed to unite thousands of people in an inspiring creative movement.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Malang City Connect",
+        description:
+          "A strategic conference and business forum acting as a meeting point for city leaders, industry players, investors, academics, and creative communities to foster an inclusive and sustainable ecosystem. This event integrates various major programs such as the Creative City Summit, Business Matching, and the MBOIS AI & Creative Pitch to transform innovative ideas into investments and tangible impacts for the future of Indonesia's creative industry.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Made by Arema Market",
+        description:
+          "A creative showcase bringing together local brands, creators, and tech startups to celebrate future innovations deeply rooted in Malang's local identity through fashion, craft, culinary, and creative hub zones. Designed as a boundless collaboration platform to support the finest works of Arek Malang, preparing them to shine and make an impact on a wider stage.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Malang Mediart Experience",
+        description:
+          "Presenting the future of creativity through a spectacular blend of art, technology, and innovation. Visitors will enjoy mesmerizing immersive experiences, from projection mapping and interactive installations to AI-based art exploration and robotics. This event is a visionary collaborative hub designed to ignite new creative energy and elevate Malang's digital ecosystem to a global level.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+    ],
+    itemAction: "View Details",
   },
   statistic: {
     label: "Statistics",
@@ -87,7 +130,8 @@ const en: Translations = {
   },
   program: {
     label: "Program",
-    title: "Accelerating Creative Economy Potential and National Digital Infrastructure.",
+    title:
+      "Accelerating Creative Economy Potential and National Digital Infrastructure.",
     description:
       "An exclusive collaboration invitation for Corporate Partners to connect, interact, and secure brand positioning in front of more than 10,000 startup innovators, creative industry players, and integrated digital ecosystems.",
     items: [

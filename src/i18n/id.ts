@@ -21,7 +21,8 @@ const id = {
   },
   ticket: {
     title: "Beli Tiket Presale Sekarang!",
-    description: "Amankan tiketmu sekarang untuk merayakan kreativitas dan inovasi di Stadion Gajayana di Festival MBOIS 11 nanti !",
+    description:
+      "Amankan tiketmu sekarang untuk merayakan kreativitas dan inovasi di Stadion Gajayana di Festival MBOIS 11 nanti !",
     cta: "Beli Tiket Presale",
   },
   about: {
@@ -51,17 +52,20 @@ const id = {
     items: [
       {
         title: "Panggung Komunitas",
-        description: "Ruang ekspresi pelaku kreatif, pertemuan komunitas, showcase karya",
+        description:
+          "Ruang ekspresi pelaku kreatif, pertemuan komunitas, showcase karya",
         year: "2016 – 2019",
       },
       {
         title: "Digital & Adaptasi",
-        description: "Virtual exhibition, webinar interaktif, live streaming inovatif",
+        description:
+          "Virtual exhibition, webinar interaktif, live streaming inovatif",
         year: "2020 – 2021",
       },
       {
         title: "Ekosistem & Kolaborasi",
-        description: "Hub lintas sektor, aktivasi 17 subsektor, integrasi ICCN & MCC",
+        description:
+          "Hub lintas sektor, aktivasi 17 subsektor, integrasi ICCN & MCC",
         year: "2022 – 2025",
       },
       {
@@ -70,6 +74,45 @@ const id = {
         year: "2026",
       },
     ],
+  },
+  pillar: {
+    label: "+ Program",
+    title: "5 Pilar Festival MBOIS 11",
+    description:
+      "Sebuah ajakan kolaborasi eksklusif bagi Mitra Korporasi untuk terhubung, berinteraksi, dan mengamankan posisi merek di hadapan lebih dari 10.000 inovator startup, pelaku industri kreatif, dan ekosistem digital terintegrasi.",
+    items: [
+      {
+        title: "Malang Sportainment",
+        description:
+          "Perayaan energi kreatif terbesar yang secara spektakuler menyatukan dunia olahraga, kompetisi esports, dan aksi seni urban dalam satu panggung. Acara ini dirancang sebagai wadah interaksi lintas komunitas yang memadukan keseruan laga kompetitif dengan hiburan modern seperti live music, drone show, hingga festival kuliner.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Sound of Malang Menyala",
+        description:
+          "Perayaan energi baru Kota Malang di mana musik, budaya, kreativitas, dan teknologi bertemu dalam satu kesatuan. Pengunjung akan disuguhkan pengalaman multisensori, mulai dari panggung musik dan seni media interaktif, hingga pertunjukan budaya dan pasar ekonomi kreatif yang semarak, semuanya dirancang untuk menyatukan ribuan orang dalam satu gerakan kreatif yang menginspirasi.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Malang City Connect",
+        description:
+          "Konferensi dan forum bisnis strategis yang menjadi titik temu bagi para pemimpin kota, pelaku industri, investor, akademisi, dan komunitas kreatif untuk mendorong ekosistem inklusif dan berkelanjutan. Acara ini mengintegrasikan berbagai program utama seperti Creative City Summit, Business Matching, hingga MBOIS Al & Creative Pitch guna mengubah ide inovatif menjadi investasi dan dampak nyata bagi masa depan industri kreatif Indonesia.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Made by Arema Market",
+        description:
+          "Etalase kreatif yang mempertemukan brand lokal, kreator, dan startup teknologi guna merayakan inovasi masa depan yang berakar kuat pada identitas lokal Malan melalui zona fesyen, kriya, kuliner, hingga creative hub. Dirancang sebagai panggung kolaborasi tanpa batas untuk mendukung karya terbaik Arek Malang agar siap bersinar dan berdampak di kancah yang lebih luas.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+      {
+        title: "Malang Mediart Experience",
+        description:
+          "Menghadirkan masa depan kreativitas melalui perpaduan spektakuler antara seni, teknologi, dan inovasi. Pengunjung akan disuguhkan pengalaman imersif yang memukau, mulai dari projection mapping dan instalasi interaktif hingga eksplorasi seni berbasis Al dan robotika. Acara ini merupakan wadah kolaborasi visioner yang dirancang untuk menyalakan energi kreatif baru dan membawa ekosistem digital Malang ke level global.",
+        imgUrl: "/program_sportainment_v2.webp",
+      },
+    ],
+    itemAction: "Lihat Detail",
   },
   statistic: {
     label: "Statistik",
@@ -85,7 +128,8 @@ const id = {
   },
   program: {
     label: "Program",
-    title: "Mengakselerasi Potensi Ekonomi Kreatif dan Infrastruktur Digital Nasional.",
+    title:
+      "Mengakselerasi Potensi Ekonomi Kreatif dan Infrastruktur Digital Nasional.",
     description:
       "Sebuah ajakan kolaborasi eksklusif bagi Mitra Korporasi untuk terhubung, berinteraksi, dan mengamankan posisi merek di hadapan lebih dari 10.000 inovator startup, pelaku industri kreatif, dan ekosistem digital terintegrasi.",
     items: [

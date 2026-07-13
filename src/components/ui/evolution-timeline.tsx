@@ -65,7 +65,7 @@ export default function EvolutionTimeline({ onChange, active }: EvolutionTimelin
 
       {/* Garis dasar */}
       <div ref={lineRef} className="relative h-0.5 rounded-full bg-white/20">
-        {/* Garis fill, panjangnya = posisi asli dot aktif (px), diukur dari DOM */}
+        {/* Garis fill*/}
         <div
           className="absolute top-0 left-0 h-0.5 rounded-full bg-white transition-all duration-700 ease-in-out"
           style={{ width: `${fillWidth}px` }}

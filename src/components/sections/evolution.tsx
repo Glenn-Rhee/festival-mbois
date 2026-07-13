@@ -36,7 +36,7 @@ export default function EvolutionSection() {
       id="evolution"
       className="bg-brand-aubergine relative w-full overflow-hidden py-14 md:py-18"
     >
-      {/* Background Grid & Ornaments */}
+      {/* Background */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[#0B1030] bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem]" />
       </div>
@@ -87,7 +87,7 @@ export default function EvolutionSection() {
                   />
                 </div>
 
-                {/* Panel teks pink */}
+                {/* Panel */}
                 <div className="flex w-56 flex-col justify-center gap-y-2 bg-[#FFEDFA] px-4 py-5 md:w-64 lg:w-72">
                   <span className="text-sm font-semibold text-[#31061B]">
                     {item.year}
@@ -105,7 +105,7 @@ export default function EvolutionSection() {
         </div>
       </div>
 
-      {/* Timeline - controlled, sinkron dengan carousel di atas */}
+      {/* Timeline */}
       <EvolutionTimeline active={active} onChange={setActive} />
     </section>
   );

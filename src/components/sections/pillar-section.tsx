@@ -2,43 +2,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import Dialog from "../ui/Dialog";
-
-const dataPillar = [
-  {
-    title: "Malang Sportainment",
-    description:
-      "Perayaan energi kreatif terbesar yang secara spektakuler menyatukan dunia olahraga, kompetisi esports, dan aksi seni urban dalam satu panggung. Acara ini dirancang sebagai wadah interaksi lintas komunitas yang memadukan keseruan laga kompetitif dengan hiburan modern seperti live music, drone show, hingga festival kuliner.",
-    imgUrl: "/program_sportainment_v2.webp",
-  },
-  {
-    title: "Sound of Malang Menyala",
-    description:
-      "Perayaan energi baru Kota Malang di mana musik, budaya, kreativitas, dan teknologi bertemu dalam satu kesatuan. Pengunjung akan disuguhkan pengalaman multisensori, mulai dari panggung musik dan seni media interaktif, hingga pertunjukan budaya dan pasar ekonomi kreatif yang semarak, semuanya dirancang untuk menyatukan ribuan orang dalam satu gerakan kreatif yang menginspirasi.",
-    imgUrl: "/program_sportainment_v2.webp",
-  },
-  {
-    title: "Malang City Connect",
-    description:
-      "Konferensi dan forum bisnis strategis yang menjadi titik temu bagi para pemimpin kota, pelaku industri, investor, akademisi, dan komunitas kreatif untuk mendorong ekosistem inklusif dan berkelanjutan. Acara ini mengintegrasikan berbagai program utama seperti Creative City Summit, Business Matching, hingga MBOIS Al & Creative Pitch guna mengubah ide inovatif menjadi investasi dan dampak nyata bagi masa depan industri kreatif Indonesia.",
-    imgUrl: "/program_sportainment_v2.webp",
-  },
-  {
-    title: "Made by Arema Market",
-    description:
-      "Etalase kreatif yang mempertemukan brand lokal, kreator, dan startup teknologi guna merayakan inovasi masa depan yang berakar kuat pada identitas lokal Malan melalui zona fesyen, kriya, kuliner, hingga creative hub. Dirancang sebagai panggung kolaborasi tanpa batas untuk mendukung karya terbaik Arek Malang agar siap bersinar dan berdampak di kancah yang lebih luas.",
-    imgUrl: "/program_sportainment_v2.webp",
-  },
-  {
-    title: "Malang Mediart Experience",
-    description:
-      "Menghadirkan masa depan kreativitas melalui perpaduan spektakuler antara seni, teknologi, dan inovasi. Pengunjung akan disuguhkan pengalaman imersif yang memukau, mulai dari projection mapping dan instalasi interaktif hingga eksplorasi seni berbasis Al dan robotika. Acara ini merupakan wadah kolaborasi visioner yang dirancang untuk menyalakan energi kreatif baru dan membawa ekosistem digital Malang ke level global.",
-    imgUrl: "/program_sportainment_v2.webp",
-  },
-];
+import { useLanguage } from "@/i18n/context";
 
 export default function PillarSection() {
+  const { t } = useLanguage();
   const [selectedPillar, setSelectedPillar] = useState<
-    (typeof dataPillar)[number] | null
+    (typeof t.pillar.items)[number] | null
   >(null);
 
   return (
@@ -48,20 +17,19 @@ export default function PillarSection() {
     >
       <div className="absolute top-2 -right-70 size-80 rounded-full bg-[#f61d89] blur-[150px]" />
       <div className="flex flex-col items-center gap-y-6 text-[#F2F2F2]">
-        <span className="block text-center font-semibold">+ Program</span>
+        <span className="block text-center font-semibold">
+          {t.pillar.label}
+        </span>
         <h2 className="text-6xl leading-[90.19px] font-medium">
-          5 Pilar Festival MBOIS 11
+          {t.pillar.title}
         </h2>
         <p className="w-4xl text-center text-2xl text-[#F2F2F2]/80">
-          Sebuah ajakan kolaborasi eksklusif bagi Mitra Korporasi untuk
-          terhubung, berinteraksi, dan mengamankan posisi merek di hadapan lebih
-          dari 10.000 inovator startup, pelaku industri kreatif, dan ekosistem
-          digital terintegrasi.
+          {t.pillar.description}
         </p>
       </div>
 
       <div className="mt-8 flex w-full flex-wrap justify-center gap-x-6 gap-y-10">
-        {dataPillar.map((dp) => (
+        {t.pillar.items.map((dp) => (
           <div
             role="button"
             key={dp.title}
@@ -100,7 +68,7 @@ export default function PillarSection() {
             </div>
             <div className="flex w-full flex-col gap-y-4">
               <div className="flex size-8 items-center justify-center rounded-full border border-white text-lg font-semibold">
-                {dataPillar.indexOf(selectedPillar) + 1}
+                {t.pillar.items.indexOf(selectedPillar) + 1}
               </div>
               <h6 className="w-full text-2xl font-semibold">
                 {selectedPillar.title}
@@ -109,7 +77,7 @@ export default function PillarSection() {
                 {selectedPillar.description}
               </p>
               <button className="mt-auto w-full rounded-lg border border-[#F61D89] py-2.5 text-xs font-medium transition hover:border-white hover:bg-white hover:text-black">
-                Lihat Detail
+                {t.pillar.itemAction}
               </button>
             </div>
           </div>
