@@ -23,7 +23,7 @@ export default function YourRoleSection() {
 
   return (
     <section
-      id="pillar"
+      id="your-role"
       className="relative w-full overflow-hidden px-8 py-14 md:px-16 md:py-18"
     >
       <div className="relative z-20 flex flex-col items-center gap-y-6 text-[#F2F2F2]">

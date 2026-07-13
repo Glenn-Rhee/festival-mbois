@@ -374,6 +374,117 @@ const id = {
       },
     ],
   },
+  rundown: {
+    label: "+ Rundown",
+    title: "MBOIS Festival Rundown",
+    actionToggle: "Lihat lebih sedikit",
+    description:
+      "Satu stadion, ribu ide, juta karya, satu gerakan. Simak ringkasan agenda kolaborasi, eksibisi bisnis, hingga panggung sportainment spektakuler Festival Mbois 11.",
+    items: [
+      {
+        label: "Day 1",
+        date: "21 Aug 2026",
+        title: "The Opening: From Heritage to Future",
+        actionTicket: "Dapatkan Tiket",
+        titleDetail: "Emotional Sportaiment Opening Night",
+        headlineArtist: "Sal Priadi",
+        imgUrl: "/artist/tulus.jpg",
+        times: [
+          {
+            time: "10.00 - 17.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Pembukaan Zona Bisnis & Creative Economy Opening Talk.",
+              "IP Pitching Session 1 & Komersialiasi Creative Brand Market.",
+              "Aktivasi Experience Zone: Eksplorasi AR/VR, AI Playground, dan instalasi digital interaktif.",
+            ],
+          },
+          {
+            time: "17.00 - 19.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Sunset Activation, pertunjukan seni jalanan (street performance), dan pembukaan pusat kuliner (food market).",
+            ],
+          },
+          {
+            time: "19.00 - 22.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Upacara pembukaan kolosal yang memadukan pertunjukan orkestra, Stadium Projection Mapping, Drone Show, dan Light Show Performance.",
+            ],
+          },
+        ],
+      },
+      {
+        label: "Day 2",
+        date: "21 Aug 2026",
+        title: "The Opening: From Heritage to Future",
+        actionTicket: "Dapatkan Tiket",
+        titleDetail: "Emotional Sportaiment Opening Night",
+        headlineArtist: "Sal Priadi",
+        imgUrl: "/artist/unknown-2.jpg",
+        times: [
+          {
+            time: "10.00 - 17.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Pembukaan Zona Bisnis & Creative Economy Opening Talk.",
+              "IP Pitching Session 1 & Komersialiasi Creative Brand Market.",
+              "Aktivasi Experience Zone: Eksplorasi AR/VR, AI Playground, dan instalasi digital interaktif.",
+            ],
+          },
+          {
+            time: "17.00 - 19.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Sunset Activation, pertunjukan seni jalanan (street performance), dan pembukaan pusat kuliner (food market).",
+            ],
+          },
+          {
+            time: "19.00 - 22.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Upacara pembukaan kolosal yang memadukan pertunjukan orkestra, Stadium Projection Mapping, Drone Show, dan Light Show Performance.",
+            ],
+          },
+        ],
+      },
+      {
+        label: "Day 3",
+        date: "21 Aug 2026",
+        title: "The Opening: From Heritage to Future",
+        actionTicket: "Dapatkan Tiket",
+        titleDetail: "Emotional Sportaiment Opening Night",
+        headlineArtist: "Sal Priadi",
+        imgUrl: "/artist/aldi-taher.jpg",
+        times: [
+          {
+            time: "10.00 - 17.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Pembukaan Zona Bisnis & Creative Economy Opening Talk.",
+              "IP Pitching Session 1 & Komersialiasi Creative Brand Market.",
+              "Aktivasi Experience Zone: Eksplorasi AR/VR, AI Playground, dan instalasi digital interaktif.",
+            ],
+          },
+          {
+            time: "17.00 - 19.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Sunset Activation, pertunjukan seni jalanan (street performance), dan pembukaan pusat kuliner (food market).",
+            ],
+          },
+          {
+            time: "19.00 - 22.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Upacara pembukaan kolosal yang memadukan pertunjukan orkestra, Stadium Projection Mapping, Drone Show, dan Light Show Performance.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
   statistic: {
     label: "Statistik",
     title: "Festival Mbois Dalam Angka",

@@ -376,6 +376,117 @@ const en: Translations = {
       },
     ],
   },
+  rundown: {
+    label: "+ Rundown",
+    title: "MBOIS Festival Rundown",
+    actionToggle: "Less Detail",
+    description:
+      "One stadium, thousands of ideas, millions of creations, one movement. Check out the summary of the collaboration agenda, business exhibitions, to the spectacular sportainment stage of Festival Mbois 11.",
+    items: [
+      {
+        label: "Day 1",
+        date: "21 Aug 2026",
+        title: "The Opening: From Heritage to Future",
+        actionTicket: "Get Tickets",
+        titleDetail: "Emotional Sportainment Opening Night",
+        headlineArtist: "Sal Priadi",
+        imgUrl: "/artist/tulus.jpg",
+        times: [
+          {
+            time: "10.00 - 17.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Opening of the Business Zone & Creative Economy Opening Talk.",
+              "IP Pitching Session 1 & Commercialization of the Creative Brand Market.",
+              "Experience Zone Activation: Exploration of AR/VR, AI Playground, and interactive digital installations.",
+            ],
+          },
+          {
+            time: "17.00 - 19.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Sunset Activation, street art performances, and the opening of the food market.",
+            ],
+          },
+          {
+            time: "19.00 - 22.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Colossal opening ceremony combining orchestral performances, Stadium Projection Mapping, Drone Shows, and Light Show Performances.",
+            ],
+          },
+        ],
+      },
+      {
+        label: "Day 2",
+        date: "21 Aug 2026",
+        title: "The Opening: From Heritage to Future",
+        actionTicket: "Get Tickets",
+        titleDetail: "Emotional Sportainment Opening Night",
+        headlineArtist: "Sal Priadi",
+        imgUrl: "/artist/unknown-2.jpg",
+        times: [
+          {
+            time: "10.00 - 17.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Opening of the Business Zone & Creative Economy Opening Talk.",
+              "IP Pitching Session 1 & Commercialization of the Creative Brand Market.",
+              "Experience Zone Activation: Exploration of AR/VR, AI Playground, and interactive digital installations.",
+            ],
+          },
+          {
+            time: "17.00 - 19.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Sunset Activation, street art performances, and the opening of the food market.",
+            ],
+          },
+          {
+            time: "19.00 - 22.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Colossal opening ceremony combining orchestral performances, Stadium Projection Mapping, Drone Shows, and Light Show Performances.",
+            ],
+          },
+        ],
+      },
+      {
+        label: "Day 3",
+        date: "21 Aug 2026",
+        title: "The Opening: From Heritage to Future",
+        actionTicket: "Get Tickets",
+        titleDetail: "Emotional Sportainment Opening Night",
+        headlineArtist: "Sal Priadi",
+        imgUrl: "/artist/aldi-taher.jpg",
+        times: [
+          {
+            time: "10.00 - 17.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Opening of the Business Zone & Creative Economy Opening Talk.",
+              "IP Pitching Session 1 & Commercialization of the Creative Brand Market.",
+              "Experience Zone Activation: Exploration of AR/VR, AI Playground, and interactive digital installations.",
+            ],
+          },
+          {
+            time: "17.00 - 19.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Sunset Activation, street art performances, and the opening of the food market.",
+            ],
+          },
+          {
+            time: "19.00 - 22.00 WIB",
+            title: "B2B & Tech Exploration",
+            toDo: [
+              "Colossal opening ceremony combining orchestral performances, Stadium Projection Mapping, Drone Shows, and Light Show Performances.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
   statistic: {
     label: "Statistics",
     title: "Festival Mbois in Numbers",
