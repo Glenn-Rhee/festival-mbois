@@ -10,6 +10,7 @@ import ProgramSection from "@/components/sections/program";
 import AgendaSection from "@/components/sections/agenda";
 import FaqSection from "@/components/sections/faq";
 import PillarSection from "@/components/sections/pillar-section";
+import LineUpArtist from "@/components/sections/line-up-artist";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       </div>
       <EvolutionSection />
       <PillarSection />
+      <LineUpArtist />
       <StatistikSection />
       <FestivalVideoSection />
       {/* Unified background wrapper for Program → FAQ */}
