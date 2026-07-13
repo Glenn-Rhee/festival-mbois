@@ -12,6 +12,7 @@ import FaqSection from "@/components/sections/faq";
 import PillarSection from "@/components/sections/pillar-section";
 import LineUpArtist from "@/components/sections/line-up-artist";
 import KeySpeaker from "@/components/sections/key-speaker";
+import YourRoleSection from "@/components/sections/your-role-section";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
       <PillarSection />
       <LineUpArtist />
       <KeySpeaker />
+      <YourRoleSection />
       <StatistikSection />
       <FestivalVideoSection />
       {/* Unified background wrapper for Program → FAQ */}

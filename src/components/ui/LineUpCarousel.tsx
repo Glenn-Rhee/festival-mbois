@@ -114,6 +114,7 @@ export default function LineupCarousel(props: Props) {
               src={item.imgUrl}
               alt={"Image of " + item.artist}
               fill
+              sizes="360px"
               className={cn(
                 "object-cover",
                 item.artist === "?" ? "blur-xl" : "",

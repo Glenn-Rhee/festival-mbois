@@ -329,6 +329,51 @@ const id = {
       "PAYUNG TEDUH",
     ],
   },
+  yourRole: {
+    label: "+ Gerbang Ekosistem",
+    title: "Pilih Peranmu Sekarang",
+    actionItem: "Daftar Sekarang",
+    description:
+      "Amankan tiket festival, daftarkan startup-mu ke sesi pitching, atau ajukan kurasi brand lokalmu untuk ikut menggerakkan ekosistem kreatif tahun ini.",
+    items: [
+      {
+        title: "Volunteer",
+        description:
+          "Kesempatan menjadi volunteer telah tiba. Daftarkan dirimu sekarang dan ambil peran aktif dalam mewujudkan pengalaman tak terlupakan bagi ribuan pengunjung.",
+        imgUrl: "/your-role.png",
+      },
+      {
+        title: "Sound of Malang Menyala Competition",
+        description:
+          "Festival Band Pelajar merupakan ajang kompetisi musik yang diselenggarakan untuk memberikan ruang bagi para musisi muda atau pelajar dalam menampilkan kreativitas, musikalitas, serta karya terbaik di panggung Festival Mbois 11 – Malang Menyala Temukan Suaramu, Nyalakan Panggungmu.",
+        imgUrl: "/your-role.png",
+      },
+      {
+        title: "Sound of Malang Menyala Concert",
+        description:
+          "Festival Mbois 11 – Malang Menyala membuka kesempatan bagi band-band terbaik untuk tampil sebagai Opening Act Main Stage bersama deretan penampil utama dalam festival kreatif terbesar di Kota Malang.",
+        imgUrl: "/your-role.png",
+      },
+      {
+        title: "Talent Made By Arema Market",
+        description:
+          "Festival Mbois 11 – Malang Menyala membuka kesempatan bagi talenta kreatif dari Malang Raya untuk berkolaborasi dan tampil pada Panggung Made By Arema Creative Market yang berada di area luar Stadion Gajayana.",
+        imgUrl: "/your-role.png",
+      },
+      {
+        title: "Media Partner",
+        description:
+          "Festival Mbois 11 membuka kesempatan bagi media cetak, online, televisi, radio, komunitas media, media kampus, hingga content creator untuk menjadi bagian dari gerakan ini sebagai Official Media Partner.",
+        imgUrl: "/your-role.png",
+      },
+      {
+        title: "Booth & Tenant",
+        description:
+          "Festival Mbois 11 – Malang Menyala membuka kesempatan bagi UMKM, pelaku ekonomi kreatif, startup, komunitas, institusi, dan brand untuk berpartisipasi sebagai tenant dalam rangkaian Creative Market & Exhibition.",
+        imgUrl: "/your-role.png",
+      },
+    ],
+  },
   statistic: {
     label: "Statistik",
     title: "Festival Mbois Dalam Angka",
