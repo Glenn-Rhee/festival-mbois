@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Dialog from "../ui/Dialog";
 import { useLanguage } from "@/i18n/context";
+import { StarParticles } from "../ui/star-particles";
 
 export default function PillarSection() {
   const { t } = useLanguage();
@@ -15,15 +16,29 @@ export default function PillarSection() {
       id="pillar"
       className="relative w-full overflow-hidden py-14 md:py-18"
     >
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 md:h-48">
+        <StarParticles bottom={10} left={20} glow size="large" />
+        <StarParticles bottom={20} left={2} glow size="medium" />
+        <StarParticles bottom={5} left={8} size="small" />
+        <StarParticles bottom={15} left={35} size="small" />
+        <StarParticles bottom={25} left={45} glow size="medium" />
+        <StarParticles bottom={8} left={55} size="small" />
+        <StarParticles bottom={18} left={62} glow size="large" />
+        <StarParticles bottom={3} left={70} size="small" />
+        <StarParticles bottom={22} left={78} size="medium" />
+        <StarParticles bottom={12} left={85} glow size="medium" />
+        <StarParticles bottom={6} left={92} size="small" />
+        <StarParticles bottom={28} left={95} glow size="large" />
+      </div>
       <div className="absolute top-2 -right-70 size-80 rounded-full bg-[#f61d89] blur-[150px]" />
       <div className="flex flex-col items-center gap-y-6 text-[#F2F2F2]">
         <span className="block text-center font-semibold">
           {t.pillar.label}
         </span>
-        <h2 className="text-6xl leading-[90.19px] font-medium">
+        <h2 className="text-3xl leading-tight font-medium sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[90.19px]">
           {t.pillar.title}
         </h2>
-        <p className="w-4xl text-center text-2xl text-[#F2F2F2]/80">
+        <p className="w-full max-w-4xl text-center text-base text-[#F2F2F2]/80 sm:text-lg md:text-2xl">
           {t.pillar.description}
         </p>
       </div>
@@ -56,9 +71,8 @@ export default function PillarSection() {
 
       <Dialog isOpen={!!selectedPillar} onClose={() => setSelectedPillar(null)}>
         {selectedPillar && (
-          <div className="relative grid min-h-80 w-full max-w-2xl grid-cols-2 gap-x-8 rounded-xl border border-white bg-[#8d00478c] p-6 opacity-90">
-            {" "}
-            <div className="relative h-full w-full overflow-hidden rounded-xl">
+          <div className="relative grid min-h-80 w-[calc(100%-2rem)] max-w-2xl grid-cols-1 gap-6 rounded-xl border border-white bg-[#8d0047] p-4 text-center shadow-2xl backdrop-blur-md sm:gap-x-8 sm:p-6 md:grid-cols-2 md:text-start">
+            <div className="relative h-48 w-full overflow-hidden rounded-xl sm:h-full">
               <Image
                 src={"/program_sound_of_malang_menyala_v2.webp"}
                 alt={selectedPillar.title + " image"}
@@ -67,7 +81,7 @@ export default function PillarSection() {
               />
             </div>
             <div className="flex w-full flex-col gap-y-4">
-              <div className="flex size-8 items-center justify-center rounded-full border border-white text-lg font-semibold">
+              <div className="mx-auto flex size-8 items-center justify-center rounded-full border border-white text-lg font-semibold">
                 {t.pillar.items.indexOf(selectedPillar) + 1}
               </div>
               <h6 className="w-full text-2xl font-semibold">
@@ -83,6 +97,21 @@ export default function PillarSection() {
           </div>
         )}
       </Dialog>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 md:h-48">
+        <StarParticles bottom={10} left={20} glow size="large" />
+        <StarParticles bottom={20} left={2} glow size="medium" />
+        <StarParticles bottom={5} left={8} size="small" />
+        <StarParticles bottom={15} left={35} size="small" />
+        <StarParticles bottom={25} left={45} glow size="medium" />
+        <StarParticles bottom={8} left={55} size="small" />
+        <StarParticles bottom={18} left={62} glow size="large" />
+        <StarParticles bottom={3} left={70} size="small" />
+        <StarParticles bottom={22} left={78} size="medium" />
+        <StarParticles bottom={12} left={85} glow size="medium" />
+        <StarParticles bottom={6} left={92} size="small" />
+        <StarParticles bottom={28} left={95} glow size="large" />
+      </div>
     </section>
   );
 }
