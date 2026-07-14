@@ -70,7 +70,7 @@ export default function AboutSection() {
               <div className="relative aspect-video w-full overflow-hidden rounded-2xl border-2 border-[#7BAEFA] p-3">
                 {isPlaying ? (
                   <iframe
-                  className="w-full h-full rounded-2xl"
+                    className="h-full w-full rounded-2xl"
                     src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&si=i0FnwmiIITIzK0Lk`}
                     title="Festival Mbois 11"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -123,7 +123,7 @@ const en: Translations = {
       "One stadium, thousands of ideas, millions of creations, one movement. Check out the summary of collaboration agendas, business exhibitions, and the spectacular sportainment stage of Mbois Festival 11.",
     items: [
       {
-        artist: "Tulus",
+        artist: "?",
         imgUrl: "/artist/tulus.jpg",
       },
       {
@@ -131,7 +131,7 @@ const en: Translations = {
         imgUrl: "/artist/unknown-1.jpg",
       },
       {
-        artist: "Aldi Taher",
+        artist: "?",
         imgUrl: "/artist/aldi-taher.jpg",
       },
       {
@@ -139,27 +139,27 @@ const en: Translations = {
         imgUrl: "/artist/unknown-2.jpg",
       },
       {
-        artist: "BTS",
+        artist: "?",
         imgUrl: "/artist/bts.jpg",
       },
       {
-        artist: "maliq & essential",
+        artist: "?",
         imgUrl: "/artist/maliq.jpg",
       },
       {
-        artist: "Bernadya",
+        artist: "?",
         imgUrl: "/artist/bernadya.jpg",
       },
       {
-        artist: "Raim Laode",
+        artist: "?",
         imgUrl: "/artist/raim-laode.jpg",
       },
       {
-        artist: "Perunggu",
+        artist: "?",
         imgUrl: "/artist/perunggu.jpg",
       },
       {
-        artist: "Hindia",
+        artist: "?",
         imgUrl: "/artist/hindia.jpg",
       },
     ],

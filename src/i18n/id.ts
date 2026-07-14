@@ -121,7 +121,7 @@ const id = {
       "Satu stadion, ribu ide, juta karya, satu gerakan. Simak ringkasan agenda kolaborasi, eksibisi bisnis, hingga panggung sportainment spektakuler Festival Mbois 11.",
     items: [
       {
-        artist: "Tulus",
+        artist: "?",
         imgUrl: "/artist/tulus.jpg",
       },
       {
@@ -129,7 +129,7 @@ const id = {
         imgUrl: "/artist/unknown-1.jpg",
       },
       {
-        artist: "Aldi Taher",
+        artist: "?",
         imgUrl: "/artist/aldi-taher.jpg",
       },
       {
@@ -137,27 +137,27 @@ const id = {
         imgUrl: "/artist/unknown-2.jpg",
       },
       {
-        artist: "BTS",
+        artist: "?",
         imgUrl: "/artist/bts.jpg",
       },
       {
-        artist: "maliq & essential",
+        artist: "?",
         imgUrl: "/artist/maliq.jpg",
       },
       {
-        artist: "Bernadya",
+        artist: "?",
         imgUrl: "/artist/bernadya.jpg",
       },
       {
-        artist: "Raim Laode",
+        artist: "?",
         imgUrl: "/artist/raim-laode.jpg",
       },
       {
-        artist: "Perunggu",
+        artist: "?",
         imgUrl: "/artist/perunggu.jpg",
       },
       {
-        artist: "Hindia",
+        artist: "?",
         imgUrl: "/artist/hindia.jpg",
       },
     ],

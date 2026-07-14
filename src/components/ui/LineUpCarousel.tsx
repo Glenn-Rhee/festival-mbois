@@ -111,13 +111,13 @@ export default function LineupCarousel(props: Props) {
         {lineupArtist.map((item, i) => (
           <div key={item.artist + i} className="relative h-120 w-90 shrink-0">
             <Image
-              src={item.imgUrl}
+              src={item.artist === "?" ? "/unknown-artist.jpg" : item.imgUrl}
               alt={"Image of " + item.artist}
               fill
               sizes="360px"
               className={cn(
                 "object-cover",
-                item.artist === "?" ? "blur-xl" : "",
+                item.artist === "?" ? "blur-md" : "",
               )}
             />
             <div className="absolute inset-0 flex items-center justify-center bg-[#f91e8b96]">
