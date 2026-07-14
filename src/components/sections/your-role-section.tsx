@@ -45,7 +45,7 @@ export default function YourRoleSection() {
             <h6 className="text-2xl font-semibold text-[#F2F2F2] sm:text-3xl md:text-4xl">
               {dataActive.title}
             </h6>
-            <p className="text-base leading-relaxed text-[#F2F2F2] sm:text-lg md:text-xl md:leading-11.25">
+            <p className="max-w-2xl text-base leading-relaxed text-[#F2F2F2] sm:text-lg md:text-xl md:leading-11.25">
               {dataActive.description}
             </p>
             <button className="w-full max-w-64 rounded-xl border border-[#5693FD] px-2 py-2.5 text-base font-medium text-transparent hover:bg-white sm:text-lg">
@@ -55,7 +55,7 @@ export default function YourRoleSection() {
             </button>
           </div>
 
-          <div className="relative order-first md:order-last h-56 w-full overflow-hidden rounded-2xl border-2 border-[#259DC2] sm:h-72 md:h-full">
+          <div className="relative order-first h-56 w-full overflow-hidden rounded-2xl border-2 border-[#259DC2] sm:h-72 md:order-last md:h-full">
             <Image
               src={dataActive.imgUrl}
               alt={dataActive.title + " image"}
@@ -81,7 +81,7 @@ export default function YourRoleSection() {
                   : "bg-linear-to-b from-[#25CFEF] to-[#5693FD]",
               )}
             >
-              <item.icon className="size-6" />
+              <item.icon className="size-6 md:size-10" />
               <span className="block max-w-[90%] text-center text-xs font-medium text-[#FFEAED] sm:text-sm md:max-w-46">
                 {item.title}
               </span>
