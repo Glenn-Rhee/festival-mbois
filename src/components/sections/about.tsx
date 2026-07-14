@@ -9,11 +9,14 @@ import Idea from "../icon/Idea";
 import Creative from "../icon/Creative";
 import User from "../icon/User";
 import { StarParticles } from "../ui/star-particles";
+import { useState } from "react";
 
 const pillarIcons = [LinkIcon, UserIcon, Idea, Creative];
+const YOUTUBE_VIDEO_ID = "Cw3eAvi8pn4";
 
 export default function AboutSection() {
   const { t } = useLanguage();
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   return (
     <section id="about" className="relative w-full py-16 lg:py-32">
@@ -64,37 +67,53 @@ export default function AboutSection() {
 
             {/* Right Content - Video/Image Card */}
             <div className="relative flex w-full items-center justify-center lg:w-[45%]">
-              <div className="relative aspect-video w-full overflow-hidden rounded-2xl border-2 border-[#7BAEFA]">
-                <Image
-                  src="/thumbnail.webp"
-                  alt="Festival Mbois 11"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 45vw"
-                />
-                {/* Play button overlay */}
-                <div className="bg-brand-blue-dark/80 absolute inset-0 flex items-center justify-center">
-                  <div className="flex size-25 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                    <PlayIcon className="size-8" fill="white" />
-                  </div>
-                </div>
-                {/* Bottom overlay with branding */}
-                <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between px-12 py-4">
-                  <div className="flex items-center gap-2">
+              <div className="relative aspect-video w-full overflow-hidden rounded-2xl border-2 border-[#7BAEFA] p-3">
+                {isPlaying ? (
+                  <iframe
+                  className="w-full h-full rounded-2xl"
+                    src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&si=i0FnwmiIITIzK0Lk`}
+                    title="Festival Mbois 11"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                ) : (
+                  <>
                     <Image
-                      src="/img-about.png"
-                      alt="Logo"
-                      width={40}
-                      height={40}
+                      src="/thumbnail.webp"
+                      alt="Festival Mbois 11"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 45vw"
                     />
-                    <span className="text-2xl font-semibold text-white md:text-3xl">
-                      Festival Mbois 11
-                    </span>
-                  </div>
-                  <span className="max-w-10 font-medium text-white">
-                    Malang Menyala
-                  </span>
-                </div>
+                    {/* Play button overlay */}
+                    <div className="bg-brand-blue-dark/80 absolute inset-0 flex items-center justify-center">
+                      <button
+                        onClick={() => setIsPlaying(true)}
+                        className="flex size-25 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm"
+                      >
+                        <PlayIcon className="size-8" fill="white" />
+                      </button>
+                    </div>
+                    {/* Bottom overlay with branding */}
+                    <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between px-12 py-4">
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src="/img-about.png"
+                          alt="Logo"
+                          width={40}
+                          height={40}
+                        />
+                        <span className="text-2xl font-semibold text-white md:text-3xl">
+                          Festival Mbois 11
+                        </span>
+                      </div>
+                      <span className="max-w-10 font-medium text-white">
+                        Malang Menyala
+                      </span>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

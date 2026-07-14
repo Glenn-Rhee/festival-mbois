@@ -35,7 +35,7 @@ export default function Home() {
       <LineUpArtist />
       <KeySpeaker />
       <YourRoleSection />
-      <RundownSection />
+      {/* <RundownSection /> */}
       <FaqSection />
       <SponsorsSection />
     </main>
