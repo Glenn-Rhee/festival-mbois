@@ -54,7 +54,7 @@ export default function SponsorsSection() {
           <div className="mx-auto flex w-full max-w-full items-center justify-center gap-x-2 sm:gap-x-4">
             <div className="h-1 w-[25%] bg-linear-to-r from-[#00000000] to-[#FFFFFF33] sm:w-[40%]" />
             <span className="shrink-0 text-center text-xs font-semibold text-white/60 sm:text-sm">
-              Instansi Pemerintah & Kementerian
+              Sektor Swasta & Mitra Bisnis
             </span>
             <div className="h-1 w-[25%] bg-linear-to-l from-[#00000000] to-[#FFFFFF33] sm:w-[40%]" />
           </div>
