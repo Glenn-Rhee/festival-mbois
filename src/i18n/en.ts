@@ -614,12 +614,12 @@ const en: Translations = {
       {
         title: "What is Festival Mbois 11: Malang Menyala?",
         content:
-          "Festival Mbois 11 is an annual creative industry celebration in Malang. With the theme Malang Menyala, this festival serves as a meeting point for creators, artists, MSME players, and the general public through various creative events.",
+          "Festival Mbois 11 is an annual creative industry celebration in Malang. Carrying the theme 'Malang Menyala' (Malang Ablaze), this festival serves as a gathering space for creators, artists, MSME players, and the wider community through a series of creative events.",
       },
       {
-        title: "When and where is Festival Mbois 11 held?",
+        title: "When and where will Festival Mbois 11 be held?",
         content:
-          "The event will be held on August 21-23, 2026 at Stadion Gajayana, Malang.",
+          "The event will be held from August 21 to 23, 2026, at Gajayana Stadium, Malang.",
       },
       {
         title: "Who can attend this event?",
