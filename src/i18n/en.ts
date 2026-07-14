@@ -343,36 +343,48 @@ const en: Translations = {
         description:
           "The opportunity to become a volunteer has arrived. Register now and take an active role in creating an unforgettable experience for thousands of visitors.",
         imgUrl: "/your-role.png",
+        actionUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdMTq4E3p2Rx9HDGKoOzNVoOPOLJOlAkYIyMVtRDAmqlxGcLg/viewform",
       },
       {
         title: "Sound of Malang Menyala Competition",
         description:
           "The Student Band Festival is a musical competition organized to provide a platform for young musicians or students to showcase their creativity, musicality, and finest works on the Mbois Festival 11 stage – Malang Menyala: Find Your Voice, Ignite Your Stage.",
         imgUrl: "/your-role.png",
+        actionUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLScGQo_WjpqcMAwCCfJosTALobAF17A8ha_v0Exyk3tdPrxaKQ/viewform",
       },
       {
         title: "Sound of Malang Menyala Concert",
         description:
           "Mbois Festival 11 – Malang Menyala opens up opportunities for the best bands to perform as the Main Stage Opening Act alongside the lineup of main performers in the largest creative festival in Malang City.",
         imgUrl: "/your-role.png",
+        actionUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLSckY5cMQJMtS61_-8zSTBCcEqyJhxLjMG5vpK-QzgL041keGQ/viewform",
       },
       {
         title: "Talent Made By Arema Market",
         description:
           "Mbois Festival 11 – Malang Menyala opens up opportunities for creative talents from Greater Malang to collaborate and perform on the Made By Arema Creative Market Stage located in the Gajayana Stadium outdoor area.",
         imgUrl: "/your-role.png",
+        actionUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLSf0vD7vxkJ6mTx23C6Ic81ekpyfituSA-pMx90iRVK_UOl88g/viewform",
       },
       {
         title: "Media Partner",
         description:
           "Mbois Festival 11 opens up opportunities for print, online, television, radio media, media communities, campus media, and content creators to be part of this movement as Official Media Partners.",
         imgUrl: "/your-role.png",
+        actionUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLSdLQb6mdhpTYtv1Wq4Zo5qoSLNLSHI-8XWqW4rguC4GMSHcrA/viewform",
       },
       {
         title: "Booth & Tenant",
         description:
           "Mbois Festival 11 – Malang Menyala opens up opportunities for MSMEs, creative economy players, startups, communities, institutions, and brands to participate as tenants in the Creative Market & Exhibition series.",
         imgUrl: "/your-role.png",
+        actionUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLScYCeAlneNXezIHXrSGJbrIAFNzqKS33F7rB881IiYBthlGOA/viewform",
       },
     ],
   },

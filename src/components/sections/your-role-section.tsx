@@ -8,6 +8,7 @@ import UserIcon from "../icon/UserIcon";
 import { useState } from "react";
 import { cn } from "@/lib/cn";
 import Image from "next/image";
+import Link from "next/link";
 
 const icons = [Creative, UserIcon, Idea, LinkIcon, Idea, LinkIcon];
 
@@ -48,11 +49,14 @@ export default function YourRoleSection() {
             <p className="max-w-2xl text-base leading-relaxed text-[#F2F2F2] sm:text-lg md:text-xl md:leading-11.25">
               {dataActive.description}
             </p>
-            <button className="w-full max-w-64 rounded-xl border border-[#5693FD] px-2 py-2.5 text-base font-medium text-transparent hover:bg-white sm:text-lg">
+            <Link
+              href={dataActive.actionUrl}
+              className="w-full max-w-64 flex items-center justify-center rounded-xl border border-[#5693FD] px-2 py-2.5 text-base font-medium text-transparent hover:bg-white sm:text-lg"
+            >
               <span className="bg-linear-to-b from-[#25CFEF] to-[#5693FD] bg-clip-text">
                 {t.yourRole.actionItem}
               </span>
-            </button>
+            </Link>
           </div>
 
           <div className="relative order-first h-56 w-full overflow-hidden rounded-2xl border-2 border-[#259DC2] sm:h-72 md:order-last md:h-full">
