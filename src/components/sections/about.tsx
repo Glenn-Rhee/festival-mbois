@@ -22,7 +22,7 @@ export default function AboutSection() {
         <div className="rounded-2xl border border-white bg-[#EEEEEE14] p-6 backdrop-blur-xl md:p-10 lg:p-14">
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-14">
             {/* Left Content */}
-            <div className="flex flex-1 flex-col">
+            <div className="flex flex-1 flex-col justify-between">
               {/* Label */}
               <div className="mb-6 flex items-center gap-2">
                 <Plus className="size-4 text-white" />
