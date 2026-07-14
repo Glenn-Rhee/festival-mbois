@@ -38,7 +38,9 @@ export default function KeySpeaker() {
             )}
           >
             <Image
-              src={speaker.imgUrl}
+              src={
+                speaker.actor === "?" ? "/unknown-artist.jpg" : speaker.imgUrl
+              }
               alt={"Photo of " + speaker.actor}
               fill
               className="object-cover shadow-xl shadow-black/80"
@@ -63,7 +65,7 @@ export default function KeySpeaker() {
                   {speaker.actor}
                 </h6>
                 <span className="text-center text-xl font-light text-white uppercase">
-                  {speaker.title}
+                  {speaker.actor === "?" ? "-" : speaker.title}
                 </span>
               </div>
             </div>

@@ -206,42 +206,42 @@ const id = {
         title: "Tokoh Nasional",
         speakers: [
           {
-            actor: "Raditya Dika",
+            actor: "?",
             title: "Komika",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "Gita Wirjawan",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/gita-wirjawan.png",
           },
           {
-            actor: "Tom Lembong",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "Handry Satriago",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/handry-satriago.png",
           },
           {
-            actor: "Rigen Rakelna",
+            actor: "?",
             title: "Komedian",
             imgUrl: "/speakers/rigen-rakelna.jpg",
           },
           {
-            actor: "W Tanuwijaya",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/william-tanuwijaya.png",
           },
@@ -251,42 +251,42 @@ const id = {
         title: "Tokoh Kreatif",
         speakers: [
           {
-            actor: "Raditya Dika",
+            actor: "?",
             title: "Komika",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "Gita Wirjawan",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/gita-wirjawan.png",
           },
           {
-            actor: "Tom Lembong",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "Handry Satriago",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/handry-satriago.png",
           },
           {
-            actor: "Rigen Rakelna",
+            actor: "?",
             title: "Komedian",
             imgUrl: "/speakers/rigen-rakelna.jpg",
           },
           {
-            actor: "W Tanuwijaya",
+            actor: "?",
             title: "Bisnisman",
             imgUrl: "/speakers/william-tanuwijaya.png",
           },

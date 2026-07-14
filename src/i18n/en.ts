@@ -208,42 +208,42 @@ const en: Translations = {
         title: "National Figures",
         speakers: [
           {
-            actor: "Raditya Dika",
+            actor: "?",
             title: "Stand-up Comedian",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Businessman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Businessman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "Gita Wirjawan",
+            actor: "?",
             title: "Businessman",
             imgUrl: "/speakers/gita-wirjawan.png",
           },
           {
-            actor: "Tom Lembong",
+            actor: "?",
             title: "Economist & Politician",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "Handry Satriago",
+            actor: "?",
             title: "CEO of GE Indonesia",
             imgUrl: "/speakers/handry-satriago.png",
           },
           {
-            actor: "Rigen Rakelna",
+            actor: "?",
             title: "Comedian & Actor",
             imgUrl: "/speakers/rigen-rakelna.jpg",
           },
           {
-            actor: "William Tanuwijaya",
+            actor: "?",
             title: "Co-Founder of Tokopedia",
             imgUrl: "/speakers/william-tanuwijaya.png",
           },
@@ -253,42 +253,42 @@ const en: Translations = {
         title: "Creative Figures",
         speakers: [
           {
-            actor: "Raditya Dika",
+            actor: "?",
             title: "Stand-up Comedian",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Businessman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "dr. Tirta",
+            actor: "?",
             title: "Businessman",
             imgUrl: "/speakers/dr-tirta.jpg",
           },
           {
-            actor: "Gita Wirjawan",
+            actor: "?",
             title: "Businessman",
             imgUrl: "/speakers/gita-wirjawan.png",
           },
           {
-            actor: "Tom Lembong",
+            actor: "?",
             title: "Economist & Politician",
             imgUrl: "/speakers/raditya-dika.jpg",
           },
           {
-            actor: "Handry Satriago",
+            actor: "?",
             title: "CEO of GE Indonesia",
             imgUrl: "/speakers/handry-satriago.png",
           },
           {
-            actor: "Rigen Rakelna",
+            actor: "?",
             title: "Comedian & Actor",
             imgUrl: "/speakers/rigen-rakelna.jpg",
           },
           {
-            actor: "William Tanuwijaya",
+            actor: "?",
             title: "Co-Founder of Tokopedia",
             imgUrl: "/speakers/william-tanuwijaya.png",
           },
