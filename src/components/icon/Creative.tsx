@@ -1,4 +1,8 @@
-export default function Creative() {
+interface Props {
+  className?: string;
+}
+export default function Creative(props: Props) {
+  const { className } = props;
   return (
     <svg
       width="41"
@@ -6,6 +10,7 @@ export default function Creative() {
       viewBox="0 0 41 41"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <g clipPath="url(#clip0_32741_1481)">
         <path
