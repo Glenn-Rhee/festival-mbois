@@ -128,7 +128,7 @@ export default function AboutSection() {
                 key={index}
                 className="flex items-center gap-2 px-2 sm:flex-1 sm:justify-center sm:gap-4 sm:px-4"
               >
-                <User className="shrink-0" />
+                <User />
                 <div className="flex flex-col">
                   <span className="text-lg font-semibold tracking-tight text-[#FDFDFD] sm:text-xl md:text-2xl lg:text-4xl">
                     {stat.value}
