@@ -96,19 +96,20 @@ export default function AboutSection() {
                       </button>
                     </div>
                     {/* Bottom overlay with branding */}
-                    <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between px-12 py-4">
+                    <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between px-4 pb-3 pt-12 sm:px-8 sm:pb-4 md:px-12">
                       <div className="flex items-center gap-2">
                         <Image
                           src="/img-about.png"
                           alt="Logo"
                           width={40}
                           height={40}
+                          className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10"
                         />
-                        <span className="text-2xl font-semibold text-white md:text-3xl">
+                        <span className="text-sm font-semibold leading-tight text-white sm:text-lg md:text-2xl lg:text-[30px]">
                           Festival Mbois 11
                         </span>
                       </div>
-                      <span className="max-w-10 font-medium text-white">
+                      <span className="max-w-12 text-right text-[10px] font-medium text-white sm:text-xs md:max-w-none md:text-sm">
                         Malang Menyala
                       </span>
                     </div>
@@ -120,19 +121,19 @@ export default function AboutSection() {
         </div>
 
         {/* Statistics Bar */}
-        <div className="mt-8 rounded-2xl border border-white bg-[#EEEEEE14] px-6 py-8 backdrop-blur-xl md:px-10 md:py-10">
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-0">
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-white bg-[#EEEEEE14] px-4 py-6 backdrop-blur-xl sm:px-6 sm:py-8 md:px-10 md:py-10">
+          <div className="flex min-w-max items-center justify-between gap-4 sm:min-w-0 sm:flex-wrap sm:justify-center sm:gap-6">
             {t.about.stats.map((stat, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 px-4 sm:flex-1 sm:justify-center sm:px-6"
+                className="flex items-center gap-2 px-2 sm:flex-1 sm:justify-center sm:gap-4 sm:px-4"
               >
-                <User />
+                <User className="shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-xl font-semibold tracking-tight text-[#FDFDFD] md:text-2xl lg:text-4xl">
+                  <span className="text-lg font-semibold tracking-tight text-[#FDFDFD] sm:text-xl md:text-2xl lg:text-4xl">
                     {stat.value}
                   </span>
-                  <span className="text[#FDFDFD] md:text-sm">{stat.label}</span>
+                  <span className="text-[10px] text-[#FDFDFD] sm:text-xs md:text-sm">{stat.label}</span>
                 </div>
               </div>
             ))}

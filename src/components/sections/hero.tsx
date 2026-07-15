@@ -89,17 +89,18 @@ export default function HeroSection() {
         <div className="relative right-0 bottom-0 left-0 z-10 mt-4 flex w-full flex-col-reverse items-center justify-between gap-6 px-6 pb-12 md:flex-row lg:absolute lg:right-[72px] lg:bottom-6 lg:left-[72px] lg:w-auto lg:px-0 lg:pb-0">
           {/* CTA buttons */}
           <div
-            className="animate-fade-up flex w-full items-center justify-center gap-3 md:justify-start"
+            className="animate-fade-up flex w-full flex-col items-center justify-center gap-3 sm:flex-row md:justify-start"
             style={{ animationDelay: "200ms" }}
           >
-            <Link href="#ticket" onClick={(e) => scrollToSection(e, "#ticket")}>
-              <Button variant={"outline"}>{t.hero.ctaTicket}</Button>
+            <Link href="#ticket" onClick={(e) => scrollToSection(e, "#ticket")} className="w-full sm:w-auto">
+              <Button variant={"outline"} className="w-full sm:w-auto">{t.hero.ctaTicket}</Button>
             </Link>
             <Link
               href="#registration"
               onClick={(e) => scrollToSection(e, "#registration")}
+              className="w-full sm:w-auto"
             >
-              <Button variant={"primary-gradient"}>
+              <Button variant={"primary-gradient"} className="w-full sm:w-auto">
                 {t.hero.cta}
                 <CircleArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -123,8 +124,8 @@ export default function HeroSection() {
         <p className="py-6 text-center text-2xl font-semibold tracking-widest text-[#F2F2F2] uppercase">
           {t.hero.supportedBy}
         </p>
-        <div className="rounded-2xl bg-white px-8 py-8 lg:px-12 lg:py-8">
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-20">
+        <div className="rounded-2xl bg-white px-4 py-6 sm:px-8 sm:py-8 lg:px-12 lg:py-8">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-8 lg:gap-20">
             <Image
               src={"/logo_mcf.svg"}
               width={80}

@@ -43,13 +43,13 @@ export default function PillarSection() {
         </p>
       </div>
 
-      <div className="mt-8 flex w-full flex-wrap justify-center gap-x-6 gap-y-10">
+      <div className="mt-8 flex w-full flex-wrap justify-center gap-x-4 gap-y-6 px-4 sm:gap-x-6 sm:gap-y-10 sm:px-0">
         {t.pillar.items.map((dp) => (
           <div
             role="button"
             key={dp.title}
             onClick={() => setSelectedPillar(dp)}
-            className="relative w-full max-w-sm cursor-pointer overflow-hidden rounded-xl border border-white/50 bg-white/5 px-6 py-4 shadow-xl backdrop-blur-md sm:w-[calc(50%-1rem)] lg:w-[calc(30%-1rem)]"
+            className="relative w-full max-w-[calc(50%-0.5rem)] cursor-pointer overflow-hidden rounded-xl border border-white/50 bg-white/5 px-4 py-3 shadow-xl backdrop-blur-md sm:max-w-sm sm:px-6 sm:py-4 lg:w-[calc(30%-1rem)]"
           >
             <div className="relative aspect-video w-full">
               <Image

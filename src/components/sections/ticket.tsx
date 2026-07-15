@@ -22,13 +22,13 @@ export default function TicketSection() {
 
       {/* Glow - right side (purple) */}
       <div
-        className="absolute top-[250px] left-[55%] h-[644px] w-[1153px]"
+        className="absolute top-[150px] left-[40%] h-[300px] w-[500px] sm:top-[250px] sm:left-[55%] sm:h-[644px] sm:w-[1153px]"
         style={{ background: "#23367A", filter: "blur(147.5px)" }}
       />
 
       {/* Glow - left side (pink) */}
       <div
-        className="absolute top-[120px] -left-[59px] w-[459.02px] h-151.75"
+        className="absolute top-[60px] -left-[30px] h-[300px] w-[230px] sm:top-[120px] sm:-left-[59px] sm:h-[607px] sm:w-[459px]"
         style={{ background: "#68114A", filter: "blur(171px)" }}
       />
 

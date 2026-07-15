@@ -71,22 +71,22 @@ export default function YourRoleSection() {
         </div>
 
         {/* Baris tombol icon: grid wrap di mobile, tetap satu baris di desktop */}
-        <div className="mt-8 flex md:mt-12 md:w-full md:items-center md:justify-around md:gap-0">
+        <div className="mt-8 grid grid-cols-3 gap-2 sm:grid-cols-3 md:mt-12 md:flex md:w-full md:items-center md:justify-around md:gap-0">
           {dataItems.map((item, i) => (
             <button
               onClick={() => setDataActive(item)}
               key={item.title}
               className={cn(
-                "flex h-24 w-full cursor-pointer flex-col items-center justify-center gap-y-2 transition-all duration-300 ease-in-out sm:h-28 md:h-32 md:gap-y-4",
-                i === 0 && "rounded-bl-3xl",
-                i === dataItems.length - 1 && "rounded-br-3xl",
+                "flex h-20 w-full cursor-pointer flex-col items-center justify-center gap-y-2 rounded-xl transition-all duration-300 ease-in-out sm:h-24 md:h-32 md:gap-y-4 md:rounded-none",
+                i === 0 && "md:rounded-bl-3xl",
+                i === dataItems.length - 1 && "md:rounded-br-3xl",
                 dataActive.title === item.title
                   ? "bg-transparent"
                   : "bg-linear-to-b from-[#25CFEF] to-[#5693FD]",
               )}
             >
-              <item.icon className="size-6 md:size-10" />
-              <span className="block max-w-[90%] text-center text-xs font-medium text-[#FFEAED] sm:text-sm md:max-w-46">
+              <item.icon className="size-5 sm:size-6 md:size-10" />
+              <span className="block max-w-[90%] text-center text-[10px] font-medium text-[#FFEAED] sm:text-xs md:max-w-46 md:text-sm">
                 {item.title}
               </span>
             </button>
