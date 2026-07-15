@@ -136,7 +136,7 @@ const en: Translations = {
       },
       {
         artist: "Red Valley",
-        imgUrl: "/artist/red-valley.jpg",
+        imgUrl: "/artist/red-valley.JPG",
       },
       {
         artist: "D'KROSS",
