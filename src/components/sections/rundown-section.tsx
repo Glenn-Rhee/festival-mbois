@@ -74,9 +74,9 @@ export default function RundownSection() {
                         </span>
                         <p className="text-xl font-medium">{item.title}</p>
                       </div>
-                      <button className="mt-8 w-full rounded-xl border border-[#FFBBEC] py-4 text-[#FFBAEB]">
+                      <a href="https://malang-creative-fusion.eventopia.my/festival-mbois-11-malang-menyala" className="mt-8 w-full rounded-xl border border-[#FFBBEC] py-4 text-[#FFBAEB] text-center">
                         {item.actionTicket}
-                      </button>
+                      </a>
                     </div>
                     <div className="flex h-full flex-col gap-y-8 py-8 ps-8 pe-2 text-[#F2F2F2]">
                       <h6 className="text-2xl font-medium">

@@ -362,12 +362,12 @@ const id = {
     items: [
       {
         label: "Day 1",
-        date: "21 Aug 2026",
-        title: "The Opening: From Heritage to Future",
+        date: "21 Agustus 2026",
+        title: "Malang Talent",
         actionTicket: "Dapatkan Tiket",
-        titleDetail: "Emotional Sportaiment Opening Night",
-        headlineArtist: "Sal Priadi",
-        imgUrl: "/artist/tulus.jpg",
+        titleDetail: "Rock Night Festival",
+        headlineArtist: "Iksan Skuter",
+        imgUrl: "/artist/iksan-skuter.jpg",
         times: [
           {
             time: "10.00 - 17.00 WIB",
@@ -396,12 +396,12 @@ const id = {
       },
       {
         label: "Day 2",
-        date: "21 Aug 2026",
-        title: "The Opening: From Heritage to Future",
+        date: "21 Agustus 2026",
+        title: "Malang Technology",
         actionTicket: "Dapatkan Tiket",
-        titleDetail: "Emotional Sportaiment Opening Night",
-        headlineArtist: "Sal Priadi",
-        imgUrl: "/artist/unknown-2.jpg",
+        titleDetail: "Pop Music Festival",
+        headlineArtist: "Coldiac",
+        imgUrl: "/artist/coldiac.jpg",
         times: [
           {
             time: "10.00 - 17.00 WIB",
@@ -430,12 +430,12 @@ const id = {
       },
       {
         label: "Day 3",
-        date: "21 Aug 2026",
-        title: "The Opening: From Heritage to Future",
+        date: "21 Agustus 2026",
+        title: "Malang Culture",
         actionTicket: "Dapatkan Tiket",
-        titleDetail: "Emotional Sportaiment Opening Night",
-        headlineArtist: "Sal Priadi",
-        imgUrl: "/artist/aldi-taher.jpg",
+        titleDetail: "Cultural Experience",
+        headlineArtist: "Arca",
+        imgUrl: "/artist/archa.png",
         times: [
           {
             time: "10.00 - 17.00 WIB",
