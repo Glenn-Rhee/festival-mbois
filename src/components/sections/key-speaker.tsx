@@ -9,71 +9,6 @@ export default function KeySpeaker() {
   const { t } = useLanguage();
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
 
-  const renderRow = (
-    rowKey: string,
-    ks: {
-      title: string;
-      speakers: {
-        actor: string;
-        title: string;
-        imgUrl: string;
-      }[];
-    },
-    itemIndexOf: number,
-  ) => (
-    <div className="flex w-full">
-      {ks.speakers.map((speaker, i) => {
-        const itemKey = `${itemIndexOf}-${rowKey}-${i}`;
-        const isSelected = selectedKey === itemKey;
-
-        return (
-          <div
-            key={speaker.actor + i}
-            onClick={() => {
-              setSelectedKey(isSelected ? null : itemKey);
-            }}
-            className={cn(
-              "relative z-20 h-96 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out",
-              isSelected ? "w-[160%] grow-3" : "w-full grow",
-            )}
-          >
-            <Image
-              src={
-                speaker.actor === "?" ? "/unknown-artist.jpg" : speaker.imgUrl
-              }
-              alt={"Photo of " + speaker.actor}
-              fill
-              className="object-cover shadow-xl shadow-black/80"
-            />
-            <div
-              className={cn(
-                "absolute inset-0 flex items-end p-4 transition-all duration-500 ease-in-out",
-                isSelected
-                  ? "bg-transparent"
-                  : itemIndexOf === 0
-                    ? "bg-[#f91e8b7e]"
-                    : "bg-[#259dc2ad]",
-              )}
-            >
-              <div
-                className={cn(
-                  "flex w-full flex-col items-center justify-center gap-y-1 rounded-lg border border-white/20 bg-[#352233B8] p-4 shadow-xl backdrop-blur-md transition-all duration-500 ease-in-out",
-                  isSelected ? "opacity-100" : "opacity-0",
-                )}
-              >
-                <h6 className="text-center text-2xl font-semibold text-white">
-                  {speaker.actor}
-                </h6>
-                <span className="text-center text-xl font-light text-white uppercase">
-                  {speaker.actor === "?" ? "-" : speaker.title}
-                </span>
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
   return (
     <section
       id="key-speaker"
@@ -124,8 +59,58 @@ export default function KeySpeaker() {
             </div>
 
             <div className="relative">
-              {renderRow("row1", ks, i)}
-              {renderRow("row2", ks, i)}
+              <div className="flex">
+                {ks.speakers.map((speaker, speakerIdx) => {
+                  const itemKey = `${i}-${speakerIdx}`;
+                  const isSelected = selectedKey === itemKey;
+
+                  return (
+                    <div
+                      key={speaker.actor + speakerIdx}
+                      onClick={() => {
+                        setSelectedKey(isSelected ? null : itemKey);
+                      }}
+                      className={cn(
+                        "relative z-20 h-96 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out",
+                        isSelected ? "grow-3" : "grow",
+                      )}
+                    >
+                      <Image
+                        src={
+                          speaker.actor === "?" ? "/unknown-artist.jpg" : speaker.imgUrl
+                        }
+                        alt={"Photo of " + speaker.actor}
+                        fill
+                        className="object-cover shadow-xl shadow-black/80"
+                      />
+                      <div
+                        className={cn(
+                          "absolute inset-0 flex items-end p-4 transition-all duration-500 ease-in-out",
+                          isSelected
+                            ? "bg-transparent"
+                            : i === 0
+                              ? "bg-[#f91e8b7e]"
+                              : "bg-[#259dc2ad]",
+                        )}
+                      >
+                        <div
+                          className={cn(
+                            "flex w-full flex-col items-center justify-center gap-y-1 rounded-lg border border-white/20 bg-[#352233B8] p-4 shadow-xl backdrop-blur-md transition-all duration-500 ease-in-out",
+                            isSelected ? "opacity-100" : "opacity-0",
+                          )}
+                        >
+                          <h6 className="text-center text-2xl font-semibold text-white">
+                            {speaker.actor}
+                          </h6>
+                          <span className="text-center text-xl font-light text-white uppercase">
+                            {speaker.actor === "?" ? "-" : speaker.title}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
               <div
                 className={cn(
                   "absolute rounded-full",

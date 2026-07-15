@@ -121,44 +121,88 @@ const id = {
       "Satu stadion, ribu ide, juta karya, satu gerakan. Simak ringkasan agenda kolaborasi, eksibisi bisnis, hingga panggung sportainment spektakuler Festival Mbois 11.",
     items: [
       {
-        artist: "?",
-        imgUrl: "/artist/tulus.jpg",
+        artist: "Arema Voice",
+        imgUrl: "/artist/arema-voice.png",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/unknown-1.jpg",
+        artist: "The Binals",
+        imgUrl: "/artist/the-binals.png",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/aldi-taher.jpg",
+        artist: "Iksan Skuter",
+        imgUrl: "/artist/iksan-skuter.jpg",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/unknown-2.jpg",
+        artist: "Red Valley",
+        imgUrl: "/artist/red-valley.jpg",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/bts.jpg",
+        artist: "D'KROSS",
+        imgUrl: "/artist/dkross.png",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/maliq.jpg",
+        artist: "Samlion",
+        imgUrl: "/artist/samlion.png",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/bernadya.jpg",
+        artist: "Antiphaty",
+        imgUrl: "/artist/antiphaty.png",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/raim-laode.jpg",
+        artist: "Kosatos",
+        imgUrl: "/artist/kosatos.png",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/perunggu.jpg",
+        artist: "Tani Maju",
+        imgUrl: "/artist/tani-maju.png",
       },
       {
-        artist: "?",
-        imgUrl: "/artist/hindia.jpg",
+        artist: "Begundal Lowokwaru",
+        imgUrl: "/artist/begundal-lowokwaru.png",
+      },
+      {
+        artist: "Tropical Forest",
+        imgUrl: "/artist/tropical-forest.png",
+      },
+      {
+        artist: "Wara Valerie",
+        imgUrl: "/artist/wara-valerie.png",
+      },
+      {
+        artist: "Flying Dutchman",
+        imgUrl: "/artist/flying-dutchman.png",
+      },
+      {
+        artist: "Terrace 88",
+        imgUrl: "/artist/terraces-88.png",
+      },
+      {
+        artist: "Satrio Mboys and Genk",
+        imgUrl: "/artist/satriyo-mbois.png",
+      },
+      {
+        artist: "Riam Remo",
+        imgUrl: "/artist/riam-remo.png",
+      },
+      {
+        artist: "KB Mlebu Metu",
+        imgUrl: "/artist/mlebu-metu.png",
+      },
+      {
+        artist: "Arca Tatasawara",
+        imgUrl: "/artist/archa.png",
+      },
+      {
+        artist: "Bandar Angin",
+        imgUrl: "/artist/bandar-angin.png",
+      },
+      {
+        artist: "Kastil",
+        imgUrl: "/artist/kastil.jpeg",
+      },
+      {
+        artist: "Apa Rapper",
+        imgUrl: "/artist/apa-rapper.png",
       },
     ],
     subItems: [
@@ -174,7 +218,6 @@ const id = {
       "THE BINALS",
       "WARA VALERIE",
       "FLYING DUTCHMAN",
-      "CORNER SIDE",
       "RED VALLEY",
       "CAN A ROCK",
       "TERRACE 88",
@@ -202,42 +245,42 @@ const id = {
           {
             actor: "ERICK THOHIR",
             title: "MENTERI PEMUDA DAN OLAHRAGA",
-            imgUrl: "/speakers/raditya-dika.jpg",
+            imgUrl: "/speakers/erick-thohir.png",
           },
           {
             actor: "TEUKU RIEFKY HARSYA",
             title: "MENTERI EKONOMI KREATIF",
-            imgUrl: "/speakers/dr-tirta.jpg",
+            imgUrl: "/speakers/teuku-riefky.png",
           },
           {
             actor: "RAFFI AHMAD",
             title: "UTUSAN KHUSUS PRESIDEN",
-            imgUrl: "/speakers/dr-tirta.jpg",
+            imgUrl: "/speakers/raffi-ahmad.jpg",
           },
           {
             actor: "KHOFIFAH INDAR PARAWANSA",
             title: "GUBERNUR JAWA TIMUR",
-            imgUrl: "/speakers/gita-wirjawan.png",
+            imgUrl: "/speakers/khofifah.jpeg",
           },
           {
             actor: "WAHYU HIDAYAT",
             title: "WALIKOTA MALANG",
-            imgUrl: "/speakers/raditya-dika.jpg",
+            imgUrl: "/speakers/wahyu-hidayat.jpg",
           },
           {
             actor: "TB FIKI C SATARI",
             title: "KETUA UMUM ICCN",
-            imgUrl: "/speakers/handry-satriago.png",
+            imgUrl: "/speakers/fiki-satari.png",
           },
           {
             actor: "AMAR ALPABET",
             title: "FOCAL POINT MALANG MEDIA ART",
-            imgUrl: "/speakers/rigen-rakelna.jpg",
+            imgUrl: "/speakers/amar-alpabet.png",
           },
           {
             actor: "VICKY ARIEF HERINADHARMA",
             title: "KETUA HARIAN ICCN",
-            imgUrl: "/speakers/william-tanuwijaya.png",
+            imgUrl: "/speakers/vicky-arief.png",
           },
         ],
       },
