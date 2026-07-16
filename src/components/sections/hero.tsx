@@ -138,13 +138,13 @@ export default function HeroSection() {
       </section>
 
       {/* ── Sponsors & Partners Section ── */}
-      <section className="relative z-10 w-full px-6 pb-16 lg:px-18">
+      <section className="relative z-10 w-full bg-white">
         {/* Sponsored By - Top */}
-        <div className="mb-10 flex flex-col items-center justify-center gap-6 rounded-2xl bg-white px-8 py-8 lg:px-12 lg:py-10">
-          <span className="text-sm font-semibold tracking-widest text-black/50 uppercase">
+        <div className="w-full border-b border-[#BDBDBD] py-10">
+          <span className="block text-center text-lg font-bold tracking-widest text-black uppercase">
             Stakeholder Partners
           </span>
-          <div className="flex items-center justify-center gap-10">
+          <div className="mt-6 flex items-center justify-center gap-10">
             <Image
               src="/sponsors/bri.png"
               width={200}
@@ -177,9 +177,9 @@ export default function HeroSection() {
         </div>
 
         {/* Grid: Powered By | Partners | Collaborators | Media Partner */}
-        <div className="grid grid-cols-1 gap-6 rounded-2xl bg-white p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-4 lg:p-10">
+        <div className="grid grid-cols-1 gap-6 rounded-2xl bg-white sm:grid-cols-2 lg:grid-cols-4">
           {/* Powered By */}
-          <div className="flex flex-col items-center border-r-0 border-black/10 px-4 py-6 sm:border-r lg:border-r">
+          <div className="flex flex-col items-center border-r border-[#BDBDBD] px-4 py-6 sm:border-r lg:border-r">
             <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
               Powered By
             </span>
@@ -202,7 +202,7 @@ export default function HeroSection() {
           </div>
 
           {/* Partners */}
-          <div className="flex flex-col items-center border-r-0 border-black/10 px-4 py-6 lg:border-r">
+          <div className="flex flex-col items-center border-r border-[#BDBDBD] px-4 py-6 lg:border-r">
             <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
               Partners
             </span>
@@ -274,7 +274,7 @@ export default function HeroSection() {
           </div>
 
           {/* Collaborators */}
-          <div className="flex flex-col items-center border-r-0 border-black/10 px-4 py-6 sm:border-r lg:border-r">
+          <div className="flex flex-col items-center border-r border-[#BDBDBD] px-4 py-6 sm:border-r lg:border-r">
             <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
               Collaborators
             </span>
