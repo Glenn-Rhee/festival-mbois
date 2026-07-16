@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FloatingOrb } from "../ui/floating-orb";
 import { Button } from "../ui/button";
 import { CircleArrowRight } from "lucide-react";
 import { StarParticles } from "../ui/star-particles";
@@ -64,8 +63,15 @@ export default function HeroSection() {
         <StarParticles top={48} left={12} size="small" />
         <StarParticles top={30} left={22} size="medium" />
 
+        <Image
+          src={"/hero-bg.png"}
+          alt="Hero Image"
+          fill
+          className="object-cover opacity-75"
+        />
+
         {/* ── Content grid ── */}
-        <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between px-6 pt-32 pb-4 lg:flex-row lg:items-center lg:px-[72px] lg:pt-40 lg:pb-16">
+        <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between px-6 pt-32 pb-4 lg:flex-row lg:items-center lg:px-18 lg:pt-40 lg:pb-16">
           {/* Left — text content */}
           <div className="mt-10 flex w-full flex-col items-center text-center md:mt-0 lg:w-auto lg:max-w-xl lg:items-start lg:text-left">
             <div className="lg:flex lg:flex-col lg:items-start">
@@ -80,13 +86,10 @@ export default function HeroSection() {
               </h1>
             </div>
           </div>
-
-          {/* Right — glowing orb */}
-          <FloatingOrb />
         </div>
 
         {/* ── Bottom Bar: CTA Buttons & Tagline ── */}
-        <div className="relative right-0 bottom-0 left-0 z-10 mt-4 flex w-full flex-col-reverse items-center justify-between gap-6 px-6 pb-12 md:flex-row lg:absolute lg:right-[72px] lg:bottom-6 lg:left-[72px] lg:w-auto lg:px-0 lg:pb-0">
+        <div className="relative right-0 bottom-0 left-0 z-10 mt-4 flex w-full flex-col-reverse items-center justify-between gap-6 px-6 pb-12 md:flex-row lg:absolute lg:right-18 lg:bottom-6 lg:left-18 lg:w-auto lg:px-0 lg:pb-0">
           {/* CTA buttons */}
           <div
             className="animate-fade-up flex w-full flex-col items-center justify-center gap-3 sm:flex-row md:justify-start"
@@ -101,7 +104,12 @@ export default function HeroSection() {
                 {t.hero.cta}
               </Button>
             </Link>
-            <Link href="https://malang-creative-fusion.eventopia.my/festival-mbois-11-malang-menyala" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Link
+              href="https://malang-creative-fusion.eventopia.my/festival-mbois-11-malang-menyala"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
               <Button variant={"primary-gradient"} className="w-full sm:w-auto">
                 {t.hero.ctaTicket}
                 <CircleArrowRight className="ml-2 h-4 w-4" />
@@ -110,53 +118,61 @@ export default function HeroSection() {
           </div>
 
           {/* Tagline */}
-          <div className="text-center md:w-full md:text-right">
-            <p className="text-[15px] tracking-normal text-white uppercase lg:text-2xl">
-              {t.hero.tagline}
-            </p>
-            <p className="mt-1 text-[12px] font-light text-white lg:text-base">
-              {t.hero.dateLocation}
-            </p>
+          <div className="flex items-center justify-end gap-x-2 md:w-full">
+            <div className="text-center md:text-right">
+              <p className="text-[15px] tracking-normal text-white uppercase lg:text-2xl">
+                {t.hero.tagline}
+              </p>
+              <p className="mt-1 text-[12px] font-light text-white lg:text-base">
+                {t.hero.dateLocation}
+              </p>
+            </div>
+            <Image
+              src={"/hut-ri.png"}
+              alt="Hut RI Logo"
+              width={150}
+              height={50}
+            />
           </div>
         </div>
       </section>
 
       {/* ── Sponsors & Partners Section ── */}
-      <section className="relative z-10 w-full px-6 pb-16 lg:px-[72px]">
+      <section className="relative z-10 w-full px-6 pb-16 lg:px-18">
         {/* Sponsored By - Top */}
         <div className="mb-10 flex flex-col items-center justify-center gap-6 rounded-2xl bg-white px-8 py-8 lg:px-12 lg:py-10">
           <span className="text-sm font-semibold tracking-widest text-black/50 uppercase">
             Stakeholder Partners
           </span>
           <div className="flex items-center justify-center gap-10">
-          <Image
-            src="/sponsors/bri.png"
-            width={200}
-            height={80}
-            alt="BRI"
-            style={{ width: "auto", height: "80px" }}
-          />
-          <Image
-            src="/sponsors/kemenpora.png"
-            width={200}
-            height={80}
-            alt="Kemenpora"
-            style={{ width: "auto", height: "80px" }}
-          />
-          <Image
-            src="/sponsors/kemenekraf.png"
-            width={200}
-            height={80}
-            alt="Kemenekraf"
-            style={{ width: "auto", height: "80px" }}
-          />
-          <Image
-            src="/sponsors/ukp.png"
-            width={200}
-            height={80}
-            alt="Utusan Khusus Presiden"
-            style={{ width: "auto", height: "80px" }}
-          />
+            <Image
+              src="/sponsors/bri.png"
+              width={200}
+              height={80}
+              alt="BRI"
+              style={{ width: "auto", height: "80px" }}
+            />
+            <Image
+              src="/sponsors/kemenpora.png"
+              width={200}
+              height={80}
+              alt="Kemenpora"
+              style={{ width: "auto", height: "80px" }}
+            />
+            <Image
+              src="/sponsors/kemenekraf.png"
+              width={200}
+              height={80}
+              alt="Kemenekraf"
+              style={{ width: "auto", height: "80px" }}
+            />
+            <Image
+              src="/sponsors/ukp.png"
+              width={200}
+              height={80}
+              alt="Utusan Khusus Presiden"
+              style={{ width: "auto", height: "80px" }}
+            />
           </div>
         </div>
 
@@ -168,8 +184,20 @@ export default function HeroSection() {
               Powered By
             </span>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Image src="/logo_mcf.svg" width={80} height={60} alt="MCF" style={{ width: "auto", height: "150px" }} />
-              <Image src="/logo_iccn.svg" width={80} height={60} alt="ICCN" style={{ width: "auto", height: "70px" }} />
+              <Image
+                src="/logo_mcf.svg"
+                width={80}
+                height={60}
+                alt="MCF"
+                style={{ width: "auto", height: "150px" }}
+              />
+              <Image
+                src="/logo_iccn.svg"
+                width={80}
+                height={60}
+                alt="ICCN"
+                style={{ width: "auto", height: "70px" }}
+              />
             </div>
           </div>
 
@@ -179,15 +207,69 @@ export default function HeroSection() {
               Partners
             </span>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Image src="/partners/logo_partner_1.png" width={50} height={50} alt="Kota Malang" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_2.png" width={50} height={50} alt="Dekopinda Kota Malang" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_3.png" width={50} height={50} alt="Koni Kota Malang" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_4.png" width={50} height={50} alt="Arema Music Tribute" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_5.png" width={50} height={50} alt="Mbois Mart" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_6.png" width={50} height={50} alt="Amazing Malang Eat" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_7.png" width={50} height={50} alt="AACE" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_8.png" width={50} height={50} alt="Multiverse" style={{ width: "auto", height: "40px" }} />
-              <Image src="/partners/logo_partner_9.png" width={50} height={50} alt="MMAC" style={{ width: "auto", height: "40px" }} />
+              <Image
+                src="/partners/logo_partner_1.png"
+                width={50}
+                height={50}
+                alt="Kota Malang"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_2.png"
+                width={50}
+                height={50}
+                alt="Dekopinda Kota Malang"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_3.png"
+                width={50}
+                height={50}
+                alt="Koni Kota Malang"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_4.png"
+                width={50}
+                height={50}
+                alt="Arema Music Tribute"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_5.png"
+                width={50}
+                height={50}
+                alt="Mbois Mart"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_6.png"
+                width={50}
+                height={50}
+                alt="Amazing Malang Eat"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_7.png"
+                width={50}
+                height={50}
+                alt="AACE"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_8.png"
+                width={50}
+                height={50}
+                alt="Multiverse"
+                style={{ width: "auto", height: "40px" }}
+              />
+              <Image
+                src="/partners/logo_partner_9.png"
+                width={50}
+                height={50}
+                alt="MMAC"
+                style={{ width: "auto", height: "40px" }}
+              />
             </div>
           </div>
 
@@ -197,28 +279,160 @@ export default function HeroSection() {
               Collaborators
             </span>
             <div className="flex flex-wrap items-center justify-center gap-3">
-              <Image src="/collaborators/logo_collab_1.png" width={40} height={40} alt="Collaborator 1" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_2.png" width={40} height={40} alt="Collaborator 2" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_3.png" width={40} height={40} alt="Collaborator 3" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_4.png" width={40} height={40} alt="Collaborator 4" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_5.png" width={40} height={40} alt="Collaborator 5" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_6.png" width={40} height={40} alt="Collaborator 6" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_7.png" width={40} height={40} alt="Collaborator 7" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_8.png" width={40} height={40} alt="Collaborator 8" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_9.png" width={40} height={40} alt="Collaborator 9" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_10.png" width={40} height={40} alt="Collaborator 10" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_11.png" width={40} height={40} alt="Collaborator 11" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_12.png" width={40} height={40} alt="Collaborator 12" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_13.png" width={40} height={40} alt="Collaborator 13" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_14.png" width={40} height={40} alt="Collaborator 14" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_15.png" width={40} height={40} alt="Collaborator 15" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_16.png" width={40} height={40} alt="Collaborator 16" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_17.png" width={40} height={40} alt="Collaborator 17" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_18.png" width={40} height={40} alt="Collaborator 18" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_19.png" width={40} height={40} alt="Collaborator 19" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_20.png" width={40} height={40} alt="Collaborator 20" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_21.png" width={40} height={40} alt="Collaborator 21" style={{ width: "auto", height: "32px" }} />
-              <Image src="/collaborators/logo_collab_22.png" width={40} height={40} alt="Collaborator 22" style={{ width: "auto", height: "32px" }} />
+              <Image
+                src="/collaborators/logo_collab_1.png"
+                width={40}
+                height={40}
+                alt="Collaborator 1"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_2.png"
+                width={40}
+                height={40}
+                alt="Collaborator 2"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_3.png"
+                width={40}
+                height={40}
+                alt="Collaborator 3"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_4.png"
+                width={40}
+                height={40}
+                alt="Collaborator 4"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_5.png"
+                width={40}
+                height={40}
+                alt="Collaborator 5"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_6.png"
+                width={40}
+                height={40}
+                alt="Collaborator 6"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_7.png"
+                width={40}
+                height={40}
+                alt="Collaborator 7"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_8.png"
+                width={40}
+                height={40}
+                alt="Collaborator 8"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_9.png"
+                width={40}
+                height={40}
+                alt="Collaborator 9"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_10.png"
+                width={40}
+                height={40}
+                alt="Collaborator 10"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_11.png"
+                width={40}
+                height={40}
+                alt="Collaborator 11"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_12.png"
+                width={40}
+                height={40}
+                alt="Collaborator 12"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_13.png"
+                width={40}
+                height={40}
+                alt="Collaborator 13"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_14.png"
+                width={40}
+                height={40}
+                alt="Collaborator 14"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_15.png"
+                width={40}
+                height={40}
+                alt="Collaborator 15"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_16.png"
+                width={40}
+                height={40}
+                alt="Collaborator 16"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_17.png"
+                width={40}
+                height={40}
+                alt="Collaborator 17"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_18.png"
+                width={40}
+                height={40}
+                alt="Collaborator 18"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_19.png"
+                width={40}
+                height={40}
+                alt="Collaborator 19"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_20.png"
+                width={40}
+                height={40}
+                alt="Collaborator 20"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_21.png"
+                width={40}
+                height={40}
+                alt="Collaborator 21"
+                style={{ width: "auto", height: "32px" }}
+              />
+              <Image
+                src="/collaborators/logo_collab_22.png"
+                width={40}
+                height={40}
+                alt="Collaborator 22"
+                style={{ width: "auto", height: "32px" }}
+              />
             </div>
           </div>
 
@@ -228,8 +442,20 @@ export default function HeroSection() {
               Media Partner
             </span>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Image src="/medias/logo_media_1.png" width={60} height={50} alt="Media Partner 1" style={{ width: "auto", height: "100px" }} />
-              <Image src="/medias/logo_media_2.png" width={60} height={50} alt="Media Partner 2" style={{ width: "auto", height: "140px" }} />
+              <Image
+                src="/medias/logo_media_1.png"
+                width={60}
+                height={50}
+                alt="Media Partner 1"
+                style={{ width: "auto", height: "100px" }}
+              />
+              <Image
+                src="/medias/logo_media_2.png"
+                width={60}
+                height={50}
+                alt="Media Partner 2"
+                style={{ width: "auto", height: "140px" }}
+              />
             </div>
           </div>
         </div>
