@@ -11,7 +11,7 @@ export default function TicketSection() {
   return (
     <section
       id="ticket"
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden py-16 lg:py-32"
       style={{ boxShadow: "9px 6px 74px 1px rgba(234, 94, 167, 0.10)" }}
     >
       {/* Dark overlay background */}

@@ -24,8 +24,8 @@ export default function YourRoleSection() {
 
   return (
     <section
-      id="your-role"
-      className="relative w-full overflow-hidden px-4 py-10 sm:px-8 sm:py-14 md:px-16 md:py-18"
+      id="registration"
+      className="relative w-full overflow-hidden px-4 py-16 sm:px-8 md:px-16 lg:py-32"
     >
       <div className="relative z-20 flex flex-col items-center gap-y-4 text-[#F2F2F2] sm:gap-y-6">
         <span className="block text-center font-semibold">
@@ -51,7 +51,7 @@ export default function YourRoleSection() {
             </p>
             <Link
               href={dataActive.actionUrl}
-              className="w-full max-w-64 flex items-center justify-center rounded-xl border border-[#5693FD] px-2 py-2.5 text-base font-medium text-transparent hover:bg-white sm:text-lg"
+              className="flex w-full max-w-64 items-center justify-center rounded-xl border border-[#5693FD] px-2 py-2.5 text-base font-medium text-transparent hover:bg-white sm:text-lg"
             >
               <span className="bg-linear-to-b from-[#25CFEF] to-[#5693FD] bg-clip-text">
                 {t.yourRole.actionItem}

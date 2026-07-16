@@ -23,9 +23,9 @@ export default function AboutSection() {
       <div className="max-w-8xl relative z-20 mx-auto w-full px-6 lg:px-18">
         {/* Main Card */}
         <div className="rounded-2xl border border-white bg-[#EEEEEE14] p-6 backdrop-blur-xl md:p-10 lg:p-14">
-          <div className="flex flex-col gap-10 lg:flex-row lg:gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
             {/* Left Content */}
-            <div className="flex flex-1 flex-col justify-between">
+            <div className="flex flex-1 flex-col justify-between order-last md:order-first">
               {/* Label */}
               <div className="mb-6 flex items-center gap-2">
                 <Plus className="size-4 text-white" />
@@ -66,8 +66,8 @@ export default function AboutSection() {
             </div>
 
             {/* Right Content - Video/Image Card */}
-            <div className="relative flex w-full items-center justify-center lg:w-[45%]">
-              <div className="relative aspect-video w-full overflow-hidden rounded-2xl border-2 border-[#7BAEFA] p-3">
+            <div className="relative flex h-full w-full items-center justify-center">
+              <div className="relative aspect-video w-full h-full overflow-hidden rounded-2xl border-2 border-[#7BAEFA] p-3">
                 {isPlaying ? (
                   <iframe
                     className="h-full w-full rounded-2xl"
@@ -96,7 +96,7 @@ export default function AboutSection() {
                       </button>
                     </div>
                     {/* Bottom overlay with branding */}
-                    <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between px-4 pb-3 pt-12 sm:px-8 sm:pb-4 md:px-12">
+                    <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between px-4 pt-12 pb-3 sm:px-8 sm:pb-4 md:px-12">
                       <div className="flex items-center gap-2">
                         <Image
                           src="/img-about.png"
@@ -105,7 +105,7 @@ export default function AboutSection() {
                           height={40}
                           className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10"
                         />
-                        <span className="text-sm font-semibold leading-tight text-white sm:text-lg md:text-2xl lg:text-[30px]">
+                        <span className="text-sm leading-tight font-semibold text-white sm:text-lg md:text-2xl lg:text-[30px]">
                           Festival Mbois 11
                         </span>
                       </div>
@@ -133,7 +133,9 @@ export default function AboutSection() {
                   <span className="text-lg font-semibold tracking-tight text-[#FDFDFD] sm:text-xl md:text-2xl lg:text-4xl">
                     {stat.value}
                   </span>
-                  <span className="text-[10px] text-[#FDFDFD] sm:text-xs md:text-sm">{stat.label}</span>
+                  <span className="text-[10px] text-[#FDFDFD] sm:text-xs md:text-sm">
+                    {stat.label}
+                  </span>
                 </div>
               </div>
             ))}

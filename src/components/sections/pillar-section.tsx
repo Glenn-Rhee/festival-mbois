@@ -13,8 +13,8 @@ export default function PillarSection() {
 
   return (
     <section
-      id="pillar"
-      className="relative w-full overflow-hidden py-14 md:py-18"
+      id="program"
+      className="relative w-full overflow-hidden py-16 lg:py-32"
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-32 md:h-48">
         <StarParticles bottom={10} left={20} glow size="large" />
