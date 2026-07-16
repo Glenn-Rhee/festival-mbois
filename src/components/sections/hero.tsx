@@ -70,6 +70,8 @@ export default function HeroSection() {
           className="object-cover opacity-75"
         />
 
+        <div className="absolute top-40 left-1/2 blur-[180px] -z-10 size-80 rounded-full bg-[#F84AA1]" />
+
         {/* ── Content grid ── */}
         <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between px-6 pt-32 pb-4 lg:flex-row lg:items-center lg:px-18 lg:pt-40 lg:pb-16">
           {/* Left — text content */}
