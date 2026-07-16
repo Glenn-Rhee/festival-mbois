@@ -11,7 +11,7 @@ export default function TicketSection() {
   return (
     <section
       id="ticket"
-      className="relative w-full overflow-hidden mt-20"
+      className="relative w-full overflow-hidden"
       style={{ boxShadow: "9px 6px 74px 1px rgba(234, 94, 167, 0.10)" }}
     >
       {/* Dark overlay background */}
@@ -22,22 +22,25 @@ export default function TicketSection() {
 
       {/* Glow - right side (purple) */}
       <div
-        className="absolute top-[150px] left-[40%] h-[300px] w-[500px] sm:top-[250px] sm:left-[55%] sm:h-[644px] sm:w-[1153px]"
+        className="absolute top-37.5 left-[40%] h-75 w-125 sm:top-62.5 sm:left-[55%] sm:h-161 sm:w-288.25"
         style={{ background: "#23367A", filter: "blur(147.5px)" }}
       />
 
       {/* Glow - left side (pink) */}
       <div
-        className="absolute top-[60px] -left-[30px] h-[300px] w-[230px] sm:top-[120px] sm:-left-[59px] sm:h-[607px] sm:w-[459px]"
+        className="absolute top-15 -left-7.5 h-75 w-57.5 sm:top-30 sm:-left-14.75 sm:h-151.75 sm:w-114.75"
         style={{ background: "#68114A", filter: "blur(171px)" }}
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex flex-col items-center px-6 py-[72px] text-center md:px-10">
-        <h2 className="font-onest max-w-[966px] text-3xl font-bold tracking-tight text-white md:text-5xl lg:text-[70px] lg:leading-[105px]" style={{ textShadow: "0px 0px 8px rgba(255, 255, 255, 0.32)" }}>
+      <div className="relative z-10 mx-auto flex flex-col items-center px-6 py-18 text-center md:px-10">
+        <h2
+          className="font-onest max-w-241.5 text-3xl font-bold tracking-tight text-white md:text-5xl lg:text-[70px] lg:leading-26.25"
+          style={{ textShadow: "0px 0px 8px rgba(255, 255, 255, 0.32)" }}
+        >
           {t.ticket.title}
         </h2>
-        <p className="font-onest mt-4 max-w-[698px] text-sm leading-relaxed font-normal text-[#F2F2F2] md:text-lg lg:text-2xl lg:leading-9">
+        <p className="font-onest mt-4 max-w-174.5 text-sm leading-relaxed font-normal text-[#F2F2F2] md:text-lg lg:text-2xl lg:leading-9">
           {t.ticket.description}
         </p>
         <Link
@@ -46,7 +49,10 @@ export default function TicketSection() {
           rel="noopener noreferrer"
           className="mt-8"
         >
-          <Button className="text-lg shadow-[0px_0px_13.9px_0px_#F12B8E]" variant={"primary-gradient"}>
+          <Button
+            className="text-lg shadow-[0px_0px_13.9px_0px_#F12B8E]"
+            variant={"primary-gradient"}
+          >
             {t.ticket.cta}
             <CircleArrowRight className="ml-2 h-4 w-4" />
           </Button>
