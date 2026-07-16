@@ -255,17 +255,17 @@ const id = {
           {
             actor: "RAFFI AHMAD",
             title: "UTUSAN KHUSUS PRESIDEN",
-            imgUrl: "/speakers/raffi-ahmad.jpg",
+            imgUrl: "/speakers/raffi-ahmad.png",
           },
           {
             actor: "KHOFIFAH INDAR PARAWANSA",
             title: "GUBERNUR JAWA TIMUR",
-            imgUrl: "/speakers/khofifah.jpeg",
+            imgUrl: "/speakers/khofifah.png",
           },
           {
             actor: "WAHYU HIDAYAT",
             title: "WALIKOTA MALANG",
-            imgUrl: "/speakers/wahyu-hidayat.jpg",
+            imgUrl: "/speakers/wahyu-hidayat.png",
           },
           {
             actor: "TB FIKI C SATARI",
