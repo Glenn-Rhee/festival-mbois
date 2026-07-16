@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { CircleArrowRight } from "lucide-react";
 import { StarParticles } from "../ui/star-particles";
 import { useLanguage } from "@/i18n/context";
@@ -63,17 +63,22 @@ export default function HeroSection() {
         <StarParticles top={48} left={12} size="small" />
         <StarParticles top={30} left={22} size="medium" />
 
-        <Image
-          src={"/hero-bg.png"}
-          alt="Hero Image"
-          fill
-          className="object-cover opacity-75"
-        />
+        <div className="absolute inset-0 z-10">
+          <Image
+            src={"/hero-bg.png"}
+            alt="Hero Image"
+            fill
+            className="relative -z-10 object-cover object-bottom-left"
+          />
+          <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black/60" />
+        </div>
 
-        <div className="absolute top-40 left-1/2 blur-[180px] -z-10 size-80 rounded-full bg-[#F84AA1]" />
+        <div className="absolute top-40 left-1/2 -z-10 size-80 rounded-full bg-[#F84AA1] blur-[180px]" />
+        <div className="absolute top-30 right-20 -z-10 size-80 rounded-full bg-[#F84AA1] blur-[200px]" />
+        <div className="absolute -top-10 -left-10 -z-10 size-80 rounded-full bg-[#F84AA1] blur-[200px]" />
 
         {/* ── Content grid ── */}
-        <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between px-6 pt-32 pb-4 lg:flex-row lg:items-center lg:px-18 lg:pt-40 lg:pb-16">
+        <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between px-6 pt-32 pb-4 lg:flex-row lg:items-center lg:px-18 lg:pb-16">
           {/* Left — text content */}
           <div className="mt-10 flex w-full flex-col items-center text-center md:mt-0 lg:w-auto lg:max-w-xl lg:items-start lg:text-left">
             <div className="lg:flex lg:flex-col lg:items-start">
@@ -100,22 +105,24 @@ export default function HeroSection() {
             <Link
               href="#registration"
               onClick={(e) => scrollToSection(e, "#registration")}
-              className="w-full sm:w-auto"
+              className={buttonVariants({
+                variant: "outline",
+                className: "w-full justify-center sm:w-52",
+              })}
             >
-              <Button variant={"outline"} className="w-full sm:w-auto">
-                {t.hero.cta}
-              </Button>
+              {t.hero.cta}
             </Link>
             <Link
               href="https://malang-creative-fusion.eventopia.my/festival-mbois-11-malang-menyala"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className={buttonVariants({
+                variant: "primary-gradient",
+                className: "w-full justify-center sm:w-52",
+              })}
             >
-              <Button variant={"primary-gradient"} className="w-full sm:w-auto">
-                {t.hero.ctaTicket}
-                <CircleArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              {t.hero.ctaTicket}
+              <CircleArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
 
@@ -134,6 +141,7 @@ export default function HeroSection() {
               alt="Hut RI Logo"
               width={150}
               height={50}
+              className="w-auto"
             />
           </div>
         </div>
