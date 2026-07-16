@@ -7,7 +7,6 @@ import PillarSection from "@/components/sections/pillar-section";
 import LineUpArtist from "@/components/sections/line-up-artist";
 import KeySpeaker from "@/components/sections/key-speaker";
 import YourRoleSection from "@/components/sections/your-role-section";
-import RundownSection from "@/components/sections/rundown-section";
 
 export default function Home() {
   return (
@@ -22,7 +21,7 @@ export default function Home() {
       <LineUpArtist />
       <KeySpeaker />
       <YourRoleSection />
-      <RundownSection />
+      {/* <RundownSection /> */}
       <FaqSection />
     </main>
   );
