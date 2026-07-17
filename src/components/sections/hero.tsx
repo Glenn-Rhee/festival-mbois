@@ -27,7 +27,7 @@ export default function HeroSection() {
     <>
       <section
         id="home"
-        className="relative flex min-h-screen w-full flex-col items-center justify-center lg:flex-row"
+        className="relative flex min-h-screen w-full flex-col items-center justify-between pt-32 md:justify-center md:pt-0 lg:flex-row"
       >
         <StarParticles top={20} left={8} size="large" glow={true} />
         <StarParticles top={22} left={6} size="large" glow={true} />
@@ -68,27 +68,34 @@ export default function HeroSection() {
             src={"/hero-bg.png"}
             alt="Hero Image"
             fill
-            className="relative -z-10 object-cover object-bottom-left"
+            className="relative -z-10 object-cover object-[65%_0%] md:object-bottom-left"
           />
-          <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black/60" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black md:to-black/60" />
         </div>
 
-        <div className="absolute top-40 left-1/2 -z-10 size-80 rounded-full bg-[#F84AA1] blur-[180px]" />
-        <div className="absolute top-30 right-20 -z-10 size-80 rounded-full bg-[#F84AA1] blur-[200px]" />
-        <div className="absolute -top-10 -left-10 -z-10 size-80 rounded-full bg-[#F84AA1] blur-[200px]" />
+        <div className="absolute top-40 left-1/2 -z-10 hidden size-80 rounded-full bg-[#F84AA1] blur-[180px] md:block" />
+        <div className="absolute top-30 right-20 -z-10 hidden size-80 rounded-full bg-[#F84AA1] blur-[200px] md:block" />
+        <div className="absolute -top-10 -left-10 -z-10 hidden size-80 rounded-full bg-[#F84AA1] blur-[200px] md:block" />
 
         {/* ── Content grid ── */}
-        <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between px-6 pt-32 pb-4 lg:flex-row lg:items-center lg:px-18 lg:pb-16">
+        <div className="relative z-10 mx-auto flex w-full flex-col-reverse items-center justify-between pb-4 md:pt-32 lg:flex-row lg:items-center lg:px-18 lg:pb-16">
           {/* Left — text content */}
-          <div className="mt-10 flex w-full flex-col items-center text-center md:mt-0 lg:w-auto lg:max-w-xl lg:items-start lg:text-left">
-            <div className="lg:flex lg:flex-col lg:items-start">
+          <div className="m:mt-10 flex w-full flex-col text-left md:mt-0 lg:w-auto lg:max-w-xl lg:items-start">
+            <div className="px-6 md:px-0 lg:flex lg:flex-col lg:items-start">
+              <Image
+                src={"/hut-ri.png"}
+                alt="Hut RI Logo"
+                width={140}
+                height={50}
+                className="-ml-6 block w-auto md:hidden"
+              />
               {/* Sub-heading */}
-              <p className="mb-2 text-xl font-semibold tracking-normal whitespace-nowrap uppercase md:text-[48px]">
+              <p className="mt-6 mb-2 bg-[linear-gradient(to_right,#A37E9A,#FFFFFF,#A37E9A)] bg-clip-text text-xl font-semibold tracking-normal whitespace-nowrap text-transparent uppercase md:mt-0 md:text-[48px]">
                 {t.hero.subtitle}
               </p>
 
               {/* Main heading */}
-              <h1 className="mb-6 -ml-1 text-3xl leading-[0.95] font-semibold tracking-normal text-white md:text-[clamp(4rem,10vw,8.5rem)] lg:mb-12 lg:-ml-2 lg:text-[118px]">
+              <h1 className="mb-6 -ml-1 text-6xl leading-[0.95] font-semibold tracking-normal text-white md:text-3xl md:text-[clamp(4rem,10vw,8.5rem)] lg:mb-12 lg:-ml-2 lg:text-[118px]">
                 {t.hero.title}
               </h1>
             </div>
@@ -96,7 +103,7 @@ export default function HeroSection() {
         </div>
 
         {/* ── Bottom Bar: CTA Buttons & Tagline ── */}
-        <div className="relative right-0 bottom-0 left-0 z-10 mt-4 flex w-full flex-col-reverse items-center justify-between gap-6 px-6 pb-12 md:flex-row lg:absolute lg:right-18 lg:bottom-6 lg:left-18 lg:w-auto lg:px-0 lg:pb-0">
+        <div className="relative right-0 bottom-0 left-0 z-10 mt-4 mb-8 flex w-full flex-col-reverse items-center justify-between gap-22 px-6 pb-12 md:mb-0 md:flex-row md:gap-6 lg:absolute lg:right-18 lg:bottom-6 lg:left-18 lg:w-auto lg:px-0 lg:pb-0">
           {/* CTA buttons */}
           <div
             className="animate-fade-up flex w-full flex-col items-center justify-center gap-3 sm:flex-row md:justify-start"
@@ -127,9 +134,9 @@ export default function HeroSection() {
           </div>
 
           {/* Tagline */}
-          <div className="flex items-center justify-end gap-x-2 md:w-full">
-            <div className="text-center md:text-right">
-              <p className="text-[15px] tracking-normal text-white uppercase lg:text-2xl">
+          <div className="flex w-full items-center gap-x-2">
+            <div className="text-start md:text-right">
+              <p className="font-bold tracking-normal text-white uppercase lg:text-2xl">
                 {t.hero.tagline}
               </p>
               <p className="mt-1 text-[12px] font-light text-white lg:text-base">
@@ -141,7 +148,7 @@ export default function HeroSection() {
               alt="Hut RI Logo"
               width={150}
               height={50}
-              className="w-auto"
+              className="hidden w-auto md:block"
             />
           </div>
         </div>
@@ -160,28 +167,28 @@ export default function HeroSection() {
               width={200}
               height={80}
               alt="BRI"
-              style={{ width: "auto", height: "80px" }}
+              style={{ width: "auto", height: "auto" }}
             />
             <Image
               src="/sponsors/kemenpora.png"
               width={200}
               height={80}
               alt="Kemenpora"
-              style={{ width: "auto", height: "80px" }}
+              style={{ width: "auto", height: "auto" }}
             />
             <Image
               src="/sponsors/kemenekraf.png"
               width={200}
               height={80}
               alt="Kemenekraf"
-              style={{ width: "auto", height: "80px" }}
+              style={{ width: "auto", height: "auto" }}
             />
             <Image
               src="/sponsors/ukp.png"
               width={200}
               height={80}
               alt="Utusan Khusus Presiden"
-              style={{ width: "auto", height: "80px" }}
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
         </div>

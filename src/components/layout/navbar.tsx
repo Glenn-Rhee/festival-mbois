@@ -33,9 +33,10 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
-  const handleNavClick = () => setIsMobileMenuOpen(false);
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
     const targetId = href.replace("#", "");
@@ -61,8 +62,8 @@ export default function Navbar() {
           className={cn(
             "mx-auto flex items-center justify-between transition-all duration-500 ease-in-out",
             isScrolled
-              ? "w-full rounded-none border border-transparent bg-transparent px-6 py-[25px] lg:px-[72px]"
-              : "bg-brand-plum/30 w-[calc(100%-48px)] rounded-3xl border border-white/15 px-5 py-6 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-2xl lg:w-[calc(100%-144px)] lg:px-6 lg:py-[25px]",
+              ? "w-full rounded-none border border-transparent bg-transparent px-6 py-4 md:py-6.25 lg:px-18"
+              : "bg-brand-plum/30 w-[calc(100%-48px)] rounded-3xl border border-white px-5 py-4 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-2xl lg:w-[calc(100%-144px)] lg:px-6 lg:py-6.25",
           )}
         >
           {/* Logo */}
@@ -74,8 +75,8 @@ export default function Navbar() {
             <Image
               src={"/logo_festival_mbois.png"}
               alt="logo"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               className="h-auto w-auto"
             />
             <div className="flex flex-col">
@@ -218,7 +219,7 @@ export default function Navbar() {
           </div>
 
           {/* Lang & Masuk CTA */}
-          <div className="mt-4 flex w-full max-w-[280px] flex-col gap-6">
+          <div className="mt-4 flex w-full max-w-70 flex-col gap-6">
             <div
               className={cn(
                 "flex items-center justify-center gap-6 transition-all duration-300",
