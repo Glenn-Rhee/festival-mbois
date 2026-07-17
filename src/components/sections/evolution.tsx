@@ -40,16 +40,16 @@ export default function EvolutionSection() {
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[#0B1030] bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[4rem_4rem]" />
       </div>
-      <div className="absolute size-150 rounded-full bg-[#68114A] blur-[180px]" />
+      <div className="absolute rounded-full bg-[#68114A] blur-[180px] md:size-150" />
       <div className="absolute top-10 right-0 size-130 rounded-full bg-[#23367A] blur-[150px]" />
 
       <div className="max-w-8xl relative z-10 mx-auto w-full px-6 lg:px-18">
         {/* Header */}
-        <div className="mb-10 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
-          <h2 className="text-2xl font-medium tracking-tight text-[#F2F2F2] md:text-4xl lg:text-7xl">
+        <div className="mb-10 flex flex-col gap-4 md:mb-20 md:flex-row md:items-end md:justify-between md:gap-6">
+          <h2 className="text-3xl font-medium tracking-tight text-[#F2F2F2] md:text-4xl lg:text-7xl">
             {t.evolution.label}
           </h2>
-          <p className="max-w-96 text-lg leading-snug font-semibold text-[#F2F2F2] md:text-right md:text-xl lg:text-[32px]">
+          <p className="text-sm leading-snug font-medium text-[#F2F2F2] md:max-w-96 md:text-right md:text-xl md:font-semibold lg:text-[32px]">
             {t.evolution.title}
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function EvolutionSection() {
       {/* Carousel */}
       <div
         ref={trackRef}
-        className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden mb-12"
+        className="relative left-1/2 mb-12 w-screen -translate-x-1/2 overflow-hidden"
       >
         <div
           className="flex gap-8 ps-[50%] transition-transform duration-700 ease-in-out lg:gap-20 lg:ps-[50%]"
@@ -73,12 +73,12 @@ export default function EvolutionSection() {
                   cardRefs.current[index] = el;
                 }}
                 onClick={() => setActive(index)}
-                className={`relative flex h-64 shrink-0 cursor-pointer md:h-72 lg:h-80 ${
+                className={`relative flex h-48 shrink-0 cursor-pointer md:h-72 lg:h-80 ${
                   isActive ? "opacity-100" : "opacity-60"
                 } transition-opacity duration-500`}
               >
                 {/* Gambar */}
-                <div className="relative w-40 shrink-0 overflow-hidden md:w-48 lg:w-56">
+                <div className="relative w-48 shrink-0 overflow-hidden md:w-56 lg:w-64">
                   <Image
                     src={"/program_sportainment_v2.webp"}
                     alt={item.title}
@@ -88,14 +88,14 @@ export default function EvolutionSection() {
                 </div>
 
                 {/* Panel */}
-                <div className="flex w-56 flex-col justify-center gap-y-2 bg-[#FFEDFA] px-4 py-5 md:w-64 lg:w-72">
-                  <span className="text-sm font-semibold text-[#31061B]">
+                <div className="flex w-48 flex-col justify-center gap-y-2 bg-[#FFEDFA] px-4 py-5 md:w-64 lg:w-72">
+                  <span className="text-xs font-semibold text-[#31061B] md:text-sm">
                     {item.year}
                   </span>
-                  <h4 className="text-xl leading-tight font-semibold text-[#F61D89] lg:text-2xl">
+                  <h4 className="text-sm leading-tight font-bold text-[#F61D89] md:font-semibold lg:text-2xl">
                     {item.title}
                   </h4>
-                  <p className="text-sm leading-relaxed text-[#31061B]">
+                  <p className="text-xs leading-relaxed text-[#31061B] md:text-sm">
                     {item.description}
                   </p>
                 </div>

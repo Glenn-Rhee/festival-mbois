@@ -17,7 +17,10 @@ const TIMELINE_ITEMS: TimelineItem[] = [
   { year: "2026", label: "From Event to System" },
 ];
 
-export default function EvolutionTimeline({ onChange, active }: EvolutionTimelineProps) {
+export default function EvolutionTimeline({
+  onChange,
+  active,
+}: EvolutionTimelineProps) {
   const [fillWidth, setFillWidth] = useState<number>(0);
 
   const lineRef = useRef<HTMLDivElement | null>(null);
@@ -48,11 +51,12 @@ export default function EvolutionTimeline({ onChange, active }: EvolutionTimelin
   return (
     <div className="relative mx-auto w-full px-2">
       {/* Label tahun */}
-      <div className="mb-4 flex justify-around">
+      <div className="mb-4 hidden justify-around md:flex">
         {TIMELINE_ITEMS.map((item, i) => (
           <span
             key={item.year}
-            className={`text-sm transition-all duration-500 ${
+            onClick={() => handleSelect(i)}
+            className={`cursor-pointer text-sm transition-all duration-500 ${
               i === active
                 ? "font-medium text-white"
                 : "font-normal text-white/70"
@@ -63,8 +67,34 @@ export default function EvolutionTimeline({ onChange, active }: EvolutionTimelin
         ))}
       </div>
 
+      <div className="flex w-full justify-center md:hidden">
+        <span className="font-onest text-lg">
+          {TIMELINE_ITEMS[active].year}
+        </span>
+      </div>
+      <div className="relative flex w-full items-center justify-center gap-x-3 pt-2 md:hidden">
+        {TIMELINE_ITEMS.map((item, i) => {
+          const isActive = i === active;
+
+          return (
+            <span
+              key={item.label}
+              onClick={() => handleSelect(i)}
+              className={`relative rounded-full transition-all duration-500 ${
+                isActive
+                  ? "h-3 w-3 bg-white"
+                  : "h-2 w-2 bg-white/50 group-hover:bg-white/80"
+              }`}
+            />
+          );
+        })}
+      </div>
+
       {/* Garis dasar */}
-      <div ref={lineRef} className="relative h-0.5 rounded-full bg-white/20">
+      <div
+        ref={lineRef}
+        className="relative hidden h-0.5 rounded-full bg-white/20 md:block"
+      >
         {/* Garis fill*/}
         <div
           className="absolute top-0 left-0 h-0.5 rounded-full bg-white transition-all duration-700 ease-in-out"
@@ -90,9 +120,7 @@ export default function EvolutionTimeline({ onChange, active }: EvolutionTimelin
                 {/* Glow ring saat aktif */}
                 <span
                   className={`absolute rounded-full transition-all duration-500 ${
-                    isActive
-                      ? "h-5 w-5 bg-white/30"
-                      : "h-0 w-0 bg-transparent"
+                    isActive ? "h-5 w-5 bg-white/30" : "h-0 w-0 bg-transparent"
                   }`}
                 />
                 {/* Dot inti */}
