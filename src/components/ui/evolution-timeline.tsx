@@ -82,8 +82,8 @@ export default function EvolutionTimeline({
               onClick={() => handleSelect(i)}
               className={`relative rounded-full transition-all duration-500 ${
                 isActive
-                  ? "h-3 w-3 bg-white"
-                  : "h-2 w-2 bg-white/50 group-hover:bg-white/80"
+                  ? "h-2 w-2 bg-white"
+                  : "h-2 w-2 bg-white/35 group-hover:bg-white/80"
               }`}
             />
           );
