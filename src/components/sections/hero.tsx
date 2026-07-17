@@ -161,13 +161,14 @@ export default function HeroSection() {
           <span className="block text-center text-lg font-bold tracking-widest text-black uppercase">
             Stakeholder Partners
           </span>
-          <div className="mt-6 flex items-center justify-center gap-10">
+          <div className="mt-6 grid grid-cols-4 gap-4 px-6 pt-4 md:gap-10 md:px-0 md:pt-6">
             <Image
               src="/sponsors/bri.png"
               width={200}
               height={80}
               alt="BRI"
               style={{ width: "auto", height: "auto" }}
+              className="md:justify-self-center"
             />
             <Image
               src="/sponsors/kemenpora.png"
@@ -196,282 +197,305 @@ export default function HeroSection() {
         {/* Grid: Powered By | Partners | Collaborators | Media Partner */}
         <div className="grid grid-cols-1 gap-6 rounded-2xl bg-white sm:grid-cols-2 lg:grid-cols-4">
           {/* Powered By */}
-          <div className="flex flex-col items-center border-r border-[#BDBDBD] px-4 py-6 sm:border-r lg:border-r">
-            <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
-              Powered By
-            </span>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Image
-                src="/logo_mcf.svg"
-                width={80}
-                height={60}
-                alt="MCF"
-                style={{ width: "auto", height: "150px" }}
-              />
-              <Image
-                src="/logo_iccn.svg"
-                width={80}
-                height={60}
-                alt="ICCN"
-                style={{ width: "auto", height: "70px" }}
-              />
+          <div className="flex flex-row items-start justify-around border-r-0 border-b border-[#BDBDBD] px-4 py-6 sm:border-r md:flex-col md:justify-start md:gap-x-0 md:border-r md:border-b-0 lg:border-r">
+            <div className="flex flex-col items-center md:mx-auto">
+              <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
+                Powered By
+              </span>
+              <div className="flex flex-col flex-wrap items-center justify-center gap-4 md:flex-row">
+                <Image
+                  src="/logo_mcf.svg"
+                  width={60}
+                  height={50}
+                  alt="MCF"
+                  className="h-20 w-auto md:h-30"
+                />
+                <Image
+                  src="/logo_iccn.svg"
+                  width={60}
+                  height={50}
+                  alt="ICCN"
+                  className="h-10 w-auto md:h-20"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-start md:hidden">
+              <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
+                Media Partner
+              </span>
+              <div className="flex flex-col items-center justify-center gap-4">
+                <Image
+                  src="/medias/logo_media_1.png"
+                  width={60}
+                  height={50}
+                  alt="Media Partner 1"
+                  className="h-auto w-auto"
+                />
+                <Image
+                  src="/medias/logo_media_2.png"
+                  width={60}
+                  height={50}
+                  alt="Media Partner 2"
+                  className="h-auto w-auto"
+                />
+              </div>
             </div>
           </div>
 
           {/* Partners */}
-          <div className="flex flex-col items-center border-r border-[#BDBDBD] px-4 py-6 lg:border-r">
+          <div className="flex flex-col items-center border-r-0 border-b border-[#BDBDBD] px-4 pb-6 sm:border-r md:border-r md:border-b-0 md:py-6 lg:border-r">
             <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
               Partners
             </span>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Image
                 src="/partners/logo_partner_1.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="Kota Malang"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_2.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="Dekopinda Kota Malang"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_3.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="Koni Kota Malang"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_4.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="Arema Music Tribute"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_5.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="Mbois Mart"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_6.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="Amazing Malang Eat"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_7.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="AACE"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_8.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="Multiverse"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/partners/logo_partner_9.png"
-                width={50}
+                width={180}
                 height={50}
                 alt="MMAC"
-                style={{ width: "auto", height: "40px" }}
+                className="h-5 w-auto md:h-10"
               />
             </div>
           </div>
 
           {/* Collaborators */}
-          <div className="flex flex-col items-center border-r border-[#BDBDBD] px-4 py-6 sm:border-r lg:border-r">
+          <div className="flex flex-col items-center border-r-0 border-b border-[#BDBDBD] px-4 pb-6 sm:border-r md:border-r md:border-b-0 md:py-6 lg:border-r">
             <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
               Collaborators
             </span>
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Image
                 src="/collaborators/logo_collab_1.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 1"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_2.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 2"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_3.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 3"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_4.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 4"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_5.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 5"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_6.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 6"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_7.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 7"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_8.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 8"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_9.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 9"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_10.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 10"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_11.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 11"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_12.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 12"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_13.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 13"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_14.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 14"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_15.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 15"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_16.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 16"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_17.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 17"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_18.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 18"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_19.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 19"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_20.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 20"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_21.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 21"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
               <Image
                 src="/collaborators/logo_collab_22.png"
-                width={40}
-                height={40}
+                width={180}
+                height={50}
                 alt="Collaborator 22"
-                style={{ width: "auto", height: "32px" }}
+                className="h-5 w-auto md:h-10"
               />
             </div>
           </div>
 
           {/* Media Partner */}
-          <div className="flex flex-col items-center px-4 py-6">
+          <div className="hidden md:flex flex-col items-center border-r-0 border-b border-[#BDBDBD] px-4 pb-6 sm:border-r md:border-r md:border-b-0 md:py-6 lg:border-r">
             <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
               Media Partner
             </span>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Image
                 src="/medias/logo_media_1.png"
-                width={60}
+                width={180}
                 height={50}
                 alt="Media Partner 1"
-                style={{ width: "auto", height: "100px" }}
+                className="h-15 w-auto md:h-30"
               />
               <Image
                 src="/medias/logo_media_2.png"
-                width={60}
+                width={180}
                 height={50}
                 alt="Media Partner 2"
-                style={{ width: "auto", height: "140px" }}
+                className="h-15 w-auto md:h-30"
               />
             </div>
           </div>
