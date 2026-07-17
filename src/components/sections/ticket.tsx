@@ -11,7 +11,7 @@ export default function TicketSection() {
   return (
     <section
       id="ticket"
-      className="relative w-full overflow-hidden py-16 lg:py-32"
+      className="relative w-full overflow-hidden py-2 lg:py-32"
       style={{ boxShadow: "9px 6px 74px 1px rgba(234, 94, 167, 0.10)" }}
     >
       {/* Dark overlay background */}
@@ -35,12 +35,12 @@ export default function TicketSection() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex flex-col items-center px-6 py-18 text-center md:px-10">
         <h2
-          className="font-onest max-w-241.5 text-3xl font-bold tracking-tight text-white md:text-5xl lg:text-[70px] lg:leading-26.25"
+          className="font-onest max-w-241.5 text-[35px] font-semibold tracking-tight text-white md:text-5xl md:font-bold lg:text-[70px] lg:leading-26.25"
           style={{ textShadow: "0px 0px 8px rgba(255, 255, 255, 0.32)" }}
         >
           {t.ticket.title}
         </h2>
-        <p className="font-onest mt-4 max-w-174.5 text-sm leading-relaxed font-normal text-[#F2F2F2] md:text-lg lg:text-2xl lg:leading-9">
+        <p className="font-onest mt-4 max-w-174.5 text-sm leading-relaxed text-[#F2F2F2] md:text-lg lg:text-2xl lg:leading-9">
           {t.ticket.description}
         </p>
         <Link
