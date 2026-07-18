@@ -34,22 +34,22 @@ export default function KeySpeaker() {
         <StarParticles top={95} left={92} size="small" />
       </div>
 
-      <div className="relative z-20 flex flex-col items-center gap-y-6 text-[#F2F2F2]">
-        <span className="block text-center font-semibold">
-          {t.keySpeaker.label}
+      <div className="relative z-30 flex flex-col items-center gap-y-6 text-[#F2F2F2]">
+        <span className="block text-center text-sm font-medium md:text-base md:font-semibold">
+          {t.lineupArtist.label}
         </span>
-        <h2 className="text-3xl leading-tight font-medium sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[90.19px]">
-          {t.keySpeaker.title}
+        <h2 className="text-2xl leading-tight font-semibold sm:text-4xl md:text-5xl md:font-medium lg:text-6xl lg:leading-[90.19px]">
+          {t.lineupArtist.title}
         </h2>
-        <p className="w-full max-w-xl text-center text-base text-[#F2F2F2]/80 sm:text-lg md:max-w-3xl md:text-2xl lg:max-w-4xl">
-          {t.keySpeaker.description}
+        <p className="w-full max-w-96 text-center text-sm text-[#F2F2F2]/80 sm:text-lg md:max-w-3xl md:text-2xl lg:max-w-4xl">
+          {t.lineupArtist.description}
         </p>
       </div>
 
       <div className="relative z-20 my-8 mt-22 flex flex-col gap-y-32">
         <div className="absolute -top-30 -right-40 size-80 rounded-full bg-[#23367A] blur-[100px]" />
         {t.keySpeaker.items.map((ks, i) => (
-          <div className="flex flex-col gap-y-6" key={ks.title}>
+          <div className="flex w-full flex-col gap-y-6" key={ks.title}>
             <div className="mx-auto flex w-full max-w-6xl items-center justify-center gap-4">
               <div className="h-px flex-1 bg-[#FDFDFD]" />
               <h6 className="text-4xl font-semibold tracking-wide whitespace-nowrap text-[#FDFDFD] uppercase">
@@ -58,7 +58,7 @@ export default function KeySpeaker() {
               <div className="h-px flex-1 bg-[#FDFDFD]" />
             </div>
 
-            <div className="relative">
+            <div className="relative w-full scrollbar-none overflow-x-auto overflow-y-hidden">
               <div className="flex">
                 {ks.speakers.map((speaker, speakerIdx) => {
                   const itemKey = `${i}-${speakerIdx}`;
@@ -71,13 +71,17 @@ export default function KeySpeaker() {
                         setSelectedKey(isSelected ? null : itemKey);
                       }}
                       className={cn(
-                        "relative z-20 h-96 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out",
-                        isSelected ? "grow-3" : "grow",
+                        "relative z-20 h-96 shrink-0 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out",
+                        isSelected
+                          ? "basis-1/2 md:basis-[25%]" // melebar 2x lipat dari basis normal
+                          : "basis-1/4 md:basis-[12.5%]",
                       )}
                     >
                       <Image
                         src={
-                          speaker.actor === "?" ? "/unknown-artist.jpg" : speaker.imgUrl
+                          speaker.actor === "?"
+                            ? "/unknown-artist.jpg"
+                            : speaker.imgUrl
                         }
                         alt={"Photo of " + speaker.actor}
                         fill
@@ -99,10 +103,10 @@ export default function KeySpeaker() {
                             isSelected ? "opacity-100" : "opacity-0",
                           )}
                         >
-                          <h6 className="text-center text-2xl font-semibold text-white">
+                          <h6 className="text-center text-lg font-medium text-white md:text-2xl md:font-semibold">
                             {speaker.actor}
                           </h6>
-                          <span className="text-center text-xl font-light text-white uppercase">
+                          <span className="text-center text-xs font-medium text-white uppercase md:text-xl md:font-light">
                             {speaker.actor === "?" ? "-" : speaker.title}
                           </span>
                         </div>
@@ -124,7 +128,7 @@ export default function KeySpeaker() {
         ))}
       </div>
 
-      <div className="relative z-20 mx-auto mt-8 w-full max-w-md text-center text-lg text-[#FDFDFD] md:max-w-4xl md:text-xl lg:max-w-6xl">
+      <div className="relative z-20 mx-auto mt-8 w-full max-w-80 text-center text-sm text-[#FDFDFD] md:max-w-4xl md:text-xl lg:max-w-6xl">
         {t.keySpeaker.subItems.map((si, i) => (
           <span key={si + i}>
             {si} {i === t.keySpeaker.subItems.length - 1 ? "" : "• "}
