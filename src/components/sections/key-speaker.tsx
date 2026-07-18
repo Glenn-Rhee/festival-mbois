@@ -36,23 +36,23 @@ export default function KeySpeaker() {
 
       <div className="relative z-30 flex flex-col items-center gap-y-6 text-[#F2F2F2]">
         <span className="block text-center text-sm font-medium md:text-base md:font-semibold">
-          {t.lineupArtist.label}
+          {t.keySpeaker.label}
         </span>
         <h2 className="text-2xl leading-tight font-semibold sm:text-4xl md:text-5xl md:font-medium lg:text-6xl lg:leading-[90.19px]">
-          {t.lineupArtist.title}
+          {t.keySpeaker.title}
         </h2>
         <p className="w-full max-w-96 text-center text-sm text-[#F2F2F2]/80 sm:text-lg md:max-w-3xl md:text-2xl lg:max-w-4xl">
-          {t.lineupArtist.description}
+          {t.keySpeaker.description}
         </p>
       </div>
 
-      <div className="relative z-20 my-8 mt-22 flex flex-col gap-y-32">
+      <div className="relative z-20 my-8 mt-8 flex flex-col gap-y-32 md:mt-22">
         <div className="absolute -top-30 -right-40 size-80 rounded-full bg-[#23367A] blur-[100px]" />
         {t.keySpeaker.items.map((ks, i) => (
           <div className="flex w-full flex-col gap-y-6" key={ks.title}>
-            <div className="mx-auto flex w-full max-w-6xl items-center justify-center gap-4">
+            <div className="relative z-30 mx-auto flex w-full max-w-6xl items-center justify-center gap-4">
               <div className="h-px flex-1 bg-[#FDFDFD]" />
-              <h6 className="text-4xl font-semibold tracking-wide whitespace-nowrap text-[#FDFDFD] uppercase">
+              <h6 className="text-xl font-semibold tracking-wide whitespace-nowrap text-[#FDFDFD] uppercase md:text-4xl">
                 {ks.title}
               </h6>
               <div className="h-px flex-1 bg-[#FDFDFD]" />
