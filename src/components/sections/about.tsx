@@ -121,7 +121,7 @@ export default function AboutSection() {
                 )}
               </div>
               {/* Pillars */}
-              <div className="mt-8 grid grid-cols-2 gap-3 w-full rounded-xl border border-white p-4 sm:gap-0 sm:divide-x sm:divide-white md:hidden">
+              <div className="mt-8 grid w-full grid-cols-2 gap-3 rounded-xl border border-white p-4 sm:gap-0 sm:divide-x sm:divide-white md:hidden">
                 {t.about.pillars.map((pillar, index) => {
                   const Icon = pillarIcons[index];
                   return (

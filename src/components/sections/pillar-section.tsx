@@ -32,24 +32,24 @@ export default function PillarSection() {
       </div>
       <div className="absolute top-2 -right-70 size-80 rounded-full bg-[#f61d89] blur-[150px]" />
       <div className="flex flex-col items-center gap-y-6 text-[#F2F2F2]">
-        <span className="block text-center font-semibold">
+        <span className="block text-center text-xs font-medium md:text-base md:font-semibold">
           {t.pillar.label}
         </span>
-        <h2 className="text-3xl leading-tight font-medium sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[90.19px]">
+        <h2 className="text-2xl leading-tight font-semibold sm:text-4xl md:text-5xl md:font-medium lg:text-6xl lg:leading-[90.19px]">
           {t.pillar.title}
         </h2>
-        <p className="w-full max-w-4xl text-center text-base text-[#F2F2F2]/80 sm:text-lg md:text-2xl">
+        <p className="w-full max-w-88 text-center text-sm text-[#F2F2F2]/80 sm:text-lg md:max-w-4xl md:text-2xl">
           {t.pillar.description}
         </p>
       </div>
 
-      <div className="mt-8 flex w-full flex-wrap justify-center gap-x-4 gap-y-6 px-4 sm:gap-x-6 sm:gap-y-10 sm:px-0">
+      <div className="mt-8 grid w-full grid-cols-1 flex-wrap justify-center gap-x-4 gap-y-6 px-4 sm:gap-x-6 sm:gap-y-10 sm:px-0 md:flex">
         {t.pillar.items.map((dp) => (
           <div
             role="button"
             key={dp.title}
             onClick={() => setSelectedPillar(dp)}
-            className="relative w-full max-w-[calc(50%-0.5rem)] cursor-pointer overflow-hidden rounded-xl border border-white/50 bg-white/5 px-4 py-3 shadow-xl backdrop-blur-md sm:max-w-sm sm:px-6 sm:py-4 lg:w-[calc(30%-1rem)]"
+            className="relative w-full cursor-pointer overflow-hidden rounded-xl border border-white/50 bg-white/5 px-4 py-3 shadow-xl backdrop-blur-md sm:max-w-sm sm:px-6 sm:py-4 md:max-w-[calc(50%-0.5rem)] lg:w-[calc(30%-1rem)]"
           >
             <div className="relative aspect-video w-full">
               <Image
@@ -58,13 +58,19 @@ export default function PillarSection() {
                 fill
                 className="rounded-xl object-cover"
               />
-              <div className="absolute inset-0 rounded-xl bg-linear-to-b from-[#5693FD]/70 to-[#25CFEF]/70" />
-              <div className="absolute inset-0 flex items-center justify-center px-5 py-4 text-center">
+              <div className="absolute inset-0 hidden rounded-xl bg-linear-to-b from-[#5693FD]/70 to-[#25CFEF]/70 md:block" />
+              <div className="absolute inset-0 hidden items-center justify-center px-5 py-4 text-center md:flex">
                 <span className="text-2xl font-extrabold text-[#F2F2F2] drop-shadow-[0_0_16px_rgba(255,255,255,0.6)]">
                   {dp.title}
                 </span>
               </div>
             </div>
+            <button
+              onClick={() => setSelectedPillar(dp)}
+              className="mt-4 block w-full rounded-lg border-[0.5] border-white bg-white/10 py-2.5 text-sm font-medium md:hidden"
+            >
+              {dp.action}
+            </button>
           </div>
         ))}
       </div>
