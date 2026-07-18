@@ -121,7 +121,7 @@ export default function AboutSection() {
                 )}
               </div>
               {/* Pillars */}
-              <div className="mt-8 grid grid-cols-2 gap-3 rounded-xl border border-white p-4 sm:gap-0 sm:divide-x sm:divide-white md:hidden">
+              <div className="mt-8 grid grid-cols-2 gap-3 w-full rounded-xl border border-white p-4 sm:gap-0 sm:divide-x sm:divide-white md:hidden">
                 {t.about.pillars.map((pillar, index) => {
                   const Icon = pillarIcons[index];
                   return (
@@ -148,7 +148,7 @@ export default function AboutSection() {
         </div>
 
         {/* Statistics Bar */}
-        <div className="mt-8 overflow-x-auto scrollbar-none border-t border-b md:border border-white bg-[#EEEEEE14] px-4 py-6 backdrop-blur-xl sm:px-6 sm:py-8 md:rounded-2xl md:px-10 md:py-10">
+        <div className="mt-8 scrollbar-none overflow-x-auto border-t border-b border-white bg-[#EEEEEE14] px-4 py-6 backdrop-blur-xl sm:px-6 sm:py-8 md:rounded-2xl md:border md:px-10 md:py-10">
           <div className="flex min-w-max items-center justify-between gap-6 sm:min-w-0 sm:flex-wrap sm:justify-center">
             {t.about.stats.map((stat, index) => {
               const Icon = statisticIcons[index];
