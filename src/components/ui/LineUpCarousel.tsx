@@ -92,8 +92,8 @@ export default function LineupCarousel(props: Props) {
 
   return (
     <div className="relative left-1/2 my-10 mb-12 w-screen -translate-x-1/2">
-      <div className="bg-background absolute -top-78 left-1/2 z-10 h-90 w-[150%] -translate-x-1/2 rounded-[45%] md:rounded-[100%]" />
-      <div className="bg-background absolute -bottom-78 left-1/2 z-10 h-90 w-[150%] -translate-x-1/2 rounded-[45%] md:rounded-[100%]" />
+      <div className="bg-background absolute -top-78 left-1/2 z-10 hidden h-90 w-[150%] -translate-x-1/2 rounded-[45%] md:block md:rounded-[100%]" />
+      <div className="bg-background absolute -bottom-78 left-1/2 z-10 hidden h-90 w-[150%] -translate-x-1/2 rounded-[45%] md:block md:rounded-[100%]" />
 
       <div
         ref={scrollRef}
@@ -109,7 +109,10 @@ export default function LineupCarousel(props: Props) {
         )}
       >
         {lineupArtist.map((item, i) => (
-          <div key={item.artist + i} className="relative h-120 w-90 shrink-0">
+          <div
+            key={item.artist + i}
+            className="relative h-96 w-56 shrink-0 md:h-120 md:w-90"
+          >
             <Image
               src={item.artist === "?" ? "/unknown-artist.jpg" : item.imgUrl}
               alt={"Image of " + item.artist}
@@ -120,7 +123,12 @@ export default function LineupCarousel(props: Props) {
                 item.artist === "?" ? "blur-md" : "",
               )}
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-[#f91e8b96]">
+            <div
+              className={cn(
+                "absolute inset-0 flex items-center justify-center rounded-lg",
+                i % 2 === 0 ? "bg-[#f91e8b96]" : "bg-[#2EC4F296]",
+              )}
+            >
               <h6
                 className={cn(
                   "text-center font-bold text-white uppercase [text-shadow:0px_0px_6px_#FFFFFF9E]",
