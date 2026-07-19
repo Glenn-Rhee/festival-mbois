@@ -73,7 +73,7 @@ export default function KeySpeaker() {
                       className={cn(
                         "relative z-20 h-96 shrink-0 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out",
                         isSelected
-                          ? "basis-1/2 md:basis-[25%]" // melebar 2x lipat dari basis normal
+                          ? "basis-1/2 md:basis-[25%]"
                           : "basis-1/4 md:basis-[12.5%]",
                       )}
                     >
@@ -85,6 +85,11 @@ export default function KeySpeaker() {
                         }
                         alt={"Photo of " + speaker.actor}
                         fill
+                        sizes={
+                          isSelected
+                            ? "(min-width: 768px) 25vw, 50vw"
+                            : "(min-width: 768px) 12.5vw, 25vw"
+                        }
                         className="object-cover shadow-xl shadow-black/80"
                       />
                       <div
