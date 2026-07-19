@@ -43,7 +43,7 @@ export default function YourRoleSection() {
       </div>
 
       <div className="relative mt-8 w-full rounded-2xl border border-white bg-white/10 px-6 py-6 shadow-xl backdrop-blur-md sm:mt-12 sm:px-10 sm:py-8">
-        <div className="grid grid-cols-1 gap-6 lg:h-96 lg:grid-cols-2 lg:gap-x-8">
+        <div className="grid grid-cols-1 gap-6 lg:min-h-96 lg:grid-cols-2 lg:gap-x-8">
           <div className="flex flex-col items-stretch justify-center gap-y-4 md:justify-between md:gap-y-0">
             <h6 className="text-2xl font-semibold text-[#F2F2F2] sm:text-3xl md:text-4xl">
               {dataActive.title}
@@ -83,7 +83,7 @@ export default function YourRoleSection() {
           }}
           disabled={page === 0}
           className={cn(
-            "broder-white absolute top-1/2 -left-5 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border bg-[#EC1B82] text-white",
+            "broder-white absolute top-1/2 -left-5 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border bg-[#EC1B82] text-white lg:hidden",
             page === 0 && "bg-gray-800",
           )}
         >
@@ -98,7 +98,7 @@ export default function YourRoleSection() {
           }}
           disabled={page === dataItems.length}
           className={cn(
-            "broder-white -right-5 absolute top-1/2 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border bg-[#EC1B82] text-white",
+            "broder-white absolute top-1/2 -right-5 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border bg-[#EC1B82] text-white lg:hidden",
             page === dataItems.length - 1 && "bg-gray-800",
           )}
         >
