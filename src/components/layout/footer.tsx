@@ -58,17 +58,24 @@ export default function Footer() {
         </div>
 
         {/* --- BRAND SECTION --- */}
-        <div className="border-t border-white/20">
+        <div className="border-t border-white/20 pt-10 md:pt-0">
           <div className="flex flex-col md:flex-row">
             {/* Logo & Name */}
-            <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-12 text-center md:flex-row md:justify-start md:gap-8 md:px-16 md:text-left lg:gap-8 lg:pl-24">
-              <span className="text-3xl leading-none font-semibold tracking-tight text-white md:text-6xl lg:text-8xl">
+            <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center md:flex-row md:justify-start md:gap-8 md:px-16 md:py-12 md:text-left lg:gap-8 lg:pl-24">
+              <Image
+                src={"/img-about.png"}
+                alt="Festival Mbois Logo"
+                width={100}
+                height={100}
+                className="h-24 object-cover"
+              />
+              <span className="text-4xl leading-none font-semibold text-white md:text-6xl md:tracking-tight lg:text-8xl">
                 {t.footer.brandName}
               </span>
             </div>
 
             {/* Tagline */}
-            <div className="flex items-center justify-center border-t border-white/20 px-6 py-8 md:border-t-0 md:border-l md:px-16 lg:px-24">
+            <div className="flex items-center justify-center border-0 border-white/20 px-6 py-8 md:border-t-0 md:border-l md:px-16 lg:px-24">
               <span className="text-center text-xl leading-tight font-medium text-white md:text-left md:text-3xl lg:text-[40px]">
                 {t.footer.tagline}
               </span>
@@ -77,10 +84,10 @@ export default function Footer() {
         </div>
 
         {/* --- BOTTOM LINKS SECTION --- */}
-        <div className="border-t border-white/20">
+        <div className="border-white/20 md:border-t">
           <div className="flex flex-col md:flex-row">
             {/* Social Icons */}
-            <div className="flex w-full items-center justify-center gap-6 px-6 py-8 md:w-auto md:px-16 lg:px-24">
+            <div className="flex w-full items-center justify-center gap-6 px-6 pb-10 md:w-auto md:px-16 md:pb-0 lg:px-24">
               <a
                 href="https://instagram.com/festivalmbois"
                 target="_blank"
