@@ -19,10 +19,10 @@ export function AccordionItem({
   return (
     <div className="mb-4 w-full border border-[#FDFDFD] transition-all duration-300">
       <button
-        className="flex w-full cursor-pointer items-center justify-between p-6 text-left focus:outline-none md:p-8"
+        className="flex w-full cursor-pointer items-center justify-between p-4 text-left focus:outline-none md:p-8"
         onClick={onClick}
       >
-        <h3 className="text-neutral-off-white text-xl font-medium tracking-wide md:text-2xl">
+        <h3 className="text-neutral-off-white font-semibold tracking-wide md:text-2xl md:font-medium">
           {title}
         </h3>
         {isOpen ? (
@@ -32,11 +32,11 @@ export function AccordionItem({
         )}
       </button>
       <div
-        className={`overflow-hidden px-6 transition-all duration-300 ease-in-out md:px-8 ${
+        className={`overflow-hidden px-4 transition-all duration-300 ease-in-out md:px-8 ${
           isOpen ? "max-h-96 pb-6 opacity-100 md:pb-8" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="text-neutral-off-white/80 pr-8 text-sm leading-relaxed font-light md:text-base">
+        <div className="text-neutral-off-white/80 pr-8 text-sm leading-relaxed md:text-base md:font-light">
           {content}
         </div>
       </div>
@@ -56,7 +56,7 @@ export function Accordion({ items }: AccordionProps) {
   };
 
   return (
-    <div className="w-full">
+    <div className="mt-6 w-full md:mt-20">
       {items.map((item, index) => (
         <AccordionItem
           key={index}
