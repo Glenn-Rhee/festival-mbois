@@ -91,7 +91,7 @@ export default function KeySpeaker() {
                             }
                             alt={"Photo of " + speaker.actor}
                             fill
-                            sizes="(min-width: 768px) 25vw, 50vw"
+                            sizes={"(min-width: 768px) 12.5vw, 25vw"}
                             className="object-cover shadow-xl shadow-black/80"
                           />
                           <div
