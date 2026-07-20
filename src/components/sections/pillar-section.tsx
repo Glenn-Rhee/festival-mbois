@@ -87,7 +87,7 @@ export default function PillarSection() {
               />
             </div>
             <div className="flex w-full flex-col gap-y-4">
-              <div className="mx-auto flex size-8 items-center justify-center rounded-full border border-white text-lg font-semibold">
+              <div className="mx-auto md:mx-0 flex size-8 items-center justify-center rounded-full border border-white text-lg font-semibold">
                 {t.pillar.items.indexOf(selectedPillar) + 1}
               </div>
               <h6 className="w-full text-2xl font-semibold">
