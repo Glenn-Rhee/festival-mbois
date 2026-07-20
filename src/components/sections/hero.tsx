@@ -120,9 +120,7 @@ export default function HeroSection() {
               {t.hero.cta}
             </Link>
             <Link
-              href="https://malang-creative-fusion.eventopia.my/festival-mbois-11-malang-menyala"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#ticket"
               className={buttonVariants({
                 variant: "primary-gradient",
                 className: "w-full justify-center sm:w-52",

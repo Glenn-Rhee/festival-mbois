@@ -44,9 +44,7 @@ export default function TicketSection() {
           {t.ticket.description}
         </p>
         <Link
-          href="https://malang-creative-fusion.eventopia.my/festival-mbois-11-malang-menyala"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#ticket"
           className="mt-8"
         >
           <Button
