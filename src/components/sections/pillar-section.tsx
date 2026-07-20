@@ -4,6 +4,7 @@ import { useState } from "react";
 import Dialog from "../ui/Dialog";
 import { useLanguage } from "@/i18n/context";
 import { StarParticles } from "../ui/star-particles";
+import { X } from "lucide-react";
 
 export default function PillarSection() {
   const { t } = useLanguage();
@@ -87,7 +88,7 @@ export default function PillarSection() {
               />
             </div>
             <div className="flex w-full flex-col gap-y-4">
-              <div className="mx-auto md:mx-0 flex size-8 items-center justify-center rounded-full border border-white text-lg font-semibold">
+              <div className="mx-auto flex size-8 items-center justify-center rounded-full border border-white text-lg font-semibold md:mx-0">
                 {t.pillar.items.indexOf(selectedPillar) + 1}
               </div>
               <h6 className="w-full text-2xl font-semibold">
@@ -100,6 +101,12 @@ export default function PillarSection() {
                 {t.pillar.itemAction}
               </button>
             </div>
+            <button
+              onClick={() => setSelectedPillar(null)}
+              className="absolute -top-3 -right-3 cursor-pointer md:top-4 md:right-4"
+            >
+              <X className="size-8 md:size-6" />
+            </button>
           </div>
         )}
       </Dialog>
