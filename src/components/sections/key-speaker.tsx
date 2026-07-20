@@ -2,17 +2,29 @@
 import { useLanguage } from "@/i18n/context";
 import { cn } from "@/lib/cn";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StarParticles } from "../ui/star-particles";
 import { chunkArray } from "@/helper/chunkSpeakers";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import ImgCardSpeakerMobile from "../ui/imgCardSpeakerMobile";
 
 export default function KeySpeaker() {
   const { t } = useLanguage();
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
-  const COLS = 8;
-  const baseBasis = 100 / COLS; // 12.5%
-  const selectedMultiplier = 2; // sesuai grow-2 yang kamu pakai sebelumnya
-  const selectedBasis = baseBasis * selectedMultiplier; // 25%
+  const isMobile = useIsMobile();
+  const [colsPicture, setColsPicture] = useState<number>(isMobile ? 4 : 8);
+  const baseBasis = 100 / colsPicture;
+  const selectedMultiplier = 2;
+  const selectedBasis = baseBasis * selectedMultiplier;
+
+  useEffect(() => {
+    if (isMobile) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setColsPicture(4);
+    } else {
+      setColsPicture(8);
+    }
+  }, [isMobile]);
   return (
     <section
       id="key-speaker"
@@ -63,67 +75,71 @@ export default function KeySpeaker() {
             </div>
 
             <div className="relative w-full scrollbar-none overflow-x-auto overflow-y-hidden md:overflow-x-hidden">
-              <div className="flex flex-col gap-0">
-                {chunkArray(ks.speakers, COLS).map((rowSpeakers, rowIdx) => (
-                  <div key={rowIdx} className="flex">
-                    {rowSpeakers.map((speaker, colIdx) => {
-                      const speakerIdx = rowIdx * COLS + colIdx;
-                      const itemKey = `${i}-${speakerIdx}`;
-                      const isSelected = selectedKey === itemKey;
+              <div className="hidden flex-col gap-0 md:flex">
+                {chunkArray(ks.speakers, colsPicture).map(
+                  (rowSpeakers, rowIdx) => (
+                    <div key={rowIdx} className="flex">
+                      {rowSpeakers.map((speaker, colIdx) => {
+                        const speakerIdx = rowIdx * colsPicture + colIdx;
+                        const itemKey = `${i}-${speakerIdx}`;
+                        const isSelected = selectedKey === itemKey;
 
-                      return (
-                        <div
-                          key={speaker.actor + speakerIdx}
-                          onClick={() =>
-                            setSelectedKey(isSelected ? null : itemKey)
-                          }
-                          className="relative z-20 h-96 shrink grow-0 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out"
-                          style={{
-                            flexBasis: `${isSelected ? selectedBasis : baseBasis}%`,
-                            transition: "flex-basis 500ms ease-in-out",
-                          }}
-                        >
-                          <Image
-                            src={
-                              speaker.actor === "?"
-                                ? "/unknown-artist.jpg"
-                                : speaker.imgUrl
-                            }
-                            alt={"Photo of " + speaker.actor}
-                            fill
-                            sizes={"(min-width: 768px) 12.5vw, 25vw"}
-                            className="object-cover shadow-xl shadow-black/80"
-                          />
+                        return (
                           <div
-                            className={cn(
-                              "absolute inset-0 flex items-end p-4 transition-all duration-500 ease-in-out",
-                              isSelected
-                                ? "bg-transparent"
-                                : i === 0
-                                  ? "bg-[#f91e8b7e]"
-                                  : "bg-[#259dc2ad]",
-                            )}
+                            key={speaker.actor + speakerIdx}
+                            onClick={() =>
+                              setSelectedKey(isSelected ? null : itemKey)
+                            }
+                            className="relative z-20 h-96 shrink grow-0 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out"
+                            style={{
+                              flexBasis: `${isSelected ? selectedBasis : baseBasis}%`,
+                              transition: "flex-basis 500ms ease-in-out",
+                            }}
                           >
+                            <Image
+                              src={
+                                speaker.actor === "?"
+                                  ? "/unknown-artist.jpg"
+                                  : speaker.imgUrl
+                              }
+                              alt={"Photo of " + speaker.actor}
+                              fill
+                              sizes={"(min-width: 768px) 12.5vw, 25vw"}
+                              className="object-cover shadow-xl shadow-black/80"
+                            />
                             <div
                               className={cn(
-                                "flex w-full flex-col items-center justify-center gap-y-1 rounded-lg border border-white/20 bg-[#352233B8] p-4 shadow-xl backdrop-blur-md transition-all duration-500 ease-in-out",
-                                isSelected ? "opacity-100" : "opacity-0",
+                                "absolute inset-0 flex items-end p-4 transition-all duration-500 ease-in-out",
+                                isSelected
+                                  ? "bg-transparent"
+                                  : i === 0
+                                    ? "bg-[#f91e8b7e]"
+                                    : "bg-[#259dc2ad]",
                               )}
                             >
-                              <h6 className="text-center text-lg font-medium text-white md:text-2xl md:font-semibold">
-                                {speaker.actor}
-                              </h6>
-                              <span className="text-center text-xs font-medium text-white uppercase md:text-xl md:font-light">
-                                {speaker.actor === "?" ? "-" : speaker.title}
-                              </span>
+                              <div
+                                className={cn(
+                                  "flex w-full flex-col items-center justify-center gap-y-1 rounded-lg border border-white/20 bg-[#352233B8] p-4 shadow-xl backdrop-blur-md transition-all duration-500 ease-in-out",
+                                  isSelected ? "opacity-100" : "opacity-0",
+                                )}
+                              >
+                                <h6 className="text-center text-lg font-medium text-white md:text-2xl md:font-semibold">
+                                  {speaker.actor}
+                                </h6>
+                                <span className="text-center text-xs font-medium text-white uppercase md:text-xl md:font-light">
+                                  {speaker.actor === "?" ? "-" : speaker.title}
+                                </span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ))}
-              </div>{" "}
+                        );
+                      })}
+                    </div>
+                  ),
+                )}
+              </div>
+              <ImgCardSpeakerMobile index={i} keySpeaker={ks} />
+
               <div
                 className={cn(
                   "absolute rounded-full",
