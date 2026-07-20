@@ -134,7 +134,7 @@ export default function HeroSection() {
           </div>
 
           {/* Tagline */}
-          <div className="flex w-full items-center gap-x-2">
+          <div className="flex w-full items-center gap-x-2 md:justify-end">
             <div className="text-start md:text-right">
               <p className="font-bold tracking-normal text-white uppercase lg:text-2xl">
                 {t.hero.tagline}
@@ -161,35 +161,34 @@ export default function HeroSection() {
           <span className="block text-center text-lg font-bold tracking-widest text-black uppercase">
             Stakeholder Partners
           </span>
-          <div className="mt-6 grid grid-cols-4 gap-4 px-6 pt-4 md:gap-10 md:px-0 md:pt-6">
+          <div className="mt-6 grid grid-cols-4 items-center justify-center gap-4 px-6 pt-4 md:flex md:gap-12 md:px-0 md:pt-6">
             <Image
               src="/sponsors/bri.png"
               width={200}
               height={80}
               alt="BRI"
-              style={{ width: "auto", height: "auto" }}
-              className="md:justify-self-center"
+              className="h-20 w-auto object-contain md:justify-self-center"
             />
             <Image
               src="/sponsors/kemenpora.png"
               width={200}
               height={80}
               alt="Kemenpora"
-              style={{ width: "auto", height: "auto" }}
+              className="h-20 w-auto object-contain md:justify-self-center"
             />
             <Image
               src="/sponsors/kemenekraf.png"
               width={200}
               height={80}
               alt="Kemenekraf"
-              style={{ width: "auto", height: "auto" }}
+              className="h-20 w-auto object-contain md:justify-self-center"
             />
             <Image
               src="/sponsors/ukp.png"
               width={200}
               height={80}
               alt="Utusan Khusus Presiden"
-              style={{ width: "auto", height: "auto" }}
+              className="h-20 w-auto object-contain md:justify-self-center"
             />
           </div>
         </div>
@@ -202,20 +201,20 @@ export default function HeroSection() {
               <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
                 Powered By
               </span>
-              <div className="flex flex-col flex-wrap items-center justify-center gap-4 md:flex-row">
+              <div className="flex flex-col flex-wrap items-center justify-center gap-4">
                 <Image
                   src="/logo_mcf.svg"
                   width={60}
                   height={50}
                   alt="MCF"
-                  className="h-20 w-auto md:h-30"
+                  className="h-20 w-auto md:h-22"
                 />
                 <Image
                   src="/logo_iccn.svg"
                   width={60}
                   height={50}
                   alt="ICCN"
-                  className="h-10 w-auto md:h-20"
+                  className="h-10 w-auto md:h-12"
                 />
               </div>
             </div>
@@ -253,63 +252,63 @@ export default function HeroSection() {
                 width={180}
                 height={50}
                 alt="Kota Malang"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_2.png"
                 width={180}
                 height={50}
                 alt="Dekopinda Kota Malang"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_3.png"
                 width={180}
                 height={50}
                 alt="Koni Kota Malang"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_4.png"
                 width={180}
                 height={50}
                 alt="Arema Music Tribute"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_5.png"
                 width={180}
                 height={50}
                 alt="Mbois Mart"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_6.png"
                 width={180}
                 height={50}
                 alt="Amazing Malang Eat"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_7.png"
                 width={180}
                 height={50}
                 alt="AACE"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_8.png"
                 width={180}
                 height={50}
                 alt="Multiverse"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_9.png"
                 width={180}
                 height={50}
                 alt="MMAC"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-8"
               />
             </div>
           </div>
@@ -325,177 +324,177 @@ export default function HeroSection() {
                 width={180}
                 height={50}
                 alt="Collaborator 1"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_2.png"
                 width={180}
                 height={50}
                 alt="Collaborator 2"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_3.png"
                 width={180}
                 height={50}
                 alt="Collaborator 3"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_4.png"
                 width={180}
                 height={50}
                 alt="Collaborator 4"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_5.png"
                 width={180}
                 height={50}
                 alt="Collaborator 5"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_6.png"
                 width={180}
                 height={50}
                 alt="Collaborator 6"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_7.png"
                 width={180}
                 height={50}
                 alt="Collaborator 7"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_8.png"
                 width={180}
                 height={50}
                 alt="Collaborator 8"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_9.png"
                 width={180}
                 height={50}
                 alt="Collaborator 9"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_10.png"
                 width={180}
                 height={50}
                 alt="Collaborator 10"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_11.png"
                 width={180}
                 height={50}
                 alt="Collaborator 11"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_12.png"
                 width={180}
                 height={50}
                 alt="Collaborator 12"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_13.png"
                 width={180}
                 height={50}
                 alt="Collaborator 13"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_14.png"
                 width={180}
                 height={50}
                 alt="Collaborator 14"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_15.png"
                 width={180}
                 height={50}
                 alt="Collaborator 15"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_16.png"
                 width={180}
                 height={50}
                 alt="Collaborator 16"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_17.png"
                 width={180}
                 height={50}
                 alt="Collaborator 17"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_18.png"
                 width={180}
                 height={50}
                 alt="Collaborator 18"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_19.png"
                 width={180}
                 height={50}
                 alt="Collaborator 19"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_20.png"
                 width={180}
                 height={50}
                 alt="Collaborator 20"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_21.png"
                 width={180}
                 height={50}
                 alt="Collaborator 21"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
               <Image
                 src="/collaborators/logo_collab_22.png"
                 width={180}
                 height={50}
                 alt="Collaborator 22"
-                className="h-5 w-auto md:h-10"
+                className="h-5 w-auto md:h-6"
               />
             </div>
           </div>
 
           {/* Media Partner */}
-          <div className="hidden md:flex flex-col items-center border-r-0 border-b border-[#BDBDBD] px-4 pb-6 sm:border-r md:border-r md:border-b-0 md:py-6 lg:border-r">
+          <div className="hidden flex-col items-center border-r-0 border-b border-[#BDBDBD] px-4 pb-6 sm:border-r md:flex md:border-r md:border-b-0 md:py-6 lg:border-r">
             <span className="mb-4 text-xs font-semibold tracking-widest text-black/50 uppercase">
               Media Partner
             </span>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col flex-wrap items-center justify-center gap-4">
               <Image
                 src="/medias/logo_media_1.png"
                 width={180}
                 height={50}
                 alt="Media Partner 1"
-                className="h-15 w-auto md:h-30"
+                className="h-20 w-auto md:h-22"
               />
               <Image
                 src="/medias/logo_media_2.png"
                 width={180}
                 height={50}
                 alt="Media Partner 2"
-                className="h-15 w-auto md:h-30"
+                className="h-20 w-auto md:h-22"
               />
             </div>
           </div>
