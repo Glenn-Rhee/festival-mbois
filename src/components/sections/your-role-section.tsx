@@ -55,10 +55,11 @@ export default function YourRoleSection() {
               href={dataActive.actionUrl}
               className={buttonVariants({
                 variant: "primary-gradient",
-                className: "shadow-[0px_7.77px_29.12px_0px_#F12B8E73]",
+                className:
+                  "w-full shadow-[0px_7.77px_29.12px_0px_#F12B8E73] md:max-w-64",
               })}
             >
-              <span className="bg-linear-to-b from-[#25CFEF] to-[#5693FD] bg-clip-text">
+              <span className="bg-linear-to-b from-[#2d3131] to-[#5693FD] bg-clip-text">
                 {t.yourRole.actionItem}
               </span>
             </Link>
