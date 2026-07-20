@@ -62,9 +62,9 @@ export default function ImgCardSpeakerMobile(props: Props) {
               src={
                 speaker.actor === "?" ? "/unknown-artist.jpg" : speaker.imgUrl
               }
+              quality={100}
               alt={"Photo of " + speaker.actor}
               fill
-              sizes={"(min-width: 768px) 12.5vw, 25vw"}
               className="object-cover shadow-xl shadow-black/80"
             />
             <div
