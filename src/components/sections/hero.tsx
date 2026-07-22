@@ -146,21 +146,21 @@ export default function HeroSection() {
               alt="Malang Media Art"
               width={150}
               height={50}
-              className="hidden w-auto md:block"
+              className="hidden w-28 object-contain md:block"
             />
             <Image
               src={"/unesco.png"}
               alt="Unesco"
               width={150}
               height={50}
-              className="hidden w-auto md:block"
+              className="hidden w-28 object-contain md:block"
             />
             <Image
               src={"/hut-ri.png"}
               alt="Hut RI Logo"
               width={150}
               height={50}
-              className="hidden w-auto md:block"
+              className="hidden w-28 object-contain md:block"
             />
           </div>
         </div>
