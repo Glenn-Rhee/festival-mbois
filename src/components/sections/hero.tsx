@@ -534,21 +534,21 @@ export default function HeroSection() {
                 width={180}
                 height={50}
                 alt="Media Partner 1"
-                className="h-20 w-auto md:h-22"
+                className="h-20 w-auto md:h-18"
               />
               <Image
                 src="/medias/logo_media_2.png"
                 width={180}
                 height={50}
                 alt="Media Partner 2"
-                className="h-20 w-auto md:h-22"
+                className="h-20 w-auto md:h-18"
               />
               <Image
                 src="/medias/logo_media_3.png"
                 width={180}
                 height={50}
                 alt="Media Partner 3"
-                className="h-20 w-auto md:h-22"
+                className="h-20 w-auto md:h-18"
               />
             </div>
           </div>
