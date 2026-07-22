@@ -553,6 +553,24 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
+
+        <div className="w-full border-t border-[#BDBDBD] py-10">
+          <span className="mb-4 block text-center text-xs font-semibold tracking-widest text-black/50 uppercase">
+            JEJARING FESTIVAL MBOIS 11
+          </span>
+          <div className="mx-auto mt-6 flex w-full max-w-[85%] flex-wrap justify-center gap-x-3 gap-y-2 md:gap-x-8 md:gap-y-4">
+            {Array.from({ length: 22 }).map((_, i) => (
+              <Image
+                key={i}
+                src={`/jejaring-festival-mbois/logo_jejaring_${i + 1}.png`}
+                width={180}
+                height={50}
+                alt={`Logo jejaring festival ${i + 1}`}
+                className="h-5 w-auto md:h-8"
+              />
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );
