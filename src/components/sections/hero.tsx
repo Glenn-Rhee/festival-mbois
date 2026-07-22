@@ -142,6 +142,20 @@ export default function HeroSection() {
               </p>
             </div>
             <Image
+              src={"/malang-media-art.png"}
+              alt="Malang Media Art"
+              width={150}
+              height={50}
+              className="hidden w-auto md:block"
+            />
+            <Image
+              src={"/unesco.png"}
+              alt="Unesco"
+              width={150}
+              height={50}
+              className="hidden w-auto md:block"
+            />
+            <Image
               src={"/hut-ri.png"}
               alt="Hut RI Logo"
               width={150}
@@ -270,14 +284,14 @@ export default function HeroSection() {
                 src="/partners/logo_partner_4.png"
                 width={180}
                 height={50}
-                alt="Arema Music Tribute"
+                alt="Karang Taruna"
                 className="h-5 w-auto md:h-8"
               />
               <Image
                 src="/partners/logo_partner_5.png"
                 width={180}
                 height={50}
-                alt="Mbois Mart"
+                alt="Arema Music Tribute"
                 className="h-5 w-auto md:h-8"
               />
               <Image
@@ -306,6 +320,13 @@ export default function HeroSection() {
                 width={180}
                 height={50}
                 alt="MMAC"
+                className="h-5 w-auto md:h-8"
+              />
+              <Image
+                src="/partners/logo_partner_10.png"
+                width={180}
+                height={50}
+                alt="Mbois Mart"
                 className="h-5 w-auto md:h-8"
               />
             </div>
@@ -471,6 +492,27 @@ export default function HeroSection() {
                 alt="Collaborator 22"
                 className="h-5 w-auto md:h-6"
               />
+              <Image
+                src="/collaborators/logo_collab_23.png"
+                width={180}
+                height={50}
+                alt="Collaborator 23"
+                className="h-5 w-auto md:h-6"
+              />
+              <Image
+                src="/collaborators/logo_collab_24.png"
+                width={180}
+                height={50}
+                alt="Collaborator 24"
+                className="h-5 w-auto md:h-6"
+              />
+              <Image
+                src="/collaborators/logo_collab_25.png"
+                width={180}
+                height={50}
+                alt="Collaborator 25"
+                className="h-5 w-auto md:h-6"
+              />
             </div>
           </div>
 
@@ -492,6 +534,13 @@ export default function HeroSection() {
                 width={180}
                 height={50}
                 alt="Media Partner 2"
+                className="h-20 w-auto md:h-22"
+              />
+              <Image
+                src="/medias/logo_media_3.png"
+                width={180}
+                height={50}
+                alt="Media Partner 3"
                 className="h-20 w-auto md:h-22"
               />
             </div>

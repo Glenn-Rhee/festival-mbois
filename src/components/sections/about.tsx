@@ -16,7 +16,6 @@ import HandCoin from "../icon/HandCoin";
 
 const pillarIcons = [LinkIcon, UserIcon, Idea, Creative];
 const statisticIcons = [Users, Users, Bag, HandCoin, HandCoin];
-const YOUTUBE_VIDEO_ID = "Cw3eAvi8pn4";
 
 export default function AboutSection() {
   const { t } = useLanguage();
@@ -73,13 +72,12 @@ export default function AboutSection() {
             <div className="relative flex h-full w-full flex-col items-center justify-center md:flex-row">
               <div className="relative aspect-video h-full w-full overflow-hidden rounded-2xl border-2 border-[#7BAEFA] p-3">
                 {isPlaying ? (
-                  <iframe
-                    className="h-full w-full rounded-2xl"
-                    src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&si=i0FnwmiIITIzK0Lk`}
-                    title="Festival Mbois 11"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
+                  <video
+                    className="h-full w-full rounded-2xl object-cover"
+                    src="/Bumper-landsape.m4v"
+                    autoPlay
+                    controls
+                    playsInline
                   />
                 ) : (
                   <>
