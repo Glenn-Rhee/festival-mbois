@@ -125,8 +125,7 @@ export default function LineupCarousel(props: Props) {
             />
             <div
               className={cn(
-                "absolute inset-0 flex items-center justify-center rounded-lg",
-                i % 2 === 0 ? "bg-[#f91e8b96]" : "bg-[#2EC4F296]",
+                "absolute inset-0 flex items-center justify-center rounded-lg bg-[#2EC4F24D]",
               )}
             >
               <h6
