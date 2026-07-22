@@ -249,6 +249,13 @@ export default function HeroSection() {
                   alt="Media Partner 2"
                   className="h-auto w-auto"
                 />
+                <Image
+                  src="/medias/logo_media_3.png"
+                  width={60}
+                  height={50}
+                  alt="Media Partner 3"
+                  className="h-auto w-auto"
+                />
               </div>
             </div>
           </div>
